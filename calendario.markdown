@@ -34,10 +34,16 @@ permalink: /calendario/
 | Viernes | 14/11 | *no hay clase* |  |
 | Miércoles | 19/11 | *no hay clase* |  |
 | Viernes | 21/11 | *no hay clase* |  |
-| Miércoles | 26/11 | *no hay clase* |  |
-| Viernes | 28/11 | Bitcoin | [Bitcoin \- Nakamoto](https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf) |
+| Miércoles | 26/11 | Consultas sobre el TP |  |
+| Viernes | 28/11 | *no hay clase* |  |
 | Miércoles | 3/12 | Diseño y despliegue de aplicaciones distribuidas | [Services \- Hamilton](https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf) |
 | Viernes | 5/12 | **Entrega TP3** |  |
+
+## Fechas de Final
+
+| Fecha | Hora |
+| :---- | :---- |
+| 16/12 | 18:00 |
 
 [^1]: George Coulouris, Jean Dollimore, Tim Kindberg, and Gordon Blair. 2011. Distributed Systems: Concepts and Design (5th. ed.). Addison-Wesley Publishing Company, USA.
 
