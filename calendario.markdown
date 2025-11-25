@@ -41,9 +41,13 @@ permalink: /calendario/
 
 ## Fechas de Final
 
-| Fecha | Hora |
-| :---- | :---- |
-| 16/12 | 18:00 |
+| # | Fecha | Hora |
+| :---- | :---- | :---- |
+| 1 | 16/12 | 18:00 |
+| 2 | a definir | a definir |
+| 3 | a definir | a definir |
+| 4 | a definir | a definir |
+| 5 | a definir | a definir |
 
 [^1]: George Coulouris, Jean Dollimore, Tim Kindberg, and Gordon Blair. 2011. Distributed Systems: Concepts and Design (5th. ed.). Addison-Wesley Publishing Company, USA.
 
