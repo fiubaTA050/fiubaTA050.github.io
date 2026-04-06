@@ -1,3 +1,141 @@
+:root {
+  --bg: #fdfdfd;
+  --text: #111111;
+  --muted: #555555;
+  --muted-2: #666666;
+  --border: #e8e8e8;
+  --surface: #ffffff;
+  --surface-2: #f7f7f7;
+  --surface-3: #f0f0f0;
+  --link: #2a7ae2;
+  --link-visited: #1756a9;
+  --link-hover: #111111;
+  --code-bg: #eeeeff;
+  --code-border: #e8e8e8;
+  --blockquote: #828282;
+  --header-top: #424242;
+  --accent: #8b4512;
+  --accent-hover: #654321;
+  --success-bg: #e8f5e9;
+  --focus: #2a7ae2;
+}
+
+html[data-theme="dark"] {
+  --bg: #0b0f14;
+  --text: #e6edf3;
+  --muted: #a8b3bf;
+  --muted-2: #93a0ad;
+  --border: #2b3541;
+  --surface: #0f1724;
+  --surface-2: #121c2a;
+  --surface-3: #172334;
+  --link: #7bb4ff;
+  --link-visited: #c39cff;
+  --link-hover: #e6edf3;
+  --code-bg: #0c1320;
+  --code-border: #2b3541;
+  --blockquote: #a8b3bf;
+  --header-top: #2b3541;
+  --accent: #d6a07a;
+  --accent-hover: #e3b894;
+  --success-bg: #0f2a1a;
+  --focus: #7bb4ff;
+}
+
+html {
+  color-scheme: light;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+}
+a:visited {
+  color: var(--link-visited);
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+blockquote {
+  color: var(--blockquote);
+  border-left-color: var(--border);
+}
+
+pre,
+code {
+  background-color: var(--code-bg);
+  border-color: var(--code-border);
+  color: inherit;
+}
+
+table {
+  color: var(--text);
+  background-color: var(--surface);
+  border-color: var(--border);
+}
+table tr:nth-child(even) {
+  background-color: var(--surface-2);
+}
+table th {
+  background-color: var(--surface-3);
+  border-color: var(--border);
+  border-bottom-color: var(--border);
+}
+table td {
+  border-color: var(--border);
+}
+
+.site-header {
+  border-top-color: var(--header-top);
+  border-bottom-color: var(--border);
+}
+.site-title,
+.site-title:visited {
+  color: var(--text);
+}
+.site-nav .page-link {
+  color: var(--text);
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: var(--surface);
+    border-color: var(--border);
+  }
+  .site-nav .menu-icon > svg {
+    fill: var(--text);
+  }
+}
+
+.site-footer {
+  border-top-color: var(--border);
+}
+.footer-col-wrapper {
+  color: var(--muted);
+}
+
+select,
+input,
+textarea {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
 .docentes-list {
   font-family: inherit;
   margin: 1.5em 0;
@@ -21,17 +159,17 @@
 }
 .docentes-list .docentes-name-header {
   font-size: 0.9em;
-  color: #666;
+  color: var(--muted-2);
   text-align: right;
   padding-right: 0.5em;
   margin-bottom: 0.25em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border);
 }
 .docentes-list .docentes-person {
   display: flex;
   align-items: center;
   padding: 0.6em 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border);
 }
 .docentes-list .docentes-section .docentes-person:last-child {
   border-bottom: none;
@@ -47,14 +185,14 @@
   margin-left: 1em;
 }
 .docentes-list .docentes-person-name a {
-  color: #8b4512;
+  color: var(--accent);
   text-decoration: underline;
 }
 .docentes-list .docentes-person-name a:hover {
-  color: #654321;
+  color: var(--accent-hover);
 }
 .docentes-list .docentes-person-name span {
-  color: #333;
+  color: var(--text);
 }
 
 .calendario {
@@ -74,7 +212,7 @@
 }
 
 .calendario tr.cal-feriado td {
-  background-color: #e8f5e9;
+  background-color: var(--success-bg);
 }
 
 /* Calendario: columna Tema (estilo tipo schedule CMU) */
@@ -98,7 +236,7 @@
 .calendario .calendar-activity .cal-activity-dl dt {
   margin: 0;
   font-weight: normal;
-  color: #555;
+  color: var(--muted);
 }
 .calendario .calendar-activity .cal-activity-dl dd {
   margin: 0;

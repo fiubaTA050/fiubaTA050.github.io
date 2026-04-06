@@ -49,3 +49,8 @@ header_pages:
 #
 exclude:
   - _posts/
+  - vendor/
+  - .bundle/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
