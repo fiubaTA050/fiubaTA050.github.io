@@ -2,6 +2,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(){
+      var t;
+      try { t = localStorage.getItem("ta050.theme"); } catch(e) {}
+      if (!t) t = "light";
+      document.documentElement.dataset.theme = t;
+      document.documentElement.style.colorScheme = t;
+    })();
+  </script>
   <link rel="icon" type="image/png" href="{{ "/assets/favicon.png" | relative_url }}">
   <link rel="apple-touch-icon" href="{{ "/assets/favicon.png" | relative_url }}">
   {%- seo -%}
