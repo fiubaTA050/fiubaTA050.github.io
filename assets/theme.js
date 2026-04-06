@@ -24,7 +24,7 @@
     html.style.colorScheme = theme;
     const btn = document.getElementById("theme-toggle");
     if (btn) {
-      btn.innerHTML = theme === "dark" ? MOON_SVG : SUN_SVG;
+      btn.innerHTML = theme === "dark" ? SUN_SVG : MOON_SVG;
       btn.setAttribute("aria-label",
         theme === "dark" ? "Activar modo día" : "Activar modo noche");
     }
