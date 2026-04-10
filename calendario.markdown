@@ -123,13 +123,17 @@ permalink: /calendario/
       <td>8 abr</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 6 — Raft I: elección de líder</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Notas:</dt>
+          <dd class="cal-mobile-only"><a href="https://drive.google.com/file/d/1OVpJj8eza6oALuboZzP67MKPHMByy1Nu/view?usp=drive_link" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/O9aVLIrOLLs" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf">Raft - Ongaro</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — enunciado</dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td><a href="https://drive.google.com/file/d/1OVpJj8eza6oALuboZzP67MKPHMByy1Nu/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td><a href="https://youtu.be/O9aVLIrOLLs"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>10 abr</td>
