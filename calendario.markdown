@@ -139,11 +139,15 @@ permalink: /calendario/
       <td>10 abr</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 7 — Raft II: log y snapshots</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Notas:</dt>
+          <dd class="cal-mobile-only"><a href="https://drive.google.com/file/d/1jnjrwKsQ55WO50MPF09BKDOZ0c5RWmuv/view?usp=drive_link" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/2fNRXQfAyg8" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf">Raft - Ongaro</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td><a href="https://drive.google.com/file/d/1jnjrwKsQ55WO50MPF09BKDOZ0c5RWmuv/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td><a href="https://youtu.be/2fNRXQfAyg8"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr class="cal-entrega">
       <td>15 abr</td>
