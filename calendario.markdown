@@ -163,8 +163,14 @@ permalink: /calendario/
       <td>—</td>
       <td>—</td>
     </tr>
-    <tr class="cal-entrega">
+    <tr class="cal-feriado">
       <td>22 abr</td>
+      <td class="calendar-activity"><span class="lecture-title">ELECCIONES</span></td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr class="cal-entrega">
+      <td>24 abr</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 9 — Consistencia en caches</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -172,12 +178,6 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2B</span></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>24 abr</td>
-      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
