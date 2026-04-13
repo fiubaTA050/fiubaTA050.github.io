@@ -287,7 +287,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>3 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Práctica: Kafka, Flink y Beam</span></td>
+      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
@@ -303,7 +303,8 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>10 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 18 — Bitcoin <em>(docente invitado)</em></span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 18 — Bitcoin</span>
+        <div><em>Clase asincrónica a cargo del Ing. Tomás Arjovsky</em></div>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
