@@ -151,10 +151,8 @@ permalink: /calendario/
     </tr>
     <tr class="cal-entrega">
       <td>15 abr</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 8 — Linealizabilidad y Zookeeper</span>
+      <td class="calendar-activity">
         <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf">Zookeeper - Hunt</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2A</span></dd>
         </dl></td>
@@ -163,7 +161,11 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>17 abr</td>
-      <td></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 8 — Linealizabilidad y Zookeeper</span>
+        <dl class="cal-activity-dl">
+          <dt><i class="fas fa-scroll"></i> Paper:</dt>
+          <dd><a href="https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf">Zookeeper - Hunt</a></dd>
+        </dl></td>
       <td>—</td>
       <td>—</td>
     </tr>
