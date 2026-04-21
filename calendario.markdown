@@ -163,11 +163,13 @@ permalink: /calendario/
       <td>17 abr</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 8 — Linealizabilidad y Zookeeper</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/Taiz1RYsX3Y" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf">Zookeeper - Hunt</a></dd>
         </dl></td>
       <td>—</td>
-      <td>—</td>
+      <td><a href="https://youtu.be/Taiz1RYsX3Y"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr class="cal-feriado">
       <td>22 abr</td>
