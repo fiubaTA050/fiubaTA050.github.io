@@ -195,10 +195,8 @@ permalink: /calendario/
     </tr>
     <tr class="cal-entrega">
       <td>29 abr</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 10 — Dynamo I, hashing y relojes</span>
+      <td class="calendar-activity">
         <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store">Dynamo - DeCandia</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2C</span></dd>
         </dl></td>
@@ -213,10 +211,10 @@ permalink: /calendario/
     </tr>
     <tr class="cal-entrega">
       <td>6 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 11 — Dynamo II y DynamoDB</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 10 — Dynamo I, hashing y relojes</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://www.usenix.org/system/files/atc22-elhemali.pdf">DynamoDb - Elhemali</a></dd>
+          <dd><a href="https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store">Dynamo - DeCandia</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2D</span></dd>
         </dl></td>
@@ -225,6 +223,16 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>8 may</td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 11 — Dynamo II y DynamoDB</span>
+        <dl class="cal-activity-dl">
+          <dt><i class="fas fa-scroll"></i> Paper:</dt>
+          <dd><a href="https://www.usenix.org/system/files/atc22-elhemali.pdf">DynamoDb - Elhemali</a></dd>
+        </dl></td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>13 may</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 12 — Transacciones distribuidas</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -236,7 +244,7 @@ permalink: /calendario/
       <td>—</td>
     </tr>
     <tr>
-      <td>13 may</td>
+      <td>15 may</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 13 — Cloud databases: Aurora</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -246,7 +254,7 @@ permalink: /calendario/
       <td>—</td>
     </tr>
     <tr>
-      <td>15 may</td>
+      <td>20 may</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 14 — Cloud databases: Spanner</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -256,18 +264,12 @@ permalink: /calendario/
       <td>—</td>
     </tr>
     <tr>
-      <td>20 may</td>
+      <td>22 may</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 15 — Spark <em>(docente invitado)</em></span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.5840/2023/papers/zaharia-spark.pdf">Spark - Zaharia</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>22 may</td>
-      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
