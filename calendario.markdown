@@ -233,6 +233,12 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>13 may</td>
+      <td></td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>15 may</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 12 — Transacciones distribuidas</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -244,18 +250,14 @@ permalink: /calendario/
       <td>—</td>
     </tr>
     <tr>
-      <td>15 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 13 — Cloud databases: Aurora</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="http://nil.csail.mit.edu/6.824/2020/papers/aurora.pdf">Aurora - Verbitski</a></dd>
-        </dl></td>
+      <td>20 may</td>
+      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
     <tr>
-      <td>20 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Cloud databases: Spanner</span>
+      <td>22 may</td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 13 — Cloud databases: Spanner</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.5840/2025/papers/spanner.pdf">Spanner - Corbett</a></dd>
@@ -264,8 +266,8 @@ permalink: /calendario/
       <td>—</td>
     </tr>
     <tr>
-      <td>22 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Spark <em>(docente invitado)</em></span>
+      <td>27 may</td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Spark</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.5840/2023/papers/zaharia-spark.pdf">Spark - Zaharia</a></dd>
@@ -274,8 +276,8 @@ permalink: /calendario/
       <td>—</td>
     </tr>
     <tr>
-      <td>27 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 16 — Message-oriented middleware y Kafka</span>
+      <td>29 may</td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Message-oriented middleware y Kafka</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
@@ -284,18 +286,12 @@ permalink: /calendario/
       <td>—</td>
     </tr>
     <tr>
-      <td>29 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Procesamiento de data streams</span>
+      <td>3 jun</td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 16 — Procesamiento de data streams</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>3 jun</td>
-      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
@@ -311,7 +307,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>10 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 18 — Bitcoin</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Bitcoin</span>
         <div><em>Clase asincrónica a cargo del Ing. Tomás Arjovsky</em></div>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -328,7 +324,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>17 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 19 — Cluster computing y Borg</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 18 — Cluster computing y Borg</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.824/2016/papers/borg.pdf">Borg - Verma</a></dd>
@@ -338,7 +334,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>19 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 20 — Serverless computing</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 19 — Serverless computing</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/atc23-brooker.pdf">Lambda</a> <a href="https://www.usenix.org/system/files/nsdi20-paper-agache.pdf">Firecracker</a></dd>
@@ -354,7 +350,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>26 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 21 — Internet scale services</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 20 — Internet scale services</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf">Services - Hamilton</a></dd>
