@@ -215,6 +215,13 @@ permalink: /calendario/
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store">Dynamo - DeCandia</a></dd>
+          <dt><i class="fas fa-book"></i> Lecturas:</dt>
+          <dd>
+            <ul class="cal-reading-list">
+              <li><a href="https://lamport.azurewebsites.net/pubs/time-clocks.pdf">Logical Clocks - Lamport</a></li>
+              <li>Capítulo 14.1 a 14.4 de <a href="#ref-coulouris-ds">Coulouris et al. (2012)</a></li>
+            </ul>
+          </dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2D</span></dd>
         </dl></td>
@@ -227,6 +234,8 @@ permalink: /calendario/
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.usenix.org/system/files/atc22-elhemali.pdf">DynamoDb - Elhemali</a></dd>
+          <dt><i class="fas fa-video"></i> Videos:</dt>
+          <dd><a href="https://www.youtube.com/watch?v=yvBR71D0nAQ">DynamoDB deep dive</a></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
@@ -365,4 +374,5 @@ permalink: /calendario/
 <ol class="cal-bibliografia">
   <li id="ref-saltzer-kaashoek">Jerome H. Saltzer, M. Frans Kaashoek. <cite>Principles of Computer System Design: An Introduction</cite>. July 2009.</li>
   <li id="ref-kleppmann-ddia">Martin Kleppmann. <cite>Designing Data-Intensive Applications</cite>. 2017.</li>
+  <li id="ref-coulouris-ds">George Coulouris, Jean Dollimore, Tim Kindberg, Gordon Blair. <cite>Distributed Systems: Concepts and Design</cite>. Fifth Edition. 2012.</li>
 </ol>
