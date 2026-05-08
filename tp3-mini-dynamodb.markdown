@@ -167,11 +167,7 @@ El sistema debe ofrecer un modelo de consistencia configurable, con soporte tant
 * Cada shard debe continuar procesando operaciones mientras conserve **una mayoría de réplicas activas**.  
 * Si un shard pierde la mayoría, solo se permiten lecturas eventuales.
 
-## **Solo para grupos de 4 integrantes**
-
-## **6\. Transacciones distribuidas**
-
-La implementación de transacciones distribuidas es **obligatoria para los grupos de cuatro integrantes** y opcional para el resto.
+## **5\. Transacciones distribuidas**
 
 El sistema debe incorporar soporte para transacciones usando 2 Phase Commit basadas en el **mecanismo de locking optimista** descripto en el *paper de Amazon DynamoDB*. Este modelo debe detectar conflictos de concurrencia y abortar la transacción en caso de inconsistencias, permitiendo al cliente reintentarlo.
 
