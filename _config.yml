@@ -33,6 +33,9 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Analytics (GA4) — solo se carga en producción (jekyll.environment == 'production')
+google_analytics: G-5RQ7FJZS8Q
+
 # Navigation menu
 header_pages:
   - trabajos-practicos.markdown

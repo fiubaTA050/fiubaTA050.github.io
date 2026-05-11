@@ -213,6 +213,10 @@ permalink: /calendario/
       <td>6 may</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 10 — Dynamo I, hashing y relojes</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Notas:</dt>
+          <dd class="cal-mobile-only"><a href="https://drive.google.com/file/d/1RCF1AN8yZkZp08Fi8F1DB2khwP3Gpir-/view?usp=drive_link" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/pyxXqi3wC7s" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store">Dynamo - DeCandia</a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
@@ -225,20 +229,24 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2D</span></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td><a href="https://drive.google.com/file/d/1RCF1AN8yZkZp08Fi8F1DB2khwP3Gpir-/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td><a href="https://youtu.be/pyxXqi3wC7s"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>8 may</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 11 — Dynamo II y DynamoDB</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Notas:</dt>
+          <dd class="cal-mobile-only"><a href="https://drive.google.com/file/d/1jCvDa2nqLOKb0TSuGFuTpEDaV8D3YckR/view?usp=drive_link" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/9ZKUwF7gBWY" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.usenix.org/system/files/atc22-elhemali.pdf">DynamoDb - Elhemali</a></dd>
           <dt><i class="fas fa-video"></i> Videos:</dt>
           <dd><a href="https://www.youtube.com/watch?v=yvBR71D0nAQ">DynamoDB deep dive</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td><a href="https://drive.google.com/file/d/1jCvDa2nqLOKb0TSuGFuTpEDaV8D3YckR/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td><a href="https://youtu.be/9ZKUwF7gBWY"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>13 may</td>
@@ -276,7 +284,18 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>27 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Spark</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Bitcoin</span>
+        <div><em>Clase asincrónica a cargo del Ing. Tomás Arjovsky</em></div>
+        <dl class="cal-activity-dl">
+          <dt><i class="fas fa-scroll"></i> Paper:</dt>
+          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
+        </dl></td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>29 may</td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Spark</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.5840/2023/papers/zaharia-spark.pdf">Spark - Zaharia</a></dd>
@@ -285,21 +304,11 @@ permalink: /calendario/
       <td>—</td>
     </tr>
     <tr>
-      <td>29 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Message-oriented middleware y Kafka</span>
+      <td>3 jun</td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 16 — Message-oriented middleware y Kafka</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
-        </dl></td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>3 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 16 — Procesamiento de data streams</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
@@ -316,11 +325,10 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>10 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Bitcoin</span>
-        <div><em>Clase asincrónica a cargo del Ing. Tomás Arjovsky</em></div>
+      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Procesamiento de data streams</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
+          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
