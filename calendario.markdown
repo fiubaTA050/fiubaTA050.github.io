@@ -278,21 +278,25 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>22 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 13 — Cloud databases: Spanner</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 13 — Bitcoin</span>
+        <div><em>Clase asincrónica a cargo del Ing. Tomás Arjovsky</em></div>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Notas:</dt>
+          <dd class="cal-mobile-only"><a href="https://drive.google.com/file/d/1RE_q4eKTCJVm-SfnPaMSQIq7JC-jAe7y/view?usp=drive_link" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/Csk5r3UPA7g" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="http://nil.csail.mit.edu/6.5840/2025/papers/spanner.pdf">Spanner - Corbett</a></dd>
+          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td><a href="https://drive.google.com/file/d/1RE_q4eKTCJVm-SfnPaMSQIq7JC-jAe7y/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td><a href="https://youtu.be/Csk5r3UPA7g"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>27 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Bitcoin</span>
-        <div><em>Clase asincrónica a cargo del Ing. Tomás Arjovsky</em></div>
+      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Cloud databases: Spanner</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
+          <dd><a href="http://nil.csail.mit.edu/6.5840/2025/papers/spanner.pdf">Spanner - Corbett</a></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
