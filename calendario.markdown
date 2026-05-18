@@ -258,13 +258,17 @@ permalink: /calendario/
       <td>15 may</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 12 — Transacciones distribuidas</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Notas:</dt>
+          <dd class="cal-mobile-only"><a href="https://drive.google.com/file/d/134xX2l3qWaulpErl4qCQRCyMJ8BI61DY/view?usp=drive_link" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/motwgkEcQ3k" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.usenix.org/system/files/atc23-idziorek.pdf">DynamoDb - Idziorek</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — enunciado</dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td><a href="https://drive.google.com/file/d/134xX2l3qWaulpErl4qCQRCyMJ8BI61DY/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td><a href="https://youtu.be/motwgkEcQ3k"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>20 may</td>
