@@ -303,17 +303,13 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>29 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Spark</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="http://nil.csail.mit.edu/6.5840/2023/papers/zaharia-spark.pdf">Spark - Zaharia</a></dd>
-        </dl></td>
+      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
     <tr>
       <td>3 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 16 — Message-oriented middleware y Kafka</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Message-oriented middleware y Kafka</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
@@ -333,17 +329,21 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>10 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Procesamiento de data streams</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 16 — Spark</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
+          <dd><a href="http://nil.csail.mit.edu/6.5840/2023/papers/zaharia-spark.pdf">Spark - Zaharia</a></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
     </tr>
     <tr>
       <td>12 jun</td>
-      <td></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Procesamiento de data streams</span>
+        <dl class="cal-activity-dl">
+          <dt><i class="fas fa-scroll"></i> Paper:</dt>
+          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
+        </dl></td>
       <td>—</td>
       <td>—</td>
     </tr>
