@@ -329,6 +329,12 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>10 jun</td>
+      <td></td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>12 jun</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 16 — Spark</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -338,31 +344,17 @@ permalink: /calendario/
       <td>—</td>
     </tr>
     <tr>
-      <td>12 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Procesamiento de data streams</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
-        </dl></td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
       <td>17 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 18 — Cluster computing y Borg</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="http://nil.csail.mit.edu/6.824/2016/papers/borg.pdf">Borg - Verma</a></dd>
-        </dl></td>
+      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
     <tr>
       <td>19 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 19 — Serverless computing</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Procesamiento de data streams</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/atc23-brooker.pdf">Lambda</a> <a href="https://www.usenix.org/system/files/nsdi20-paper-agache.pdf">Firecracker</a></dd>
+          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
@@ -375,7 +367,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>26 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 20 — Internet scale services</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 18 — Internet scale services</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf">Services - Hamilton</a></dd>
