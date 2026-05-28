@@ -13,3 +13,7 @@ ayudantes:
     image: "/assets/images/laab.jpeg"
   - name: Luca Lazcano
     image: "/assets/images/llazcano.jpeg"
+
+colaboradores_invitados:
+  - name: Ing. Tomás Arjovsky
+    image: "/assets/images/tarjovsky.jpeg"

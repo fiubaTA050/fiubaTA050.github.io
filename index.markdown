@@ -59,4 +59,20 @@ Podés [agregar el calendario de la materia a tu Google Calendar](https://calend
     </div>
     {% endfor %}
   </div>
+
+  <div class="docentes-section">
+    <h3 class="docentes-section-title"><i class="fa fa-handshake fa-lg"></i>Colaboradores invitados</h3>
+    {% for person in docentes.colaboradores_invitados %}
+    <div class="docentes-person">
+      <img class="docentes-person-img" src="{{ person.image | relative_url }}" alt="{{ person.name }}" />
+      <div class="docentes-person-name">
+        {% if person.url and person.url != "" %}
+        <a href="{{ person.url }}">{{ person.name }}</a>
+        {% else %}
+        <span>{{ person.name }}</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>
