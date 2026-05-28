@@ -293,7 +293,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>27 may</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Cloud databases: Spanner</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Spanner</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.5840/2025/papers/spanner.pdf">Spanner - Corbett</a></dd>
@@ -309,17 +309,17 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>3 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Message-oriented middleware y Kafka</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
-        </dl></td>
+      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
     <tr>
       <td>5 jun</td>
-      <td></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Message-oriented middleware y Kafka</span>
+        <dl class="cal-activity-dl">
+          <dt><i class="fas fa-scroll"></i> Paper:</dt>
+          <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
+        </dl></td>
       <td>—</td>
       <td>—</td>
     </tr>
