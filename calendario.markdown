@@ -317,28 +317,28 @@ permalink: /calendario/
       <td>—</td>
       <td>—</td>
     </tr>
-    <tr class="cal-entrega">
-      <td>5 jun</td>
-      <td class="calendar-activity">
-        <dl class="cal-activity-dl">
-          <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — <span style="color: #c00;">entrega y presentación</span></dd>
-        </dl></td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
     <tr>
-      <td>10 jun</td>
+      <td>5 jun</td>
       <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
     <tr>
-      <td>12 jun</td>
+      <td>10 jun</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 16 — Spark</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.5840/2023/papers/zaharia-spark.pdf">Spark - Zaharia</a></dd>
+        </dl></td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr class="cal-entrega">
+      <td>12 jun</td>
+      <td class="calendar-activity">
+        <dl class="cal-activity-dl">
+          <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
+          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — <span style="color: #c00;">entrega y presentación</span></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
