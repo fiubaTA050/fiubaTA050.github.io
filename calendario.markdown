@@ -327,6 +327,15 @@ permalink: /calendario/
           <dd class="cal-mobile-only"><a href="https://youtu.be/bTOSYUN0nMY" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
+          <dt><i class="fas fa-book"></i> Lecturas:</dt>
+          <dd>
+            <ul class="cal-reading-list">
+              <li>Capítulo 11, pp. 439–451 de <a href="#ref-kleppmann-ddia">Kleppmann (2017)</a></li>
+              <li>Capítulo 6.1, 6.3 y 6.4 de <a href="#ref-coulouris-ds">Coulouris et al. (2012)</a></li>
+            </ul>
+          </dd>
+          <dt><i class="fas fa-video"></i> Videos:</dt>
+          <dd><a href="https://www.youtube.com/watch?v=XcvHmqmh16g">Intra-cluster Replication in Apache Kafka</a></dd>
         </dl></td>
       <td><a href="https://drive.google.com/file/d/1PZ0Vv7UYi1SIUk_9dBGYNLgDjfCPGH0K/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
       <td><a href="https://youtu.be/bTOSYUN0nMY"><i class="fas fa-file-video fa-lg"></i></a></td>
