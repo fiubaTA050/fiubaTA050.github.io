@@ -333,11 +333,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>10 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 16 — Spark</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="http://nil.csail.mit.edu/6.5840/2023/papers/zaharia-spark.pdf">Spark - Zaharia</a></dd>
-        </dl></td>
+      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
@@ -353,17 +349,17 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>17 jun</td>
-      <td></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 16 — Procesamiento de data streams</span>
+        <dl class="cal-activity-dl">
+          <dt><i class="fas fa-scroll"></i> Paper:</dt>
+          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
+        </dl></td>
       <td>—</td>
       <td>—</td>
     </tr>
     <tr>
       <td>19 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Procesamiento de data streams</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
-        </dl></td>
+      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
@@ -375,7 +371,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>26 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 18 — Internet scale services</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Internet scale services</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf">Services - Hamilton</a></dd>
