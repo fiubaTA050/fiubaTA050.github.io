@@ -319,13 +319,17 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>5 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Message-oriented middleware y Kafka</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Sistemas de Mensajería</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Notas:</dt>
+          <dd class="cal-mobile-only"><a href="https://drive.google.com/file/d/1PZ0Vv7UYi1SIUk_9dBGYNLgDjfCPGH0K/view?usp=drive_link" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/bTOSYUN0nMY" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td><a href="https://drive.google.com/file/d/1PZ0Vv7UYi1SIUk_9dBGYNLgDjfCPGH0K/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td><a href="https://youtu.be/bTOSYUN0nMY"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>10 jun</td>
