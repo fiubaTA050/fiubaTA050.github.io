@@ -361,7 +361,9 @@ permalink: /calendario/
       <td class="calendar-activity"><span class="lecture-title">Clase 16 — Procesamiento de data streams</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a>, <a href="https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43864.pdf">Dataflow - Akidau</a></dd>
+          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a></dd>
+          <dt><i class="fas fa-book"></i> Lecturas:</dt>
+          <dd>Capítulo 11, pp. 464–479 de <a href="#ref-kleppmann-ddia">Kleppmann (2017)</a></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
