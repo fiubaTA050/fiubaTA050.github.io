@@ -32,6 +32,23 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Imagen OG por defecto para TODAS las páginas.
+# jekyll-seo-tag (v2.8.0) solo lee `page.image` del front matter, NO `site.image`,
+# así que la inyectamos en cada página con los "front matter defaults" de Jekyll.
+# Cualquier página puede sobreescribirla declarando su propio `image:`.
+# Con una imagen presente, jekyll-seo-tag emite `twitter:card: summary_large_image`
+# automáticamente. La URL final se vuelve absoluta usando el `url` de arriba.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/og-image.png
+        alt: "TA050 — Sistemas Distribuidos I (FIUBA)"
+        width: 1200
+        height: 675
 
 # Analytics (GA4) — solo se carga en producción (jekyll.environment == 'production')
 google_analytics: G-5RQ7FJZS8Q
