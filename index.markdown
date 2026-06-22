@@ -6,6 +6,18 @@ layout: home
 title: Bienvenidos a Sistemas Distribuidos I
 ---
 
+<section class="anuncios" aria-labelledby="anuncios-heading">
+  <h2 id="anuncios-heading" class="anuncios-title"><i class="fa fa-bullhorn"></i> Anuncios</h2>
+  <p class="anuncios-subtitle"><i class="fa fa-graduation-cap"></i> Fechas de finales</p>
+  <ul class="anuncios-fechas">
+    <li><span class="anuncios-fecha">1 de julio</span> <span class="anuncios-hora">· 18:00 hs</span></li>
+    <li><span class="anuncios-fecha">15 de julio</span> <span class="anuncios-hora">· 18:00 hs</span></li>
+    <li><span class="anuncios-fecha">22 de julio</span> <span class="anuncios-hora">· 18:00 hs</span></li>
+    <li><span class="anuncios-fecha">31 de julio</span> <span class="anuncios-hora">· 18:00 hs</span></li>
+    <li><span class="anuncios-fecha">12 de agosto</span> <span class="anuncios-hora">· 18:00 hs</span></li>
+  </ul>
+</section>
+
 Este es el curso de FIUBA sobre el diseño e implementación de sistemas distribuidos modernos. Estudiamos cómo múltiples procesos cooperan para ofrecer servicios coherentes, escalables y tolerantes a fallos.
 
 El curso se organiza en cuatro áreas de aplicación. En **Compute** estudiamos cómo distribuir y paralelizar trabajo entre múltiples nodos donde MapReduce y Spark se ven como paradigmas de cómputo batch y analítico, y los mecanismos que hacen posible que ese cómputo sea correcto y resiliente. En **Storage** exploramos filesystems distribuidos, transacciones, consistencia en caches, y bases de datos a escala global como Aurora y Spanner. En **Stream Processing** abordamos mensajería distribuida, el log como estructura unificadora, y el procesamiento de flujos de datos en tiempo real con garantías semánticas precisas. En **Cloud Computing** estudiamos orquestación de recursos, sistemas elásticos, cómputo serverless, y los principios de observabilidad y operabilidad que sostienen servicios en producción.
