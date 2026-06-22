@@ -360,13 +360,17 @@ permalink: /calendario/
       <td>17 jun</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 16 — Procesamiento de data streams</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Notas:</dt>
+          <dd class="cal-mobile-only"><a href="https://drive.google.com/file/d/1qykXxyRfuzsSliVRlyAV6BInLp9yK01h/view?usp=drive_link" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/2G9kXTXVXOo" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
           <dd>Capítulo 11, pp. 464–479 de <a href="#ref-kleppmann-ddia">Kleppmann (2017)</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td><a href="https://drive.google.com/file/d/1qykXxyRfuzsSliVRlyAV6BInLp9yK01h/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td><a href="https://youtu.be/2G9kXTXVXOo"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>19 jun</td>
@@ -376,17 +380,14 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>24 jun</td>
-      <td></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase especial: EVM y Smart Contracts</span>
+        <div><em>A cargo del Ing. Ruben Bohorquez</em></div></td>
       <td>—</td>
       <td>—</td>
     </tr>
     <tr>
       <td>26 jun</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 17 — Internet scale services</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf">Services - Hamilton</a></dd>
-        </dl></td>
+      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
