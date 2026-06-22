@@ -17,3 +17,5 @@ ayudantes:
 colaboradores_invitados:
   - name: Ing. Tomás Arjovsky
     image: "/assets/images/tarjovsky.jpeg"
+  - name: Ing. Ruben Bohorquez
+    image: "/assets/images/rbohorquez.jpeg"
