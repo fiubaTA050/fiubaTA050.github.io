@@ -381,9 +381,13 @@ permalink: /calendario/
     <tr>
       <td>24 jun</td>
       <td class="calendar-activity"><span class="lecture-title">Clase especial: EVM y Smart Contracts</span>
-        <div><em>A cargo del Ing. Ruben Bohorquez</em></div></td>
+        <div><em>A cargo del Ing. Ruben Bohorquez</em></div>
+        <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/QwK_AQC82Qs" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
+        </dl></td>
       <td>—</td>
-      <td>—</td>
+      <td><a href="https://youtu.be/QwK_AQC82Qs"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>26 jun</td>
