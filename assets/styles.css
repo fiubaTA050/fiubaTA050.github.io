@@ -182,6 +182,9 @@ textarea:focus-visible {
 .anuncios-hora {
   color: var(--muted);
 }
+.anuncios-aula {
+  color: var(--muted);
+}
 
 .docentes-list {
   font-family: inherit;
