@@ -185,6 +185,16 @@ textarea:focus-visible {
 .anuncios-aula {
   color: var(--muted);
 }
+.anuncios-tachada .anuncios-fecha,
+.anuncios-tachada .anuncios-hora,
+.anuncios-tachada .anuncios-aula {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+.anuncios-reprogramada {
+  font-weight: 600;
+  color: var(--accent);
+}
 
 .docentes-list {
   font-family: inherit;
