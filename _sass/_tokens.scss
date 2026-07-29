@@ -36,6 +36,11 @@
   // (y el <link> de Google Fonts en _includes/head.html).
   --header-font: "Chakra Petch";
   --text-font: "Rubik";
+  // Monoespaciada para <pre> y <code>. Sin esto se usa el stack por defecto de
+  // Bootstrap, que es "probá la que tengas" y termina en Courier New donde no
+  // haya nada mejor — o sea, el código sería lo único del sitio que cambia
+  // según la máquina del lector.
+  --mono-font: "IBM Plex Mono";
 
   // El techo está limitado por "DISTRIBUIDOS" (12 caracteres): la perspectiva
   // 3D ensancha el lado derecho del texto ~25%, y el banner tiene

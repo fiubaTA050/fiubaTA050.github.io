@@ -27,7 +27,10 @@ dt {
 }
 
 pre,
-code {
+code,
+kbd,
+samp {
+  font-family: var(--mono-font), var(--bs-font-monospace);
   background-color: #e9ecef !important;
 }
 
