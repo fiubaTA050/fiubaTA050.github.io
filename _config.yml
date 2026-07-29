@@ -69,6 +69,8 @@ header_pages:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - CLAUDE.md
+  - README.md
   - _posts/
   - vendor/
   - .bundle/
