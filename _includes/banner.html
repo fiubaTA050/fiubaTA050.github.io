@@ -1,0 +1,29 @@
+{%- comment -%}
+  Hero de la home. La variante del título se elige con `course.banner_title`
+  en _config.yml: "perspectiva" (3D, estilo CMU), "recto" (a la derecha con
+  glow cyan) o "centrado" (abajo, a ancho completo).
+{%- endcomment -%}
+{%- case site.course.banner_title -%}
+  {%- when "centrado" -%}{%- assign variant = "banner--centrado" -%}
+  {%- when "recto" -%}{%- assign variant = "" -%}
+  {%- else -%}{%- assign variant = "banner--perspectiva" -%}
+{%- endcase -%}
+<style>
+  .banner { background-image: url("{{ "/assets/images/banner.webp" | relative_url }}"); }
+</style>
+<div class="banner position-relative overflow-hidden m-0 border-bottom border-5 pt-lg-5 {{ variant }}">
+  <div class="container">
+    <div class="row banner-row justify-content-end">
+      <div class="banner-title col-12 col-md-9 col-lg-7 col-xl-6 py-4 px-3 mx-0 my-0 mt-lg-4 mb-lg-4 text-start text-white">
+
+        <h1><span class="d-block fw-bold">{{ site.course.name }}</span></h1>
+
+        <p class="banner-subtitle mb-0">
+          <span class="banner-code">{{ site.course.code }}</span>
+          <span class="banner-term">{{ site.course.term }}</span>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>

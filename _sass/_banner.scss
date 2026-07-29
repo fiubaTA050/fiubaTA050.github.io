@@ -1,0 +1,159 @@
+// El background-image lo inyecta _includes/banner.html con `relative_url`,
+// para que siga funcionando si algún día se usa un `baseurl`.
+
+.banner {
+  min-height: 45rem;
+  border-color: #000 !important;
+  border-width: 0.8em !important;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner-title {
+  h1 {
+    margin-bottom: 0.6rem;
+    font-family: var(--header-font), sans-serif;
+    font-size: var(--hero-font-size);
+    font-weight: 700;
+    line-height: 0.92em;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    border-bottom: 0;
+
+    // Glow cyan (ver --hero-text-shadow en _tokens.scss), que dialoga con el
+    // anillo del monolito en lugar de la sombra dura offset de CMU.
+    text-shadow: var(--hero-text-shadow);
+  }
+
+  .banner-subtitle {
+    font-family: var(--header-font), sans-serif;
+    font-size: clamp(1rem, 1.7vw, 1.7rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--glow-color);
+    border: 0;
+    text-shadow:
+      0 0 0.6em rgba(var(--glow-rgb), 0.5),
+      0.03em 0.03em 0 rgba(0, 0, 0, 0.85);
+
+    // Apilados. Se hace acá y no con las utilidades d-*-block de Bootstrap
+    // porque esas llevan !important y la variante centrada necesita cambiarlo.
+    .banner-code,
+    .banner-term {
+      display: block;
+    }
+
+    // En teléfono sólo el cuatrimestre, como hace CMU.
+    @media (max-width: 767.98px) {
+      .banner-code {
+        display: none;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Variante con perspectiva 3D (la de CMU). Es el default de
+// `course.banner_title` en _config.yml.
+// ---------------------------------------------------------------------------
+.banner--perspectiva {
+  .banner-row {
+    perspective: 60rem;
+    perspective-origin: 21% -45%;
+  }
+
+  .banner-title {
+    transform: rotateY(-33deg) translateY(2.5rem) skewX(-5deg) skewY(-10deg);
+  }
+
+  // El h1 y el subtítulo heredan el glow difuso de .banner-title, en lugar de
+  // la sombra dura offset de CMU.
+}
+
+// ---------------------------------------------------------------------------
+// Variante centrada abajo, a ancho completo. Respeta la simetría de la imagen
+// en lugar de empujar el título al tercio derecho.
+// ---------------------------------------------------------------------------
+.banner--centrado {
+  display: flex;
+  align-items: flex-end;
+
+  .banner-row {
+    justify-content: center !important;
+  }
+
+  .banner-title {
+    // El markup trae col-xl-6 para las variantes de la derecha; acá hace falta
+    // todo el ancho, si no el título se parte en dos líneas.
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center !important;
+
+    h1 {
+      text-align: center;
+      // Con todo el ancho disponible el título entra en una línea, así que
+      // puede crecer bastante más que en la variante de la derecha.
+      font-size: clamp(2.25rem, 7vw, 7rem);
+    }
+
+    // Código y cuatrimestre en una sola línea, separados por un punto medio.
+    .banner-subtitle {
+      .banner-code,
+      .banner-term {
+        display: inline;
+      }
+
+      .banner-code::after {
+        content: " · ";
+        opacity: 0.6;
+      }
+
+      // En teléfono el código sí se muestra: al estar en línea no roba altura.
+      @media (max-width: 767.98px) {
+        .banner-code {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Responsive
+// ---------------------------------------------------------------------------
+@media (max-width: 1024px) {
+  .banner {
+    min-height: 32rem;
+  }
+
+  // Sin el ancho de escritorio la perspectiva no lee: se endereza y el título
+  // se apoya en un panel traslúcido para mantener legibilidad sobre la imagen.
+  .banner--perspectiva .banner-title {
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 0.75rem;
+  }
+
+  .banner-title h1 {
+    text-align: center;
+  }
+
+  .banner-title .banner-subtitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .banner {
+    min-height: 24rem;
+    border-width: 0.5em !important;
+  }
+
+  .banner-title {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 0.75rem;
+  }
+}

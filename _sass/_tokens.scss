@@ -1,0 +1,57 @@
+// ---------------------------------------------------------------------------
+// Tokens de diseño.
+//
+// Van como custom properties de CSS (no variables Sass) a propósito: quedan
+// vivas en el navegador, así se pueden probar desde el inspector sin rebuildear.
+// ---------------------------------------------------------------------------
+
+:root {
+  // Acentos.
+  // --main-color se usa sobre la tarjeta clara: da 5.6:1 de contraste contra
+  // #f3f4f5, y 6.2:1 con blanco encima (para el hover que invierte a fondo).
+  // --glow-color es el cyan del anillo del monolito: 1.2:1 sobre la tarjeta,
+  // o sea ILEGIBLE ahí. Usarlo sólo sobre fondo oscuro.
+  --main-color: #046b7d;
+  --link-color: #046b7d;
+  --glow-color: #25f6fe;
+  // Los mismos canales que --glow-color, para poder componer rgba() con alfa.
+  --glow-rgb: 37, 246, 254;
+  --shadow-color: #046b7d;
+  --header-color: #dee2e6;
+
+  // Semánticos del calendario. Rojo para entregas (5.4:1 sobre la tarjeta),
+  // verde para feriados. Los tintes de fila son deliberadamente lavados: el
+  // texto negro encima mantiene 16:1 o más.
+  --deadline-color: #c0261f;
+  --deadline-row-bg: #fdf0ee;
+  --feriado-row-bg: #dff0d8;
+
+  // Superficies
+  --page-bg-top: #010101;
+  --page-bg-bottom: #03181a;
+  --card-bg: #f3f4f5;
+  --text-color: #0d0d0d;
+
+  // Tipografía — para probar otras fuentes se cambian estas dos líneas
+  // (y el <link> de Google Fonts en _includes/head.html).
+  --header-font: "Chakra Petch";
+  --text-font: "Rubik";
+
+  // El techo está limitado por "DISTRIBUIDOS" (12 caracteres): la perspectiva
+  // 3D ensancha el lado derecho del texto ~25%, y el banner tiene
+  // overflow-hidden, así que de más grande se corta la última letra.
+  --hero-font-size: clamp(2.25rem, 4.6vw, 4.75rem);
+
+  // Glow del título del hero. Subir el primer radio y el alfa lo hace más
+  // intenso; pasado de 0.35em en la segunda capa las letras empiezan a
+  // perder definición.
+  --hero-text-shadow:
+    0 0 0.6em rgba(var(--glow-rgb), 0.5),
+    0 0 0.22em rgba(var(--glow-rgb), 0.7),
+    0.04em 0.04em 0 rgba(0, 0, 0, 0.7);
+
+  // Overrides de Bootstrap 5 (lo cargamos del CDN, así que se tocan por
+  // custom property; no tenemos acceso a sus variables Sass).
+  --bs-body-font-size: 1.2rem;
+  --bs-code-color: var(--main-color);
+}

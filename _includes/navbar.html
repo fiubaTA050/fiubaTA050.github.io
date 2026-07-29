@@ -1,0 +1,48 @@
+<header>
+  {%- comment -%}
+    expand-xl (no lg): con seis ítems y etiquetas en castellano la fila no entra
+    por debajo de 1200px y se partía en dos líneas.
+  {%- endcomment -%}
+  <nav class="navbar fixed-top navbar-expand-xl bg-black navbar-dark" aria-label="Menú de navegación">
+    <div class="container">
+
+      <a class="navbar-brand" href="{{ "/" | relative_url }}" title="{{ site.course.code }}">
+        <i class="fa-solid fa-network-wired"></i> {{ site.course.code }}
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+              aria-controls="navbar" aria-expanded="false" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbar">
+
+        <ul class="navbar-nav me-auto mb-0 text-uppercase">
+          {%- for path in site.header_pages -%}
+            {%- assign p = site.pages | where: "path", path | first -%}
+            {%- if p -%}
+              <li class="nav-item px-xl-3">
+                {%- comment -%} `nav_title` en el front matter permite una etiqueta corta para el navbar. {%- endcomment -%}
+                <a class="nav-link{% if page.url == p.url %} active{% endif %}" href="{{ p.url | relative_url }}">{{ p.nav_title | default: p.title | escape }}</a>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+
+        <ul class="navbar-nav ms-auto mb-0 text-uppercase">
+          {%- if site.course.youtube -%}
+            <li class="nav-item px-xl-1">
+              <a class="nav-link" href="{{ site.course.youtube }}" title="Canal de YouTube" target="_yt" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            </li>
+          {%- endif -%}
+          {%- if site.course.meet -%}
+            <li class="nav-item px-xl-1">
+              <a class="nav-link" href="{{ site.course.meet }}" title="Clases virtuales por Google Meet" target="_meet" rel="noopener"><i class="fa-solid fa-video"></i> Meet</a>
+            </li>
+          {%- endif -%}
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</header>

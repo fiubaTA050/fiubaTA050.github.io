@@ -1,0 +1,53 @@
+// Docentes. Las fotos van en grayscale, como en la referencia de CMU, y
+// recuperan color al pasar el mouse.
+
+.docentes-section {
+  margin-top: 2rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.docentes-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--header-font), sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-bottom: 2px dotted var(--header-color);
+  padding-bottom: 0.35rem;
+}
+
+.docentes-person {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.docentes-person-img {
+  width: 68px;
+  height: 68px;
+  min-width: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.25s ease;
+
+  .docentes-person:hover & {
+    filter: grayscale(0%);
+  }
+}
+
+.docentes-person-name {
+  font-weight: 500;
+  line-height: 1.25;
+
+  a {
+    color: var(--main-color);
+    text-decoration: underline;
+  }
+}

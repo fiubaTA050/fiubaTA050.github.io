@@ -1,14 +1,11 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: Bienvenidos a Sistemas Distribuidos I
 ---
 
 <section class="anuncios" aria-labelledby="anuncios-heading">
-  <h2 id="anuncios-heading" class="anuncios-title"><i class="fa fa-bullhorn"></i> Anuncios</h2>
-  <p class="anuncios-subtitle"><i class="fa fa-graduation-cap"></i> Fechas de finales</p>
+  <h2 id="anuncios-heading" class="anuncios-title"><i class="fa-solid fa-bullhorn"></i> Anuncios</h2>
+  <p class="anuncios-subtitle"><i class="fa-solid fa-graduation-cap"></i> Fechas de finales</p>
   <ul class="anuncios-fechas">
     <li><span class="anuncios-fecha">1 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 418</span></li>
     <li class="anuncios-tachada"><span class="anuncios-fecha">15 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 418</span> <span class="anuncios-reprogramada">Reprogramada al viernes 17</span></li>
@@ -21,73 +18,53 @@ title: Bienvenidos a Sistemas Distribuidos I
   </ul>
 </section>
 
+<div class="row mb-4 pb-lg-2 border-bottom border-2">
+
+<div class="col-lg-7" markdown="1">
+
+<h2><i class="fa-solid fa-circle-info"></i> Sistemas Distribuidos I</h2>
+
 Este es el curso de FIUBA sobre el diseño e implementación de sistemas distribuidos modernos. Estudiamos cómo múltiples procesos cooperan para ofrecer servicios coherentes, escalables y tolerantes a fallos.
 
 El curso se organiza en cuatro áreas de aplicación. En **Compute** estudiamos cómo distribuir y paralelizar trabajo entre múltiples nodos donde MapReduce y Spark se ven como paradigmas de cómputo batch y analítico, y los mecanismos que hacen posible que ese cómputo sea correcto y resiliente. En **Storage** exploramos filesystems distribuidos, transacciones, consistencia en caches, y bases de datos a escala global como Aurora y Spanner. En **Stream Processing** abordamos mensajería distribuida, el log como estructura unificadora, y el procesamiento de flujos de datos en tiempo real con garantías semánticas precisas. En **Cloud Computing** estudiamos orquestación de recursos, sistemas elásticos, cómputo serverless, y los principios de observabilidad y operabilidad que sostienen servicios en producción.
 
 La cursada combina teoría y práctica intensiva: los trabajos prácticos reproducen técnicas reales para formar ingenieros capaces de construir y operar sistemas distribuidos robustos a gran escala.
 
-# Clases virtuales
+</div>
 
-Miércoles y Viernes · 6:00 – 9:00pm  
-Zona horaria: America/Argentina/Buenos_Aires  
-Información para unirse con Google Meet  
-Enlace de la videollamada: [https://meet.google.com/htg-dkva-htv](https://meet.google.com/htg-dkva-htv)
+<div class="col-lg-5" markdown="1">
 
-## Calendario de Google
+<h2><i class="fa-solid fa-video"></i> Clases virtuales</h2>
+
+<dl class="row course-info">
+  <dt class="col-sm-5"><i class="fa-solid fa-calendar-days"></i> Días:</dt>
+  <dd class="col-sm-7">Miércoles y Viernes</dd>
+
+  <dt class="col-sm-5"><i class="fa-solid fa-clock"></i> Horario:</dt>
+  <dd class="col-sm-7">6:00 – 9:00pm</dd>
+
+  <dt class="col-sm-5"><i class="fa-solid fa-earth-americas"></i> Zona horaria:</dt>
+  <dd class="col-sm-7">America/Argentina/Buenos_Aires</dd>
+
+  <dt class="col-sm-5"><i class="fa-solid fa-link"></i> Meet:</dt>
+  <dd class="col-sm-7"><a href="{{ site.course.meet }}" target="_meet" rel="noopener">Unirse a la videollamada <i class="fa-solid fa-arrow-up-right-from-square"></i></a></dd>
+
+  <dt class="col-sm-5"><i class="fa-brands fa-youtube"></i> Grabaciones:</dt>
+  <dd class="col-sm-7"><a href="{{ site.course.youtube }}" target="_yt" rel="noopener">Canal de YouTube <i class="fa-solid fa-arrow-up-right-from-square"></i></a></dd>
+</dl>
+
+<h3><i class="fa-regular fa-calendar-plus"></i> Calendario de Google</h3>
 
 Podés [agregar el calendario de la materia a tu Google Calendar](https://calendar.google.com/calendar/u/0?cid=Y18xZTVkMDU2NmVlMTdkNGEyZDg2YWY3N2UwOThlMTIzNzc1MTUyZjY2NDNhODZmOTI4YzNiZjJlZTMxMTY0Y2I3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20) para ver las clases y recordatorios en tu propia agenda. **El calendario está disponible cuando iniciás sesión con la cuenta de Google de la facultad**.
 
-# Docentes
+</div>
 
-{% assign docentes = site.data.docentes %}
+</div>
 
-<div class="docentes-list">
-  <div class="docentes-section">
-    <h3 class="docentes-section-title"><i class="fa fa-graduation-cap fa-lg"></i>Profesor</h3>
-    {% for person in docentes.instructor %}
-    <div class="docentes-person">
-      <img class="docentes-person-img" src="{{ person.image | relative_url }}" alt="{{ person.name }}" />
-      <div class="docentes-person-name">
-        {% if person.url and person.url != "" %}
-        <a href="{{ person.url }}">{{ person.name }}</a>
-        {% else %}
-        <span>{{ person.name }}</span>
-        {% endif %}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
+<h2><i class="fa-solid fa-chalkboard-user"></i> Docentes</h2>
 
-  <div class="docentes-section">
-    <h3 class="docentes-section-title"><i class="fa fa-users fa-lg"></i>Ayudantes</h3>
-    {% for person in docentes.ayudantes %}
-    <div class="docentes-person">
-      <img class="docentes-person-img" src="{{ person.image | relative_url }}" alt="{{ person.name }}" />
-      <div class="docentes-person-name">
-        {% if person.url and person.url != "" %}
-        <a href="{{ person.url }}">{{ person.name }}</a>
-        {% else %}
-        <span>{{ person.name }}</span>
-        {% endif %}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-
-  <div class="docentes-section">
-    <h3 class="docentes-section-title"><i class="fa fa-handshake fa-lg"></i>Colaboradores invitados</h3>
-    {% for person in docentes.colaboradores_invitados %}
-    <div class="docentes-person">
-      <img class="docentes-person-img" src="{{ person.image | relative_url }}" alt="{{ person.name }}" />
-      <div class="docentes-person-name">
-        {% if person.url and person.url != "" %}
-        <a href="{{ person.url }}">{{ person.name }}</a>
-        {% else %}
-        <span>{{ person.name }}</span>
-        {% endif %}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
+<div class="course-personnel">
+  {% include docentes-section.html title="Profesor" icon="fa-solid fa-graduation-cap" people=site.data.docentes.instructor %}
+  {% include docentes-section.html title="Ayudantes" icon="fa-solid fa-users" people=site.data.docentes.ayudantes %}
+  {% include docentes-section.html title="Colaboradores invitados" icon="fa-solid fa-handshake" people=site.data.docentes.colaboradores_invitados %}
 </div>

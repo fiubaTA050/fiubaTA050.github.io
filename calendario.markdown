@@ -4,7 +4,7 @@ title: Calendario
 permalink: /calendario/
 ---
 
-<table class="calendario">
+<table class="table calendario">
   <thead>
     <tr>
       <th>Fecha</th>
@@ -108,7 +108,7 @@ permalink: /calendario/
       <td class="calendar-activity">
         <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — <span style="color: #c00;">entrega y presentación</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — <span class="cal-entrega">entrega y presentación</span></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
@@ -154,7 +154,7 @@ permalink: /calendario/
       <td class="calendar-activity">
         <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2A</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2A</span></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
@@ -188,7 +188,7 @@ permalink: /calendario/
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/memcache-fb.pdf">Memcache - Nishtala</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2B</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2B</span></dd>
         </dl></td>
       <td><a href="https://drive.google.com/file/d/1TofDiVxODoqtW5dvQ01H_LoE2hddhfj3/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
       <td><a href="https://youtu.be/J35V1Sqf2tY"><i class="fas fa-file-video fa-lg"></i></a></td>
@@ -198,7 +198,7 @@ permalink: /calendario/
       <td class="calendar-activity">
         <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2C</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2C</span></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
@@ -227,7 +227,7 @@ permalink: /calendario/
             </ul>
           </dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span style="color: #c00;">entrega 2D</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2D</span></dd>
         </dl></td>
       <td><a href="https://drive.google.com/file/d/1RCF1AN8yZkZp08Fi8F1DB2khwP3Gpir-/view?usp=drive_link"><i class="fas fa-file-pdf fa-lg"></i></a></td>
       <td><a href="https://youtu.be/pyxXqi3wC7s"><i class="fas fa-file-video fa-lg"></i></a></td>
@@ -351,7 +351,7 @@ permalink: /calendario/
       <td class="calendar-activity">
         <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — <span style="color: #c00;">entrega y presentación</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — <span class="cal-entrega">entrega y presentación</span></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>

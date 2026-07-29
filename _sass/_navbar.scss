@@ -1,0 +1,28 @@
+.navbar-brand {
+  font-family: var(--header-font), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: inherit !important;
+  }
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  white-space: nowrap;
+
+  &.active {
+    font-weight: 700;
+    color: #fff;
+  }
+
+  // Sobre negro el hover-invertido del acento queda sucio; usamos el cyan.
+  &:hover {
+    background-color: inherit !important;
+    color: var(--glow-color);
+    text-decoration: none;
+  }
+}

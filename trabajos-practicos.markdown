@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Trabajos Prácticos
+nav_title: TPs
 permalink: /trabajos-practicos/
 ---
 
