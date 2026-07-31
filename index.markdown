@@ -14,7 +14,8 @@ title: Bienvenidos a Sistemas Distribuidos I
     <li class="anuncios-tachada"><span class="anuncios-fecha">15 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 418</span> <span class="anuncios-reprogramada">Reprogramada al viernes 17</span></li>
     <li><span class="anuncios-fecha">17 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 313</span></li>
     <li><span class="anuncios-fecha">22 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 414</span></li>
-    <li><span class="anuncios-fecha">31 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 414</span></li>
+    <li class="anuncios-tachada"><span class="anuncios-fecha">31 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 414</span> <span class="anuncios-reprogramada">Reprogramada al miércoles 5 de agosto</span></li>
+    <li><span class="anuncios-fecha">5 de agosto</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 403</span></li>
     <li><span class="anuncios-fecha">12 de agosto</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 414</span></li>
   </ul>
 </section>
