@@ -34,7 +34,7 @@ La cursada combina teoría y práctica: los trabajos prácticos reproducen técn
 
 <div class="col-lg-5" markdown="1">
 
-<h2><i class="fa-solid fa-video"></i> Clases virtuales</h2>
+<h2><i class="fa-solid fa-chalkboard"></i> Cursada</h2>
 
 <dl class="row course-info">
   <dt class="col-sm-5"><i class="fa-solid fa-calendar-days"></i> Días:</dt>
@@ -45,6 +45,9 @@ La cursada combina teoría y práctica: los trabajos prácticos reproducen técn
 
   <dt class="col-sm-5"><i class="fa-solid fa-earth-americas"></i> Zona horaria:</dt>
   <dd class="col-sm-7">America/Argentina/Buenos_Aires</dd>
+
+  <dt class="col-sm-5"><i class="fa-solid fa-location-dot"></i> Modalidad:</dt>
+  <dd class="col-sm-7">Miércoles presencial, viernes virtual. El aula y las excepciones se avisan por Discord.</dd>
 
   <dt class="col-sm-5"><i class="fa-solid fa-link"></i> Meet:</dt>
   <dd class="col-sm-7"><a href="{{ site.course.meet }}" target="_meet" rel="noopener">Unirse a la videollamada <i class="fa-solid fa-arrow-up-right-from-square"></i></a></dd>

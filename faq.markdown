@@ -14,13 +14,13 @@ La materia se aprueba mediante trabajos prácticos y un coloquio final. No hay e
 
 No se toma asistencia obligatoria. Sin embargo, se recomienda fuertemente asistir a las clases, ya que en ellas se desarrollan los conceptos teóricos y se discuten aspectos prácticos relevantes para los trabajos prácticos y el coloquio.
 
-### ¿Las clases son virtuales?
+### ¿Las clases son presenciales o virtuales?
 
-Sí. Las clases serán principalmente virtuales.
+Hay de las dos. En general los miércoles son presenciales en la facultad y los viernes, virtuales por Meet.
 
-Algunas clases podrán realizarse de manera presencial en la facultad. En esos casos, intentaremos grabar las clases y, de ser posible, transmitirlas en vivo (streaming). Todas las clases se disponibilizarán posteriormente en la página de la materia.
+Las clases presenciales se graban y se publican después en el canal de YouTube, pero no se transmiten en vivo. Las virtuales se dan por Meet y también quedan grabadas. En ambos casos, todas las clases se disponibilizan posteriormente en la página de la materia.
 
-Cuando una clase sea presencial, se avisará con suficiente anticipación en el Discord de la materia.
+El aula de las clases presenciales, y cualquier excepción a la modalidad habitual, se avisan con anticipación en el Discord de la materia.
 
 En cualquier caso, la asistencia no es obligatoria y no se tomará asistencia.
 
