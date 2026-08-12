@@ -14,11 +14,11 @@ permalink: /programa/
 - Semánticas de entrega
 - Causalidad y tiempo
 - Relojes lógicos y vectoriales
-- Estado global y cortes del sistema
 - Modelos de consistencia
 - Modelos de falla
 - Tolerancia a fallos
 - Coordinación y consenso
+- Load balancing y routing
 
 ## Áreas de aplicación
 
@@ -26,7 +26,7 @@ permalink: /programa/
 
 ## Área 1 — Compute
 
-*Cómo coordinar múltiples nodos para ejecutar trabajo de forma correcta, eficiente y tolerante a fallos, desde paradigmas clásicos hasta las demandas modernas del machine learning a escala.*
+*Cómo coordinar múltiples nodos para ejecutar trabajo de forma correcta, eficiente y tolerante a fallos, desde los paradigmas clásicos de cómputo batch hasta los límites que los vuelven insuficientes.*
 
 - Paradigmas de cómputo distribuido
 - Distribución y coordinación de tareas
@@ -35,15 +35,18 @@ permalink: /programa/
 
 ## Área 2 — Storage
 
-*Persistir datos en múltiples nodos implica navegar trade-offs fundamentales entre consistencia, disponibilidad y performance. Esta área estudia cómo los sistemas reales resuelven esos trade-offs, desde filesystems hasta bases de datos globalmente distribuidas.*
+*Persistir datos en múltiples nodos implica navegar trade-offs fundamentales entre consistencia, disponibilidad y performance. Esta área estudia cómo los sistemas reales resuelven esos trade-offs, desde filesystems hasta bases de datos globalmente distribuidas, y qué implica ofrecerlos como servicio gestionado.*
 
 - Filesystems distribuidos
 - Replicación y sharding
 - Replicación por máquina de estados distribuida
 - Transacciones distribuidas
+- Control de concurrencia multiversión y tiempo distribuido
 - Consistencia en caches
 - Replicación y anti-entropía
 - Trade-offs entre consistencia y disponibilidad
+- Elasticidad y modelo de servicio cloud
+- Serverless, SLA y operabilidad de servicios a escala
 
 ## Área 3 — Stream Processing
 
@@ -54,15 +57,15 @@ permalink: /programa/
 - Modelos de comunicación: request-reply, publisher-subscriber
 - Procesamiento de streams: tiempo de evento vs tiempo de procesamiento, watermarks, ventanas
 - Modelo unificado batch y streaming
+- Semántica exactly-once
 - Pipelines secuenciales y paralelos
 
-## Área 4 — Cloud Computing
+## Área 4 — Consenso descentralizado
 
-*El entorno donde todo lo anterior opera en producción. Esta área estudia cómo gestionar infraestructura a escala, obtener visibilidad sobre sistemas complejos y sostener confiabilidad cuando el hardware falla constantemente.*
+*Todo lo anterior asume nodos que cooperan y una autoridad que decide quién manda. Esta área estudia qué queda del problema cuando se retiran ambos supuestos: cómo un sistema abierto, entre participantes que no confían entre sí, llega igual a un acuerdo sobre un único orden de eventos.*
 
-- Infraestructura a escala: scheduling y orquestación de recursos
-- Load balancing y routing
-- Sistemas elásticos y escalado automático
-- Cómputo efímero y serverless
-- Observabilidad: métricas, logs y trazas distribuidas
-- Principios de diseño y operabilidad de servicios a escala
+- Sistemas sin autoridad central
+- Proof of work y dificultad
+- Forks, longest chain y finalidad probabilística
+- Modelo UTXO frente al estado global
+- Máquinas virtuales distribuidas y smart contracts
