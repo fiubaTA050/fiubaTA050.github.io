@@ -37,11 +37,8 @@ La cursada combina teoría y práctica: los trabajos prácticos reproducen técn
 <h2><i class="fa-solid fa-chalkboard"></i> Cursada</h2>
 
 <dl class="row course-info">
-  <dt class="col-sm-5"><i class="fa-solid fa-calendar-days"></i> Días:</dt>
-  <dd class="col-sm-7">Miércoles y Viernes</dd>
-
   <dt class="col-sm-5"><i class="fa-solid fa-clock"></i> Horario:</dt>
-  <dd class="col-sm-7">6:00 – 9:00pm</dd>
+  <dd class="col-sm-7">Miércoles 19 a 22 h · Viernes 18 a 21 h</dd>
 
   <dt class="col-sm-5"><i class="fa-solid fa-earth-americas"></i> Zona horaria:</dt>
   <dd class="col-sm-7">America/Argentina/Buenos_Aires</dd>
