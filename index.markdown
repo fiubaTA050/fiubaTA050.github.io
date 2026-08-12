@@ -24,11 +24,11 @@ title: Bienvenidos a Sistemas Distribuidos I
 
 <h2><i class="fa-solid fa-circle-info"></i> Sistemas Distribuidos I</h2>
 
-Este es el curso de FIUBA sobre el diseño e implementación de sistemas distribuidos modernos. Estudiamos cómo múltiples procesos cooperan para ofrecer servicios coherentes, escalables y tolerantes a fallos.
+Este es el curso de FIUBA sobre el diseño e implementación de sistemas distribuidos modernos: cómo múltiples procesos cooperan para ofrecer servicios coherentes, escalables y tolerantes a fallos.
 
-El curso se organiza en cuatro áreas de aplicación. En **Compute** estudiamos cómo distribuir y paralelizar trabajo entre múltiples nodos, con MapReduce como paradigma de cómputo batch, y los mecanismos que hacen posible que ese cómputo sea correcto y resiliente. En **Storage** exploramos filesystems distribuidos, replicación por consenso, linealizabilidad, consistencia en caches, transacciones distribuidas y bases de datos a escala global como DynamoDB y Spanner. En **Stream Processing** abordamos mensajería distribuida, el log como estructura unificadora, y el procesamiento de flujos de datos en tiempo real con garantías semánticas precisas. En **Consenso descentralizado** estudiamos cómo un sistema abierto, sin autoridad central y entre participantes que no confían entre sí, llega igual a un acuerdo, con Bitcoin como caso de estudio.
+Se organiza en cuatro áreas. En **Compute**, cómo distribuir y paralelizar trabajo entre nodos, con MapReduce como paradigma batch. En **Storage**, filesystems distribuidos, replicación por consenso, linealizabilidad, consistencia en caches, transacciones y bases de datos globales como DynamoDB y Spanner. En **Stream Processing**, mensajería, el log como estructura unificadora y el procesamiento de flujos en tiempo real. En **Consenso descentralizado**, cómo un sistema sin autoridad central llega igual a un acuerdo, con Bitcoin como caso de estudio.
 
-La cursada combina teoría y práctica intensiva: los trabajos prácticos reproducen técnicas reales para formar ingenieros capaces de construir y operar sistemas distribuidos robustos a gran escala.
+La cursada combina teoría y práctica: los trabajos prácticos reproducen técnicas reales para formar ingenieros capaces de construir y operar sistemas distribuidos a gran escala.
 
 </div>
 
