@@ -9,8 +9,8 @@ permalink: /programa/
 *Marco teórico común a todas las áreas del curso. Establece los modelos y abstracciones necesarias para razonar sobre sistemas donde las fallas parciales, la ausencia de relojes globales y la concurrencia son la norma.*
 
 - Modelos arquitectónicos: cliente-servidor y peer-to-peer
+- Modularidad y los límites de la transparencia
 - Remote Procedure Call
-- Modelos sincrónicos y asincrónicos
 - Semánticas de entrega
 - Causalidad y tiempo
 - Relojes lógicos y vectoriales
@@ -18,6 +18,8 @@ permalink: /programa/
 - Modelos de falla
 - Tolerancia a fallos
 - Coordinación y consenso
+- Servicios de coordinación: watches, locks distribuidos y leases
+- Modelos de rendimiento: cuellos de botella y ley de Little
 - Load balancing y routing
 
 ## Áreas de aplicación
@@ -40,10 +42,13 @@ permalink: /programa/
 - Filesystems distribuidos
 - Replicación y sharding
 - Replicación por máquina de estados distribuida
+- Chain replication
+- Replicación sin líder: quórums parciales y hinted handoff
+- Replicación y anti-entropía
 - Transacciones distribuidas
+- Serializabilidad y control de concurrencia por locks
 - Control de concurrencia multiversión y tiempo distribuido
 - Consistencia en caches
-- Replicación y anti-entropía
 - Trade-offs entre consistencia y disponibilidad
 - Elasticidad y modelo de servicio cloud
 - Serverless, SLA y operabilidad de servicios a escala
@@ -55,6 +60,9 @@ permalink: /programa/
 - Mensajería distribuida y el log como estructura unificadora
 - Message Oriented Middleware
 - Modelos de comunicación: request-reply, publisher-subscriber
+- Colas de trabajo: entrega, reintentos y visibility timeout
+- Diseño interno de un broker: persistencia, sharding y replicación
+- Event streaming: log particionado y consumer groups
 - Procesamiento de streams: tiempo de evento vs tiempo de procesamiento, watermarks, ventanas
 - Modelo unificado batch y streaming
 - Semántica exactly-once
