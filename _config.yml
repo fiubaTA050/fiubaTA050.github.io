@@ -28,7 +28,11 @@ url: "https://fiubata050.github.io" # the base hostname & protocol for your site
 #github_username:  jekyll
 
 # Build settings
-# Sin `theme:` — el tema es local: _layouts/, _includes/, _sass/ y assets/css/main.scss.
+# El tema es local: _layouts/, _includes/, _sass/ y assets/css/main.scss.
+# `theme: null` es obligatorio, no decorativo: omitir la clave no alcanza,
+# porque el gem `github-pages` mete `jekyll-theme-primer` como default y su
+# _sass/ y _includes/ quedan en el path de resolución, pisando al tema local.
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-sitemap
