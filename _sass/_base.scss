@@ -59,10 +59,14 @@ a {
   }
 }
 
-// Resaltado del ancla al navegar con #fragmento (útil en el calendario).
-tr:target,
-div:target {
+// Resaltado del ancla al navegar con #fragmento: las citas del calendario
+// enlazan a la bibliografía del pie con href="#ref-…", y esos destinos son
+// los <li> de la lista. El scroll-margin despeja el navbar `fixed-top`, que
+// si no tapa el ítem cuando el destino no está al final del documento.
+li:target {
   background-color: #ffffcc;
   border: 3px solid var(--main-color);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   scroll-margin-top: 5rem;
 }
