@@ -2,20 +2,36 @@ instructor:
   - name: Emmanuel Espina
     image: "/assets/images/eespina.jpeg"
 
+# Ordenados alfabéticamente por nombre. Quien no tiene foto todavía usa
+# placeholder.png.
 ayudantes:
   - name: Alen Davies
     image: "/assets/images/adavies.jpeg"
   - name: Bautista Silvano Lima
     image: "/assets/images/bsilvano.jpeg"
+  - name: Brayan Ricaldi
+    image: "/assets/images/placeholder.png"
+  - name: Fran Orquera
+    image: "/assets/images/placeholder.png"
+  - name: Gonzalo Crudo
+    image: "/assets/images/gcrudo.jpeg"
   - name: Ignacio Viau
     image: "/assets/images/placeholder.png"
+  - name: JuanMa Pascual
+    image: "/assets/images/jpascual.jpeg"
   - name: Leticia Isabel Aab
     image: "/assets/images/laab.jpeg"
   - name: Luca Lazcano
     image: "/assets/images/llazcano.jpeg"
+  - name: Lucas Torres
+    image: "/assets/images/ltorres.jpeg"
+  - name: Matias Besmedrisnik
+    image: "/assets/images/mbesmedrisnik.jpeg"
+  - name: Nicolas Chaia
+    image: "/assets/images/placeholder.png"
+  - name: Ruben Bohorquez
+    image: "/assets/images/rbohorquez.jpeg"
 
 colaboradores_invitados:
   - name: Ing. Tomás Arjovsky
     image: "/assets/images/tarjovsky.jpeg"
-  - name: Ing. Ruben Bohorquez
-    image: "/assets/images/rbohorquez.jpeg"
