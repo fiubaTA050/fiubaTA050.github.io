@@ -27,7 +27,15 @@
         <label for="cuatrimestres-select">Cuatrimestres Anteriores</label>
         <select id="cuatrimestres-select" onchange="if(this.value) window.location.href=this.value">
           <option value="">— Elegir —</option>
-          <option value="{{ '/archive/2025b' | relative_url }}">2025b</option>
+          {%- comment -%}
+            Rutas absolutas a propósito, SIN `relative_url`: los archivos se
+            construyen con `--baseurl /archive/<cuatri>`, y ahí `relative_url`
+            generaría `/archive/2026a/archive/2025b`. Los archivos viven siempre
+            en la raíz del sitio, así que la ruta absoluta es correcta en ambos
+            casos (el sitio vivo tiene `baseurl: ""`).
+          {%- endcomment -%}
+          <option value="/archive/2026a">2026a</option>
+          <option value="/archive/2025b">2025b</option>
         </select>
       </div>
     </div>

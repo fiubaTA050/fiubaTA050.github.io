@@ -26,6 +26,7 @@ Serves at `http://localhost:4000`.
 
 1. **Update the calendar** (most frequent) — add notes/video links per class, shift dates, add readings/papers. A dedicated skill exists for this.
 2. **Update TP statements** — edit `tp*.markdown`.
+3. **Archive a finished semester** — freeze the site as a static snapshot under `/archive/<cuatri>/`. A dedicated skill exists for this; the procedure has several non-obvious pitfalls, so follow it rather than improvising.
 
 ## Conventions
 
