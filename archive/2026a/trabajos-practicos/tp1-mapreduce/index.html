@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(){
+      var t;
+      try { t = localStorage.getItem("ta050.theme"); } catch(e) {}
+      if (!t) t = "light";
+      document.documentElement.dataset.theme = t;
+      document.documentElement.style.colorScheme = t;
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="/archive/2026a/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/archive/2026a/assets/favicon.png"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TP1 - MapReduce | TA050 Sistemas Distribuidos I</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="TP1 - MapReduce" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Curso de FIUBA sobre sistemas distribuidos modernos." />
+<meta property="og:description" content="Curso de FIUBA sobre sistemas distribuidos modernos." />
+<link rel="canonical" href="https://fiubata050.github.io/archive/2026a/trabajos-practicos/tp1-mapreduce/" />
+<meta property="og:url" content="https://fiubata050.github.io/archive/2026a/trabajos-practicos/tp1-mapreduce/" />
+<meta property="og:site_name" content="TA050 Sistemas Distribuidos I" />
+<meta property="og:image" content="https://fiubata050.github.io/archive/2026a/assets/og-image.png" />
+<meta property="og:image:height" content="675" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:alt" content="TA050 — Sistemas Distribuidos I (FIUBA)" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://fiubata050.github.io/archive/2026a/assets/og-image.png" />
+<meta name="twitter:image:alt" content="TA050 — Sistemas Distribuidos I (FIUBA)" />
+<meta property="twitter:title" content="TP1 - MapReduce" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Curso de FIUBA sobre sistemas distribuidos modernos.","headline":"TP1 - MapReduce","image":{"alt":"TA050 — Sistemas Distribuidos I (FIUBA)","width":1200,"height":675,"url":"https://fiubata050.github.io/archive/2026a/assets/og-image.png","@type":"imageObject"},"url":"https://fiubata050.github.io/archive/2026a/trabajos-practicos/tp1-mapreduce/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/archive/2026a/assets/main.css">
+  <link rel="stylesheet" href="/archive/2026a/assets/styles.css">
+  <script src="/archive/2026a/assets/theme.js" defer></script>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="https://fiubata050.github.io/archive/2026a/feed.xml" title="TA050 Sistemas Distribuidos I" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/archive/2026a/">TA050 Sistemas Distribuidos I</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/archive/2026a/trabajos-practicos/">Trabajos Prácticos</a><a class="page-link" href="/archive/2026a/faq/">FAQ</a><a class="page-link" href="/archive/2026a/calendario/">Calendario</a><a class="page-link" href="/archive/2026a/programa/">Programa</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">TP1 - MapReduce</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="introducción">Introducción</h1>
+
+<p>En este trabajo práctico deberán construir un sistema <strong>MapReduce distribuido</strong> desde cero, escrito en <strong>Go</strong>. Implementarán un proceso <strong>coordinador</strong>, encargado de repartir tareas de <em>Map</em> y <em>Reduce</em> y de manejar la detección de fallos, y múltiples procesos <strong>worker</strong>, que ejecutarán las funciones de aplicación y se comunicarán con el coordinador.</p>
+
+<p>El sistema usará <a href="https://grpc.io/"><strong>gRPC</strong></a> <strong>sobre Unix Domain Sockets</strong> para la comunicación entre procesos, y las funciones de <em>Map</em> y <em>Reduce</em> se cargarán dinámicamente mediante <a href="https://pkg.go.dev/plugin"><strong>plugins de Go</strong></a>.</p>
+
+<p>Su implementación deberá ser capaz de ejecutar las siguientes aplicaciones MapReduce:</p>
+
+<ul>
+  <li>
+    <p><strong>Word count</strong> sobre archivos de texto de Project Gutenberg (<code class="language-plaintext highlighter-rouge">pg-*.txt</code>).</p>
+  </li>
+  <li>
+    <p>Otra aplicación a elección, preferentemente alguna citada en el paper de MapReduce (por ejemplo, un índice invertido de palabras).</p>
+  </li>
+  <li>
+    <p>Una variante de <strong>word count con fallos simulados</strong>, donde los workers fallen aleatoriamente durante la ejecución y el coordinador reasigne las tareas.</p>
+  </li>
+</ul>
+
+<p>El sistema tendrá dos modos de ejecución:</p>
+
+<ol>
+  <li>
+    <p><strong>Secuencial</strong>, con un único proceso que ejecute todo el trabajo de manera ordenada.</p>
+  </li>
+  <li>
+    <p><strong>Distribuido</strong>, con un coordinador y múltiples workers en paralelo, incluyendo tolerancia a fallos de workers.</p>
+  </li>
+</ol>
+
+<p>Al finalizar, contarán con un sistema inspirado en el diseño original de MapReduce que les permitirá comprender en profundidad cómo funciona este modelo de programación en un entorno distribuido.</p>
+
+<h1 id="desarrollo">Desarrollo</h1>
+
+<p>Los datos de entrada serán archivos de texto de <a href="https://www.gutenberg.org/"><strong>Project Gutenberg</strong></a> (<code class="language-plaintext highlighter-rouge">pg-*.txt</code>). Cada archivo corresponderá a un <em>split</em> y será procesado por una tarea <em>Map</em>.</p>
+
+<p>Su primera tarea será implementar la versión <strong>secuencial</strong> de MapReduce. Esta versión ejecutará las funciones de <em>Map</em> y <em>Reduce</em> en un solo proceso, sin concurrencia, y servirá como referencia para validar el sistema distribuido.</p>
+
+<p>Luego, deberán implementar la versión <strong>distribuida</strong>, que consistirá en:</p>
+
+<ul>
+  <li>
+    <p>Un proceso <strong>coordinador</strong>, encargado de asignar tareas y controlar el progreso del job.</p>
+  </li>
+  <li>
+    <p>Uno o más procesos <strong>worker</strong>, que solicitarán trabajo al coordinador, ejecutarán la función indicada y devolverán los resultados.</p>
+  </li>
+</ul>
+
+<p>Las funciones de <em>Map</em> y <em>Reduce</em> se implementarán en archivos independientes y deberán compilarse como <strong>plugins de Go</strong>. Por ejemplo, para compilar la aplicación de <em>word count</em>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">go build -buildmode=plugin wc.go</code></p>
+
+<p>Esto generará un archivo <code class="language-plaintext highlighter-rouge">wc.so</code> que podrá ser cargado dinámicamente por los workers.</p>
+
+<p>Cada worker deberá, en un ciclo: pedir una tarea al coordinador, leer los archivos de entrada correspondientes, ejecutar la función de <em>Map</em> o <em>Reduce</em> (cargada desde un <strong>plugin de Go)</strong>, escribir la salida en uno o más archivos, y volver a solicitar una nueva tarea.</p>
+
+<p>El coordinador debe detectar si un worker no completa su tarea en un tiempo razonable (para este TP, <strong>10 segundos</strong>) y asignar esa misma tarea a otro worker. Además, debe finalizar únicamente cuando todas las tareas de <em>Map</em> y <em>Reduce</em> estén completas.</p>
+
+<p>Este trabajo práctico asume que <strong>todos los procesos comparten el mismo filesystem</strong>. Eso resulta sencillo cuando coordinador y workers corren en la misma máquina, ya que los archivos de entrada, intermedios y de salida están disponibles para todos. Sin embargo, si los procesos se ejecutaran en distintas máquinas, sería necesario contar con un <strong>filesystem global</strong> (como GFS, HDFS u otro equivalente distribuido) para permitir que los workers accedan a los mismos datos.</p>
+
+<p>Por esta misma razón, <strong>no es necesario implementar ningún mecanismo para transferir archivos</strong> entre coordinador y workers mediante gRPC u otros métodos. El coordinador puede simplemente enviar el <strong>path del archivo</strong> en su respuesta, y el worker se encargará de leer directamente el archivo de entrada o intermedio desde el filesystem compartido.</p>
+
+<h2 id="ejecución">Ejecución</h2>
+
+<p>Para ejecutar el código sobre la aplicación de <em>word count</em>, primero deberán correr el coordinador con los archivos de entrada:</p>
+
+<p><code class="language-plaintext highlighter-rouge">go run coordinator.go pg-*.txt</code></p>
+
+<p>En una o más terminales adicionales, podrán lanzar los workers indicando qué plugin usar:</p>
+
+<p><code class="language-plaintext highlighter-rouge">go run worker.go wc.so</code></p>
+
+<p>Cuando el coordinador y los workers terminen, los resultados estarán en archivos <code class="language-plaintext highlighter-rouge">mr-out-*</code>. La unión de todos esos archivos (ordenados) debe coincidir exactamente con el output de la versión secuencial:</p>
+
+<p><code class="language-plaintext highlighter-rouge">cat mr-out-* | sort | more</code><br />
+ <code class="language-plaintext highlighter-rouge">A 509</code><br />
+ <code class="language-plaintext highlighter-rouge">ABOUT 2</code><br />
+ <code class="language-plaintext highlighter-rouge">ACT 8</code><br />
+ <code class="language-plaintext highlighter-rouge">...</code></p>
+
+<h2 id="tests">Tests</h2>
+
+<p>Deberán desarrollar <strong>tests automáticos</strong> que validen el funcionamiento del sistema en sus dos modos (secuencial y distribuido).</p>
+
+<h2 id="requisitos-de-los-tests">Requisitos de los tests</h2>
+
+<ul>
+  <li>
+    <p>Los tests deben ejecutar la versión secuencial, guardar su salida como referencia, luego ejecutar la versión distribuida con la misma entrada y finalmente comparar los resultados.</p>
+  </li>
+  <li>
+    <p>Deben confirmar que las salidas coincidan exactamente (ordenadas cuando corresponda) y reportar éxito o fracaso de manera automática.</p>
+  </li>
+  <li>
+    <p>El caso de <em>word count con fallos</em> debe demostrar que efectivamente se produjo al menos un fallo de worker durante la ejecución, y que el sistema logró recuperar las tareas para producir un resultado correcto. Usar el output del word count sin fallos secuencial como resultado de referencia.</p>
+  </li>
+  <li>
+    <p>Los tests pueden implementarse en bash, Go u otro lenguaje que prefieran, siempre que el proceso esté completamente automatizado.</p>
+  </li>
+</ul>
+
+<h1 id="reglas">Reglas</h1>
+
+<ul>
+  <li>
+    <p>La comunicación entre coordinador y workers debe hacerse mediante <strong>gRPC sobre Unix Domain Sockets</strong>.</p>
+  </li>
+  <li>
+    <p>Los workers deben cargar dinámicamente las funciones <em>Map</em> y <em>Reduce</em> desde un <strong>plugin de Go</strong> (<code class="language-plaintext highlighter-rouge">.so</code>).</p>
+  </li>
+  <li>
+    <p>El coordinador debe asignar tareas de <em>Map</em> y <em>Reduce</em> a los workers, supervisarlas y reasignarlas en caso de fallo.</p>
+  </li>
+  <li>
+    <p>Los archivos intermedios producidos por las tareas <em>Map</em> deben nombrarse <code class="language-plaintext highlighter-rouge">mr-X-Y</code> donde <code class="language-plaintext highlighter-rouge">X</code> es el número de tarea <em>Map</em> y <code class="language-plaintext highlighter-rouge">Y</code> el número de tarea <em>Reduce</em>.</p>
+  </li>
+  <li>
+    <p>Cada tarea <em>Reduce</em> debe generar un archivo de salida llamado <code class="language-plaintext highlighter-rouge">mr-out-N</code>.</p>
+  </li>
+  <li>
+    <p>Cada línea de un archivo <code class="language-plaintext highlighter-rouge">mr-out-N</code> debe tener exactamente el formato <code class="language-plaintext highlighter-rouge">clave valor</code>, usando <code class="language-plaintext highlighter-rouge">fmt.Printf("%v %v\n", key, value)</code> en Go.</p>
+  </li>
+  <li>
+    <p>Los workers deben terminar cuando el coordinador finaliza su ejecución. Una estrategia posible es que el worker termine al obtener un error de comunicación con el coordinador al haber eliminado el socket.</p>
+  </li>
+</ul>
+
+<h3 id="referencias"><strong>Referencias</strong></h3>
+
+<ul>
+  <li>
+    <p>Go Programming Language: <a href="https://go.dev/">https://go.dev/</a></p>
+  </li>
+  <li>
+    <p>gRPC en Go: <a href="https://grpc.io/docs/languages/go/">https://grpc.io/docs/languages/go/</a></p>
+  </li>
+  <li>
+    <p>MapReduce: Dean, J. &amp; Ghemawat, S. (2004). <em>MapReduce: Simplified Data Processing on Large Clusters</em>. <a href="https://research.google.com/archive/mapreduce.html">https://research.google.com/archive/mapreduce.html</a></p>
+  </li>
+</ul>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/archive/2026a/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">TA050 Sistemas Distribuidos I</li><li><a class="u-email" href="mailto:eespina@fi.uba.ar">eespina@fi.uba.ar</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <label for="cuatrimestres-select">Cuatrimestres Anteriores</label>
+        <select id="cuatrimestres-select" onchange="if(this.value) window.location.href=this.value">
+          <option value="">— Elegir —</option><option value="/archive/2025b">2025b</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

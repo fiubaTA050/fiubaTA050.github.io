@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(){
+      var t;
+      try { t = localStorage.getItem("ta050.theme"); } catch(e) {}
+      if (!t) t = "light";
+      document.documentElement.dataset.theme = t;
+      document.documentElement.style.colorScheme = t;
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="/archive/2026a/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/archive/2026a/assets/favicon.png"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TP2 - Raft | TA050 Sistemas Distribuidos I</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="TP2 - Raft" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Curso de FIUBA sobre sistemas distribuidos modernos." />
+<meta property="og:description" content="Curso de FIUBA sobre sistemas distribuidos modernos." />
+<link rel="canonical" href="https://fiubata050.github.io/archive/2026a/trabajos-practicos/tp2-raft/" />
+<meta property="og:url" content="https://fiubata050.github.io/archive/2026a/trabajos-practicos/tp2-raft/" />
+<meta property="og:site_name" content="TA050 Sistemas Distribuidos I" />
+<meta property="og:image" content="https://fiubata050.github.io/archive/2026a/assets/og-image.png" />
+<meta property="og:image:height" content="675" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:alt" content="TA050 — Sistemas Distribuidos I (FIUBA)" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://fiubata050.github.io/archive/2026a/assets/og-image.png" />
+<meta name="twitter:image:alt" content="TA050 — Sistemas Distribuidos I (FIUBA)" />
+<meta property="twitter:title" content="TP2 - Raft" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Curso de FIUBA sobre sistemas distribuidos modernos.","headline":"TP2 - Raft","image":{"alt":"TA050 — Sistemas Distribuidos I (FIUBA)","width":1200,"height":675,"url":"https://fiubata050.github.io/archive/2026a/assets/og-image.png","@type":"imageObject"},"url":"https://fiubata050.github.io/archive/2026a/trabajos-practicos/tp2-raft/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/archive/2026a/assets/main.css">
+  <link rel="stylesheet" href="/archive/2026a/assets/styles.css">
+  <script src="/archive/2026a/assets/theme.js" defer></script>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="https://fiubata050.github.io/archive/2026a/feed.xml" title="TA050 Sistemas Distribuidos I" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/archive/2026a/">TA050 Sistemas Distribuidos I</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/archive/2026a/trabajos-practicos/">Trabajos Prácticos</a><a class="page-link" href="/archive/2026a/faq/">FAQ</a><a class="page-link" href="/archive/2026a/calendario/">Calendario</a><a class="page-link" href="/archive/2026a/programa/">Programa</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">TP2 - Raft</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="introducción">Introducción</h1>
+
+<p>Este es el primero de una serie de trabajos prácticos en los que construirán un sistema de almacenamiento clave/valor tolerante a fallos. En este TP implementarán <strong>Raft</strong>, un protocolo de máquina de estados replicada. En el siguiente TP construirán un servicio clave/valor sobre Raft.</p>
+
+<p>Un servicio replicado logra tolerancia a fallos almacenando copias completas de su estado (es decir, sus datos) en múltiples servidores réplica. La replicación permite que el servicio siga operando incluso si algunos de sus servidores sufren fallas (caídas o problemas de red). El desafío es que las fallas pueden causar que las réplicas mantengan copias diferentes de los datos.</p>
+
+<p>Raft organiza las solicitudes de los clientes en una secuencia llamada <strong>log</strong>, y asegura que todos los servidores réplica vean el mismo log. Cada réplica ejecuta las solicitudes de los clientes en el orden del log, aplicándolas a su copia local del estado del servicio. Como todas las réplicas activas ven el mismo contenido del log, ejecutan las mismas solicitudes en el mismo orden y, por lo tanto, mantienen un estado de servicio idéntico. Si un servidor falla pero luego se recupera, Raft se encarga de actualizar su log. Raft continuará operando mientras al menos una <strong>mayoría</strong> de los servidores estén activos y puedan comunicarse entre sí. Si no existe tal mayoría, Raft no avanzará, pero retomará donde quedó en cuanto una mayoría pueda comunicarse nuevamente.</p>
+
+<p>En este TP implementarán Raft como un tipo de objeto en Go con sus métodos asociados, pensado para ser usado como módulo en un servicio más grande. Un conjunto de instancias de Raft se comunican entre sí mediante RPC para mantener logs replicados. La interfaz de Raft soportará una secuencia indefinida de comandos numerados, también llamados <strong>entradas de log</strong>. Las entradas están numeradas con <strong>índices</strong>. La entrada del log con un índice dado eventualmente será <em>committed</em>. En ese momento, la implementación de Raft debe enviar la entrada de log al servicio más grande para que la ejecute.</p>
+
+<p>Deben seguir el diseño del <a href="https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf">paper extendido de Raft</a>, con especial atención a la <strong>Figura 2</strong>. Implementarán la mayor parte de lo descrito en el paper, incluyendo guardar estado persistente y leerlo después de que un nodo falle y luego reinicie. <strong>No</strong> implementarán cambios de membresía del cluster (Sección 6).</p>
+
+<p>Pueden encontrar útiles esta <a href="https://thesquareplanet.com/blog/students-guide-to-raft/">guía para estudiantes de Raft</a>, estos consejos sobre <a href="https://pdos.csail.mit.edu/6.824/labs/raft-locking.txt">locking</a> y <a href="https://pdos.csail.mit.edu/6.824/labs/raft-structure.txt">estructura</a> para concurrencia, y este <a href="https://pdos.csail.mit.edu/6.824/notes/raft_diagram.pdf">diagrama de interacciones de Raft</a>.</p>
+
+<p>Tengan presente que la parte más desafiante de este TP puede no ser implementar la solución, sino debuggearla. Para ayudar con esto, dediquen tiempo a pensar cómo hacer que la implementación sea más fácil de depurar. Pueden consultar <a href="https://blog.josejg.com/debugging-pretty/">este blog post sobre print statements efectivos</a>.</p>
+
+<p>Este trabajo práctico se divide en <strong>cuatro partes</strong>: 2A, 2B, 2C y 2D.</p>
+
+<h1 id="el-código">El código</h1>
+
+<p>Implementarán Raft agregando código en <code class="language-plaintext highlighter-rouge">raft/raft.go</code>. Allí encontrarán código esqueleto, además de ejemplos de cómo enviar y recibir RPCs.</p>
+
+<p>La implementación debe soportar la siguiente interfaz, que los tests (y eventualmente el servidor clave/valor) usarán. Encontrarán más detalles en los comentarios de <code class="language-plaintext highlighter-rouge">raft.go</code>.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">// crear una nueva instancia del servidor Raft:</span>
+<span class="n">rf</span> <span class="o">:=</span> <span class="n">Make</span><span class="p">(</span><span class="n">peers</span><span class="p">,</span> <span class="n">me</span><span class="p">,</span> <span class="n">persister</span><span class="p">,</span> <span class="n">applyCh</span><span class="p">)</span>
+
+<span class="c">// iniciar el acuerdo sobre una nueva entrada de log:</span>
+<span class="n">rf</span><span class="o">.</span><span class="n">Start</span><span class="p">(</span><span class="n">command</span> <span class="k">interface</span><span class="p">{})</span> <span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">term</span><span class="p">,</span> <span class="n">isleader</span><span class="p">)</span>
+
+<span class="c">// consultar a un Raft por su term actual y si cree ser líder</span>
+<span class="n">rf</span><span class="o">.</span><span class="n">GetState</span><span class="p">()</span> <span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">isLeader</span><span class="p">)</span>
+
+<span class="c">// cada vez que una nueva entrada es committed en el log,</span>
+<span class="c">// cada peer Raft debe enviar un ApplyMsg al servicio (o al tester).</span>
+<span class="k">type</span> <span class="n">ApplyMsg</span>
+</code></pre></div></div>
+
+<p>Un servicio llama a <code class="language-plaintext highlighter-rouge">Make(peers, me, ...)</code> para crear un peer Raft. El argumento <code class="language-plaintext highlighter-rouge">peers</code> es un array de identificadores de red de los peers Raft (incluyendo el propio), para uso con RPC. El argumento <code class="language-plaintext highlighter-rouge">me</code> es el índice de este peer en el array. <code class="language-plaintext highlighter-rouge">Start(command)</code> le pide a Raft que inicie el procesamiento para agregar el comando al log replicado. <code class="language-plaintext highlighter-rouge">Start()</code> debe retornar inmediatamente, sin esperar a que las operaciones de append completen. El servicio espera que la implementación envíe un <code class="language-plaintext highlighter-rouge">ApplyMsg</code> por cada nueva entrada de log <em>committed</em> al canal <code class="language-plaintext highlighter-rouge">applyCh</code> pasado como argumento a <code class="language-plaintext highlighter-rouge">Make()</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">raft.go</code> contiene código de ejemplo que envía un RPC (<code class="language-plaintext highlighter-rouge">sendRequestVote()</code>) y que maneja un RPC entrante (<code class="language-plaintext highlighter-rouge">RequestVote()</code>). Los peers Raft deben intercambiar RPCs usando el paquete Go <code class="language-plaintext highlighter-rouge">labrpc</code> (código fuente en <code class="language-plaintext highlighter-rouge">src/labrpc</code>). Los tests pueden indicarle a <code class="language-plaintext highlighter-rouge">labrpc</code> que retrase RPCs, los reordene y los descarte para simular diversas fallas de red. Si bien pueden modificar <code class="language-plaintext highlighter-rouge">labrpc</code> temporalmente, asegúrense de que Raft funcione con el <code class="language-plaintext highlighter-rouge">labrpc</code> original, ya que es el que se usará para los tests. Las instancias de Raft deben interactuar <strong>únicamente</strong> a través de RPC; por ejemplo, no está permitido comunicarse usando variables compartidas de Go ni archivos.</p>
+
+<p>Los trabajos prácticos subsiguientes se construyen sobre éste, así que es importante darse tiempo suficiente para escribir código sólido.</p>
+
+<h1 id="parte-2a-elección-de-líder">Parte 2A: Elección de líder</h1>
+
+<p>Implementen la <strong>elección de líder</strong> y los <strong>heartbeats</strong> de Raft (RPCs <code class="language-plaintext highlighter-rouge">AppendEntries</code> sin entradas de log). El objetivo de la Parte 2A es que se elija un único líder, que el líder permanezca como tal si no hay fallas, y que un nuevo líder asuma si el antiguo falla o si los paquetes desde/hacia el antiguo líder se pierden.</p>
+
+<p>Para ejecutar los tests de la parte 2A:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd src/raft
+$ go test -run 2A
+</code></pre></div></div>
+
+<h2 id="consejos">Consejos</h2>
+
+<ul>
+  <li>
+    <p>Sigan la <strong>Figura 2</strong> del paper. En esta etapa deben enfocarse en enviar y recibir RPCs <code class="language-plaintext highlighter-rouge">RequestVote</code>, las Reglas para Servidores relacionadas con elecciones, y el Estado relacionado con la elección de líder.</p>
+  </li>
+  <li>
+    <p>Agreguen el estado de la Figura 2 para elección de líder al struct <code class="language-plaintext highlighter-rouge">Raft</code> en <code class="language-plaintext highlighter-rouge">raft.go</code>. También necesitarán definir un struct para contener la información de cada entrada de log.</p>
+  </li>
+  <li>
+    <p>Completen los structs <code class="language-plaintext highlighter-rouge">RequestVoteArgs</code> y <code class="language-plaintext highlighter-rouge">RequestVoteReply</code>. Modifiquen <code class="language-plaintext highlighter-rouge">Make()</code> para crear una goroutine en segundo plano que inicie una elección de líder periódicamente enviando RPCs <code class="language-plaintext highlighter-rouge">RequestVote</code> cuando no haya recibido comunicación de otro peer por un tiempo. De esta manera, un peer aprenderá quién es el líder si ya hay uno, o se convertirá en líder él mismo. Implementen el handler de RPC <code class="language-plaintext highlighter-rouge">RequestVote()</code> para que los servidores voten entre sí.</p>
+  </li>
+  <li>
+    <p>Para implementar heartbeats, definan un struct de RPC <code class="language-plaintext highlighter-rouge">AppendEntries</code> (aunque puede que no necesiten todos los argumentos aún), y hagan que el líder los envíe periódicamente. Escriban un método handler para el RPC <code class="language-plaintext highlighter-rouge">AppendEntries</code> que resetee el timeout de elección para que otros servidores no se postulen como líderes cuando ya hay uno elegido.</p>
+  </li>
+  <li>
+    <p>Asegúrense de que los timeouts de elección de los distintos peers no se disparen siempre al mismo tiempo, o todos los peers votarán solo por sí mismos y nadie se convertirá en líder.</p>
+  </li>
+  <li>
+    <p>Los tests requieren que el líder envíe RPCs de heartbeat <strong>no más de diez veces por segundo</strong>.</p>
+  </li>
+  <li>
+    <p>Los tests requieren que Raft elija un nuevo líder dentro de <strong>cinco segundos</strong> desde la falla del líder anterior (si una mayoría de los peers aún puede comunicarse). Recuerden, sin embargo, que la elección de líder puede requerir múltiples rondas en caso de un <em>split vote</em> (que puede ocurrir si los paquetes se pierden o si los candidatos eligen los mismos tiempos de backoff aleatorios). Deben elegir timeouts de elección (y por lo tanto intervalos de heartbeat) lo suficientemente cortos para que sea muy probable que una elección se complete en menos de cinco segundos incluso si requiere múltiples rondas.</p>
+  </li>
+  <li>
+    <p>La Sección 5.2 del paper menciona timeouts de elección en el rango de 150 a 300 milisegundos. Ese rango solo tiene sentido si el líder envía heartbeats considerablemente más seguido que una vez cada 150 milisegundos. Dado que los tests limitan los heartbeats a diez por segundo, deberán usar un timeout de elección mayor que los 150-300 ms del paper, pero no demasiado grande, porque de lo contrario podrían no lograr elegir un líder dentro de cinco segundos.</p>
+  </li>
+  <li>
+    <p>Pueden usar el paquete <a href="https://golang.org/pkg/math/rand/">rand</a> de Go para generar valores aleatorios.</p>
+  </li>
+  <li>
+    <p>Necesitarán escribir código que tome acciones periódicamente o tras ciertos delays. La forma más sencilla es crear una goroutine con un loop que llame a <a href="https://golang.org/pkg/time/#Sleep">time.Sleep()</a>; vean la goroutine <code class="language-plaintext highlighter-rouge">ticker()</code> que <code class="language-plaintext highlighter-rouge">Make()</code> crea para este propósito. No usen <code class="language-plaintext highlighter-rouge">time.Timer</code> ni <code class="language-plaintext highlighter-rouge">time.Ticker</code> de Go, que son difíciles de usar correctamente.</p>
+  </li>
+  <li>
+    <p>Si el código tiene problemas para pasar los tests, relean la <strong>Figura 2</strong> del paper; la lógica completa de elección de líder está distribuida en múltiples partes de la figura.</p>
+  </li>
+  <li>
+    <p>No olviden implementar <code class="language-plaintext highlighter-rouge">GetState()</code>.</p>
+  </li>
+  <li>
+    <p>Los tests llaman a <code class="language-plaintext highlighter-rouge">rf.Kill()</code> cuando apagan una instancia permanentemente. Pueden verificar si <code class="language-plaintext highlighter-rouge">Kill()</code> fue llamado usando <code class="language-plaintext highlighter-rouge">rf.killed()</code>. Pueden querer hacer esto en todos los loops, para evitar que instancias muertas de Raft impriman mensajes confusos.</p>
+  </li>
+  <li>
+    <p>Go RPC solo envía campos de structs cuyos nombres empiecen con <strong>mayúscula</strong>. Las subestructuras también deben tener nombres de campos en mayúscula (por ejemplo, campos de registros de log en un array). El paquete <code class="language-plaintext highlighter-rouge">labgob</code> les advertirá sobre esto; no ignoren las advertencias.</p>
+  </li>
+</ul>
+
+<h2 id="salida-esperada">Salida esperada</h2>
+
+<p>Asegúrense de pasar los tests de 2A antes de avanzar:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ go test -run 2A
+Test (2A): initial election ...
+  ... Passed --   3.5  3   58   16840    0
+Test (2A): election after network failure ...
+  ... Passed --   5.4  3  118   25269    0
+Test (2A): multiple elections ...
+  ... Passed --   7.3  7  624  138014    0
+PASS
+ok  	6.824/raft	16.265s
+</code></pre></div></div>
+
+<p>Cada línea “Passed” contiene cinco números: el tiempo que tomó el test en segundos, la cantidad de peers Raft, la cantidad de RPCs enviados durante el test, el total de bytes en los mensajes RPC, y la cantidad de entradas de log reportadas como committed. Sus números diferirán de los mostrados aquí. Pueden ignorar los números si quieren, pero les pueden servir para verificar la cantidad de RPCs que envía la implementación. Los tests fallarán la solución si toman más de 600 segundos en total (<code class="language-plaintext highlighter-rouge">go test</code>), o si cualquier test individual toma más de 120 segundos.</p>
+
+<h1 id="parte-2b-log">Parte 2B: Log</h1>
+
+<p>Implementen el código de líder y follower para agregar nuevas entradas de log, de manera que pasen todos los tests de 2B:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ go test -run 2B
+</code></pre></div></div>
+
+<h2 id="consejos-1">Consejos</h2>
+
+<ul>
+  <li>
+    <p>Su primer objetivo debe ser pasar <code class="language-plaintext highlighter-rouge">TestBasicAgree2B()</code>. Comiencen implementando <code class="language-plaintext highlighter-rouge">Start()</code>, luego escriban el código para enviar y recibir nuevas entradas de log mediante RPCs <code class="language-plaintext highlighter-rouge">AppendEntries</code>, siguiendo la Figura 2.</p>
+  </li>
+  <li>
+    <p>Necesitarán implementar la <strong>restricción de elección</strong> (sección 5.4.1 del paper).</p>
+  </li>
+  <li>
+    <p>Una manera de fallar los tests tempranos de 2B es mantener elecciones repetidas a pesar de que el líder está activo. Busquen bugs en el manejo del timer de elección, o que no estén enviando heartbeats inmediatamente después de ganar una elección.</p>
+  </li>
+  <li>
+    <p>Su código puede tener loops que chequeen repetidamente ciertos eventos. No hagan que estos loops se ejecuten continuamente sin pausar, ya que eso ralentizará la implementación lo suficiente como para fallar los tests. Usen <a href="https://golang.org/pkg/sync/#Cond">variables de condición</a> de Go, o inserten un <code class="language-plaintext highlighter-rouge">time.Sleep(10 * time.Millisecond)</code> en cada iteración del loop.</p>
+  </li>
+  <li>
+    <p>Háganle un favor a su futuro yo y escriban (o reescriban) código limpio y claro.</p>
+  </li>
+  <li>
+    <p>Si fallan un test, miren <code class="language-plaintext highlighter-rouge">config.go</code> y <code class="language-plaintext highlighter-rouge">test_test.go</code> para entender mejor qué se está testeando. <code class="language-plaintext highlighter-rouge">config.go</code> también ilustra cómo el tester usa la API de Raft.</p>
+  </li>
+</ul>
+
+<h2 id="consideraciones-de-rendimiento">Consideraciones de rendimiento</h2>
+
+<p>Los tests de futuros TPs pueden fallar si el código es demasiado lento. Pueden verificar cuánto tiempo real y de CPU usa la solución con el comando <code class="language-plaintext highlighter-rouge">time</code>. Salida típica:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ time go test -run 2B
+Test (2B): basic agreement ...
+  ... Passed --   0.9  3   16    4572    3
+Test (2B): RPC byte count ...
+  ... Passed --   1.7  3   48  114536   11
+Test (2B): agreement despite follower disconnection ...
+  ... Passed --   3.6  3   78   22131    7
+Test (2B): no agreement if too many followers disconnect ...
+  ... Passed --   3.8  5  172   40935    3
+Test (2B): concurrent Start()s ...
+  ... Passed --   1.1  3   24    7379    6
+Test (2B): rejoin of partitioned leader ...
+  ... Passed --   5.1  3  152   37021    4
+Test (2B): leader backs up quickly over incorrect follower logs ...
+  ... Passed --  17.2  5 2080 1587388  102
+Test (2B): RPC counts aren't too high ...
+  ... Passed --   2.2  3   60   20119   12
+PASS
+ok  	6.824/raft	35.557s
+
+real	0m35.899s
+user	0m2.556s
+sys	0m1.458s
+</code></pre></div></div>
+
+<p>Si la solución usa mucho más de un minuto de tiempo real para los tests de 2B, o mucho más de 5 segundos de tiempo de CPU, pueden tener problemas más adelante. Busquen tiempo gastado en sleeps o esperando timeouts de RPC, loops que corran sin dormir ni esperar condiciones o mensajes de canales, o grandes cantidades de RPCs enviados.</p>
+
+<h1 id="parte-2c-persistencia">Parte 2C: Persistencia</h1>
+
+<p>Si un servidor basado en Raft se reinicia, debe retomar el servicio donde lo dejó. Esto requiere que Raft mantenga <strong>estado persistente</strong> que sobreviva un reinicio. La Figura 2 del paper menciona qué estado debe ser persistente.</p>
+
+<p>Una implementación real escribiría el estado persistente de Raft a disco cada vez que cambie, y lo leería del disco al reiniciar. La implementación de este TP no usará el disco; en su lugar, guardará y restaurará el estado persistente desde un objeto <code class="language-plaintext highlighter-rouge">Persister</code> (ver <code class="language-plaintext highlighter-rouge">persister.go</code>). Quien llame a <code class="language-plaintext highlighter-rouge">Raft.Make()</code> proporcionará un <code class="language-plaintext highlighter-rouge">Persister</code> que inicialmente contiene el estado persistido más reciente de Raft (si existe). Raft debe inicializar su estado desde ese <code class="language-plaintext highlighter-rouge">Persister</code>, y debe usarlo para guardar su estado persistente cada vez que el estado cambie. Usen los métodos <code class="language-plaintext highlighter-rouge">ReadRaftState()</code> y <code class="language-plaintext highlighter-rouge">SaveRaftState()</code> del <code class="language-plaintext highlighter-rouge">Persister</code>.</p>
+
+<p>Completen las funciones <code class="language-plaintext highlighter-rouge">persist()</code> y <code class="language-plaintext highlighter-rouge">readPersist()</code> en <code class="language-plaintext highlighter-rouge">raft.go</code> agregando código para guardar y restaurar el estado persistente. Necesitarán codificar (“serializar”) el estado como un array de bytes para pasarlo al <code class="language-plaintext highlighter-rouge">Persister</code>. Usen el encoder <code class="language-plaintext highlighter-rouge">labgob</code>; vean los comentarios en <code class="language-plaintext highlighter-rouge">persist()</code> y <code class="language-plaintext highlighter-rouge">readPersist()</code>. <code class="language-plaintext highlighter-rouge">labgob</code> es como el encoder <code class="language-plaintext highlighter-rouge">gob</code> de Go pero imprime mensajes de error si intentan encodear structs con nombres de campos en minúscula.</p>
+
+<p>Inserten llamadas a <code class="language-plaintext highlighter-rouge">persist()</code> en los puntos donde la implementación cambie estado persistente. Una vez hecho esto, y si el resto de la implementación es correcto, deberían pasar todos los tests de 2C.</p>
+
+<h2 id="consejos-2">Consejos</h2>
+
+<ul>
+  <li>
+    <p>Los tests de 2C son más exigentes que los de 2A o 2B, y las fallas pueden ser causadas por problemas en el código de 2A o 2B. Aunque pasen 2A y 2B consistentemente, pueden todavía tener bugs de elección o de log que se manifiesten en los tests de 2C.</p>
+  </li>
+  <li>
+    <p>Probablemente necesitarán la optimización que retrocede <code class="language-plaintext highlighter-rouge">nextIndex</code> más de una entrada a la vez. Miren el <a href="https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf">paper extendido de Raft</a> comenzando al final de la página 7 y al principio de la página 8 (marcado con una línea gris). El paper es vago sobre los detalles; deberán completar los vacíos. Una posibilidad es que un mensaje de rechazo incluya:</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XTerm:  term en la entrada conflictiva (si existe)
+XIndex: índice de la primera entrada con ese term (si existe)
+XLen:   longitud del log
+</code></pre></div></div>
+
+<p>Entonces la lógica del líder puede ser algo como:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Caso 1: el líder no tiene XTerm:
+    nextIndex = XIndex
+  Caso 2: el líder tiene XTerm:
+    nextIndex = última entrada del líder para XTerm
+  Caso 3: el log del follower es demasiado corto:
+    nextIndex = XLen
+</code></pre></div></div>
+
+<h2 id="salida-esperada-1">Salida esperada</h2>
+
+<p>El código debe pasar todos los tests de 2C, así como los de 2A y 2B.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ go test -run 2C
+Test (2C): basic persistence ...
+  ... Passed --   5.0  3   86   22849    6
+Test (2C): more persistence ...
+  ... Passed --  17.6  5  952  218854   16
+Test (2C): partitioned leader and one follower crash, leader restarts ...
+  ... Passed --   2.0  3   34    8937    4
+Test (2C): Figure 8 ...
+  ... Passed --  31.2  5  580  130675   32
+Test (2C): unreliable agreement ...
+  ... Passed --   1.7  5 1044  366392  246
+Test (2C): Figure 8 (unreliable) ...
+  ... Passed --  33.6  5 10700 33695245  308
+Test (2C): churn ...
+  ... Passed --  16.1  5 8864 44771259 1544
+Test (2C): unreliable churn ...
+  ... Passed --  16.5  5 4220 6414632  906
+PASS
+ok  	6.824/raft	123.564s
+</code></pre></div></div>
+
+<p>Es buena idea correr los tests múltiples veces antes de dar por terminada cada parte.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ for i in {0..10}; do go test; done
+</code></pre></div></div>
+
+<h1 id="parte-2d-compactación-del-log">Parte 2D: Compactación del log</h1>
+
+<p>Tal como está, un servidor que reinicia reproduce el log completo de Raft para restaurar su estado. Sin embargo, no es práctico para un servicio de larga duración recordar el log completo de Raft para siempre. En su lugar, modificarán Raft para cooperar con servicios que almacenan persistentemente un <strong>snapshot</strong> de su estado de vez en cuando, momento en el cual Raft descarta las entradas de log previas al snapshot. El resultado es una menor cantidad de datos persistentes y un reinicio más rápido. Sin embargo, ahora es posible que un follower quede tan atrasado que el líder haya descartado las entradas de log que necesita para ponerse al día; el líder entonces debe enviar un snapshot más el log a partir del momento del snapshot. La Sección 7 del <a href="https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf">paper extendido de Raft</a> describe el esquema; deberán diseñar los detalles.</p>
+
+<p>Pueden consultar el <a href="https://pdos.csail.mit.edu/6.824/notes/raft_diagram.pdf">diagrama de interacciones de Raft</a> para entender cómo el servicio replicado y Raft se comunican.</p>
+
+<p>Raft debe proveer la siguiente función que el servicio puede llamar con un snapshot serializado de su estado:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Snapshot</span><span class="p">(</span><span class="n">index</span> <span class="kt">int</span><span class="p">,</span> <span class="n">snapshot</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>En esta parte, los tests llaman a <code class="language-plaintext highlighter-rouge">Snapshot()</code> periódicamente. En el TP3, escribirán un servidor clave/valor que llame a <code class="language-plaintext highlighter-rouge">Snapshot()</code>; el snapshot contendrá la tabla completa de pares clave/valor. La capa de servicio llama a <code class="language-plaintext highlighter-rouge">Snapshot()</code> en cada peer (no solo en el líder).</p>
+
+<p>El argumento <code class="language-plaintext highlighter-rouge">index</code> indica la entrada de log más alta que está reflejada en el snapshot. Raft debe descartar sus entradas de log anteriores a ese punto. Necesitarán revisar el código de Raft para que opere almacenando solamente la cola del log.</p>
+
+<p>Necesitarán implementar el RPC <code class="language-plaintext highlighter-rouge">InstallSnapshot</code> discutido en el paper, que permite que un líder Raft le indique a un peer atrasado que reemplace su estado con un snapshot. Probablemente necesitarán pensar cómo <code class="language-plaintext highlighter-rouge">InstallSnapshot</code> debe interactuar con el estado y las reglas de la Figura 2. Noten que los RPCs <code class="language-plaintext highlighter-rouge">InstallSnapshot</code> se envían <em>entre</em> peers Raft, mientras que <code class="language-plaintext highlighter-rouge">Snapshot</code> es usado por el servicio para comunicarse con Raft.</p>
+
+<p>Cuando el código Raft de un follower recibe un RPC <code class="language-plaintext highlighter-rouge">InstallSnapshot</code>, puede usar <code class="language-plaintext highlighter-rouge">applyCh</code> para enviar el snapshot al servicio en un <code class="language-plaintext highlighter-rouge">ApplyMsg</code>. La definición del struct <code class="language-plaintext highlighter-rouge">ApplyMsg</code> ya contiene los campos que necesitarán (y que los tests esperan). Tengan cuidado de que estos snapshots solo avancen el estado del servicio, y no lo hagan retroceder.</p>
+
+<p>Si un servidor se cae, debe reiniciar desde datos persistidos. Raft debe persistir tanto el estado de Raft como el snapshot correspondiente. Usen <code class="language-plaintext highlighter-rouge">persister.SaveStateAndSnapshot()</code>, que toma argumentos separados para el estado de Raft y el snapshot correspondiente. Si no hay snapshot, pasen <code class="language-plaintext highlighter-rouge">nil</code> como argumento de snapshot.</p>
+
+<p>Cuando un servidor reinicia, la capa de aplicación lee el snapshot persistido y restaura su estado guardado.</p>
+
+<p>Anteriormente, se recomendaba implementar una función llamada <code class="language-plaintext highlighter-rouge">CondInstallSnapshot</code> para evitar el requerimiento de que los snapshots y las entradas de log enviadas por <code class="language-plaintext highlighter-rouge">applyCh</code> estén coordinados. Esta interfaz vestigial permanece en el código, pero no es necesario implementarla: simplemente hagan que retorne <code class="language-plaintext highlighter-rouge">true</code>.</p>
+
+<p>Implementen <code class="language-plaintext highlighter-rouge">Snapshot()</code> y el RPC <code class="language-plaintext highlighter-rouge">InstallSnapshot</code>, así como los cambios a Raft para soportar estos (por ejemplo, operar con un log recortado). La solución está completa cuando pasa los tests de 2D (y todos los tests previos del TP).</p>
+
+<h2 id="consejos-3">Consejos</h2>
+
+<ul>
+  <li>
+    <p>Un buen punto de partida es modificar el código para que sea capaz de almacenar solo la parte del log a partir de cierto índice X. Inicialmente pueden fijar X en cero y correr los tests de 2B/2C. Luego hagan que <code class="language-plaintext highlighter-rouge">Snapshot(index)</code> descarte el log antes de <code class="language-plaintext highlighter-rouge">index</code> y fije X igual a <code class="language-plaintext highlighter-rouge">index</code>. Si todo va bien, deberían pasar el primer test de 2D.</p>
+  </li>
+  <li>
+    <p>No podrán almacenar el log en un slice de Go y usar los índices del slice intercambiablemente con los índices de log de Raft; necesitarán indexar el slice de una manera que tenga en cuenta la porción descartada del log.</p>
+  </li>
+  <li>
+    <p>Siguiente paso: hagan que el líder envíe un RPC <code class="language-plaintext highlighter-rouge">InstallSnapshot</code> si no tiene las entradas de log requeridas para actualizar a un follower.</p>
+  </li>
+  <li>
+    <p>Envíen el snapshot completo en un único RPC <code class="language-plaintext highlighter-rouge">InstallSnapshot</code>. No implementen el mecanismo de offset de la Figura 13 para dividir el snapshot.</p>
+  </li>
+  <li>
+    <p>Raft debe descartar las entradas antiguas del log de una manera que permita al garbage collector de Go liberar y reutilizar la memoria; esto requiere que no haya referencias (punteros) alcanzables a las entradas descartadas del log.</p>
+  </li>
+  <li>
+    <p>Aun cuando el log esté recortado, la implementación debe enviar correctamente el term e index de la entrada previa a las nuevas entradas en los RPCs <code class="language-plaintext highlighter-rouge">AppendEntries</code>; esto puede requerir guardar y referenciar el <code class="language-plaintext highlighter-rouge">lastIncludedTerm</code>/<code class="language-plaintext highlighter-rouge">lastIncludedIndex</code> del último snapshot (consideren si esto debe ser persistido).</p>
+  </li>
+  <li>
+    <p>Raft debe almacenar cada snapshot en el persister usando <code class="language-plaintext highlighter-rouge">SaveStateAndSnapshot()</code>.</p>
+  </li>
+  <li>
+    <p>Un tiempo razonable para el conjunto completo de tests del TP (2A+2B+2C+2D) sin <code class="language-plaintext highlighter-rouge">-race</code> es de 6 minutos de tiempo real y un minuto de tiempo de CPU. Con <code class="language-plaintext highlighter-rouge">-race</code>, es alrededor de 10 minutos de tiempo real y dos minutos de CPU.</p>
+  </li>
+</ul>
+
+<h2 id="salida-esperada-2">Salida esperada</h2>
+
+<p>El código debe pasar todos los tests de 2D, así como los de 2A, 2B y 2C.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ go test -run 2D
+Test (2D): snapshots basic ...
+  ... Passed --  11.6  3  176   61716  192
+Test (2D): install snapshots (disconnect) ...
+  ... Passed --  64.2  3  878  320610  336
+Test (2D): install snapshots (disconnect+unreliable) ...
+  ... Passed --  81.1  3 1059  375850  341
+Test (2D): install snapshots (crash) ...
+  ... Passed --  53.5  3  601  256638  339
+Test (2D): install snapshots (unreliable+crash) ...
+  ... Passed --  63.5  3  687  288294  336
+PASS
+ok      6.824/raft      293.456s
+</code></pre></div></div>
+
+<h1 id="referencias">Referencias</h1>
+
+<ul>
+  <li>Paper extendido de Raft: <a href="https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf">In Search of an Understandable Consensus Algorithm</a></li>
+  <li>Visualización interactiva de Raft: <a href="https://raft.github.io/">https://raft.github.io/</a></li>
+  <li>Guía para estudiantes de Raft: <a href="https://thesquareplanet.com/blog/students-guide-to-raft/">https://thesquareplanet.com/blog/students-guide-to-raft/</a></li>
+  <li>Diagrama de interacciones de Raft: <a href="https://pdos.csail.mit.edu/6.824/notes/raft_diagram.pdf">https://pdos.csail.mit.edu/6.824/notes/raft_diagram.pdf</a></li>
+  <li>Consejos de locking: <a href="https://pdos.csail.mit.edu/6.824/labs/raft-locking.txt">https://pdos.csail.mit.edu/6.824/labs/raft-locking.txt</a></li>
+  <li>Consejos de estructura: <a href="https://pdos.csail.mit.edu/6.824/labs/raft-structure.txt">https://pdos.csail.mit.edu/6.824/labs/raft-structure.txt</a></li>
+  <li>Go Programming Language: <a href="https://go.dev/">https://go.dev/</a></li>
+</ul>
+
+<hr />
+
+<p><small>Este trabajo práctico es una adaptación del <a href="http://nil.csail.mit.edu/6.824/2022/labs/lab-raft.html">Lab 2: Raft</a> del curso <a href="http://nil.csail.mit.edu/6.824/2022/">6.824 Distributed Systems</a> del MIT (Robert Morris, Frans Kaashoek y Nickolai Zeldovich), traducido al castellano y con modificaciones menores para adaptarlo a la materia. El material original está licenciado bajo <a href="https://creativecommons.org/licenses/by/3.0/us/">Creative Commons BY 3.0 US</a>.</small></p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/archive/2026a/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">TA050 Sistemas Distribuidos I</li><li><a class="u-email" href="mailto:eespina@fi.uba.ar">eespina@fi.uba.ar</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <label for="cuatrimestres-select">Cuatrimestres Anteriores</label>
+        <select id="cuatrimestres-select" onchange="if(this.value) window.location.href=this.value">
+          <option value="">— Elegir —</option><option value="/archive/2025b">2025b</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

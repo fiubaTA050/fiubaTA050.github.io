@@ -1,0 +1,383 @@
+:root {
+  --bg: #fdfdfd;
+  --text: #111111;
+  --muted: #555555;
+  --muted-2: #666666;
+  --border: #e8e8e8;
+  --surface: #ffffff;
+  --surface-2: #f7f7f7;
+  --surface-3: #f0f0f0;
+  --link: #2a7ae2;
+  --link-visited: #1756a9;
+  --link-hover: #111111;
+  --code-bg: #eeeeff;
+  --code-border: #e8e8e8;
+  --blockquote: #828282;
+  --header-top: #424242;
+  --accent: #8b4512;
+  --accent-hover: #654321;
+  --success-bg: #e8f5e9;
+  --focus: #2a7ae2;
+}
+
+html[data-theme="dark"] {
+  --bg: #0b0f14;
+  --text: #e6edf3;
+  --muted: #a8b3bf;
+  --muted-2: #93a0ad;
+  --border: #2b3541;
+  --surface: #0f1724;
+  --surface-2: #121c2a;
+  --surface-3: #172334;
+  --link: #7bb4ff;
+  --link-visited: #c39cff;
+  --link-hover: #e6edf3;
+  --code-bg: #0c1320;
+  --code-border: #2b3541;
+  --blockquote: #a8b3bf;
+  --header-top: #2b3541;
+  --accent: #d6a07a;
+  --accent-hover: #e3b894;
+  --success-bg: #0f2a1a;
+  --focus: #7bb4ff;
+}
+
+html {
+  color-scheme: light;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+}
+a:visited {
+  color: var(--link-visited);
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+blockquote {
+  color: var(--blockquote);
+  border-left-color: var(--border);
+}
+
+pre,
+code {
+  background-color: var(--code-bg);
+  border-color: var(--code-border);
+  color: inherit;
+}
+
+table {
+  color: var(--text);
+  background-color: var(--surface);
+  border-color: var(--border);
+}
+table tr:nth-child(even) {
+  background-color: var(--surface-2);
+}
+table th {
+  background-color: var(--surface-3);
+  border-color: var(--border);
+  border-bottom-color: var(--border);
+}
+table td {
+  border-color: var(--border);
+}
+
+.site-header {
+  border-top-color: var(--header-top);
+  border-bottom-color: var(--border);
+}
+.site-title,
+.site-title:visited {
+  color: var(--text);
+}
+.site-nav .page-link {
+  color: var(--text);
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: var(--surface);
+    border-color: var(--border);
+  }
+  .site-nav .menu-icon > svg {
+    fill: var(--text);
+  }
+}
+
+.site-footer {
+  border-top-color: var(--border);
+}
+.footer-col-wrapper {
+  color: var(--muted);
+}
+
+select,
+input,
+textarea {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.anuncios {
+  margin: 1.5em 0 2.5em;
+  padding: 1.1em 1.4em;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background-color: var(--surface-2);
+}
+.anuncios-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  margin: 0;
+  font-size: 1.3em;
+  color: var(--accent);
+}
+.anuncios-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 1.05em;
+  font-weight: 600;
+  margin: 0.7em 0 0.4em;
+}
+.anuncios-fechas {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.anuncios-fechas li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  padding: 0.35em 0;
+  border-bottom: 1px solid var(--border);
+}
+.anuncios-fechas li:last-child {
+  border-bottom: none;
+}
+.anuncios-fecha {
+  font-weight: 600;
+  min-width: 7em;
+}
+.anuncios-hora {
+  color: var(--muted);
+}
+.anuncios-aula {
+  color: var(--muted);
+}
+.anuncios-tachada .anuncios-fecha,
+.anuncios-tachada .anuncios-hora,
+.anuncios-tachada .anuncios-aula {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+.anuncios-reprogramada {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.docentes-list {
+  font-family: inherit;
+  margin: 1.5em 0;
+}
+.docentes-list .docentes-section {
+  margin-top: 2em;
+}
+.docentes-list .docentes-section:first-child {
+  margin-top: 0;
+}
+.docentes-list .docentes-section-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+.docentes-list .docentes-section-title .icon {
+  font-style: normal;
+}
+.docentes-list .docentes-name-header {
+  font-size: 0.9em;
+  color: var(--muted-2);
+  text-align: right;
+  padding-right: 0.5em;
+  margin-bottom: 0.25em;
+  border-bottom: 1px solid var(--border);
+}
+.docentes-list .docentes-person {
+  display: flex;
+  align-items: center;
+  padding: 0.6em 0;
+  border-bottom: 1px solid var(--border);
+}
+.docentes-list .docentes-section .docentes-person:last-child {
+  border-bottom: none;
+}
+.docentes-list .docentes-person-img {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.docentes-list .docentes-person-name {
+  margin-left: 1em;
+}
+.docentes-list .docentes-person-name a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.docentes-list .docentes-person-name a:hover {
+  color: var(--accent-hover);
+}
+.docentes-list .docentes-person-name span {
+  color: var(--text);
+}
+
+.calendario {
+  border-left: none;
+  border-right: none;
+}
+
+.calendario th,
+.calendario td {
+  border-left: none;
+  border-right: none;
+}
+
+.calendario td:nth-child(3),
+.calendario td:nth-child(4) {
+  text-align: center;
+}
+
+.calendario tr.cal-feriado td {
+  background-color: var(--success-bg);
+}
+
+/* Calendario: columna Tema (estilo tipo schedule CMU) */
+.calendario .calendar-activity {
+  vertical-align: top;
+}
+.calendario .calendar-activity .lecture-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35em;
+}
+.calendario .calendar-activity .cal-activity-dl {
+  margin: 0;
+  padding-left: 0.25rem;
+  display: grid;
+  grid-template-columns: minmax(5.5rem, auto) 1fr;
+  gap: 0.2em 0.65em;
+  align-items: baseline;
+  font-size: 0.95em;
+}
+.calendario .calendar-activity .cal-activity-dl dt {
+  margin: 0;
+  font-weight: normal;
+  color: var(--muted);
+}
+.calendario .calendar-activity .cal-activity-dl dd {
+  margin: 0;
+}
+
+.calendario .calendar-activity .cal-activity-dl dd ul.cal-reading-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+.calendario .calendar-activity .cal-activity-dl dd ul.cal-reading-list > li {
+  margin: 0;
+}
+.calendario .calendar-activity .cal-activity-dl a.schedule-badge {
+  white-space: nowrap;
+}
+
+/* Escritorio/tablet ancho: 4 columnas; sin duplicar Notas/Video en la celda Tema */
+@media (min-width: 768px) {
+  .calendario .cal-mobile-only {
+    display: none;
+  }
+}
+
+/* Teléfono: Notas y Video solo dentro de Tema; ocultar columnas dedicadas */
+@media (max-width: 767.98px) {
+  .calendario th:nth-child(3),
+  .calendario th:nth-child(4),
+  .calendario td:nth-child(3),
+  .calendario td:nth-child(4) {
+    display: none;
+  }
+}
+
+.cal-bibliografia-heading {
+  margin-top: 2rem;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+.cal-bibliografia {
+  margin: 0.5em 0 0;
+  padding-left: 1.5rem;
+}
+.cal-bibliografia cite {
+  font-style: italic;
+}
+
+.theme-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-toggle__icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.theme-toggle:hover {
+  transform: translateY(-1px);
+}
+.theme-toggle:active {
+  transform: translateY(0);
+}
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(){
+      var t;
+      try { t = localStorage.getItem("ta050.theme"); } catch(e) {}
+      if (!t) t = "light";
+      document.documentElement.dataset.theme = t;
+      document.documentElement.style.colorScheme = t;
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="/archive/2026a/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/archive/2026a/assets/favicon.png"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TP3 - Mini-DynamoDb | TA050 Sistemas Distribuidos I</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="TP3 - Mini-DynamoDb" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Curso de FIUBA sobre sistemas distribuidos modernos." />
+<meta property="og:description" content="Curso de FIUBA sobre sistemas distribuidos modernos." />
+<link rel="canonical" href="https://fiubata050.github.io/archive/2026a/trabajos-practicos/tp3-mini-dynamodb/" />
+<meta property="og:url" content="https://fiubata050.github.io/archive/2026a/trabajos-practicos/tp3-mini-dynamodb/" />
+<meta property="og:site_name" content="TA050 Sistemas Distribuidos I" />
+<meta property="og:image" content="https://fiubata050.github.io/archive/2026a/assets/og-image.png" />
+<meta property="og:image:height" content="675" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:alt" content="TA050 — Sistemas Distribuidos I (FIUBA)" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://fiubata050.github.io/archive/2026a/assets/og-image.png" />
+<meta name="twitter:image:alt" content="TA050 — Sistemas Distribuidos I (FIUBA)" />
+<meta property="twitter:title" content="TP3 - Mini-DynamoDb" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Curso de FIUBA sobre sistemas distribuidos modernos.","headline":"TP3 - Mini-DynamoDb","image":{"alt":"TA050 — Sistemas Distribuidos I (FIUBA)","width":1200,"height":675,"url":"https://fiubata050.github.io/archive/2026a/assets/og-image.png","@type":"imageObject"},"url":"https://fiubata050.github.io/archive/2026a/trabajos-practicos/tp3-mini-dynamodb/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/archive/2026a/assets/main.css">
+  <link rel="stylesheet" href="/archive/2026a/assets/styles.css">
+  <script src="/archive/2026a/assets/theme.js" defer></script>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="https://fiubata050.github.io/archive/2026a/feed.xml" title="TA050 Sistemas Distribuidos I" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/archive/2026a/">TA050 Sistemas Distribuidos I</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/archive/2026a/trabajos-practicos/">Trabajos Prácticos</a><a class="page-link" href="/archive/2026a/faq/">FAQ</a><a class="page-link" href="/archive/2026a/calendario/">Calendario</a><a class="page-link" href="/archive/2026a/programa/">Programa</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">TP3 - Mini-DynamoDb</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="1-introducción"><strong>1. Introducción</strong></h2>
+
+<p>En este trabajo práctico los estudiantes deberán implementar una versión reducida del servicio <strong>Amazon DynamoDB</strong>, uno de los sistemas de almacenamiento distribuido más utilizados en la industria actual. El objetivo es construir un prototipo funcional que combine los principales componentes que caracterizan a los sistemas modernos de datos distribuidos: <strong>replicación mediante consenso (Raft)</strong>, <strong>particionado de datos (sharding)</strong>, <strong>coordinación distribuida (ZooKeeper)</strong> y <strong>consistencia configurable</strong>.</p>
+
+<p>El servicio resultante, denominado <strong>Mini-DynamoDB</strong>, será un <strong>almacenamiento <a href="https://es.wikipedia.org/wiki/Base_de_datos_clave-valor">clave-valor</a> distribuido</strong>, accesible a través de una API gRPC, que permitirá realizar operaciones básicas de lectura, escritura y borrado (<code class="language-plaintext highlighter-rouge">Get</code>, <code class="language-plaintext highlighter-rouge">Put</code>, <code class="language-plaintext highlighter-rouge">Delete</code>) sobre múltiples tablas. Cada tabla estará dividida en <em>shards</em> distribuidos entre distintos nodos de datos, y cada shard será replicado mediante el algoritmo <strong>Raft</strong> para garantizar durabilidad y tolerancia a fallos.</p>
+
+<p>El sistema estará compuesto por dos tipos de nodos principales:</p>
+
+<ul>
+  <li>
+    <p><strong>RequestRouters</strong>, que recibirán las peticiones de los clientes, resolverán el shard correspondiente a cada clave, y coordinarán tanto las operaciones simples.</p>
+  </li>
+  <li>
+    <p><strong>DataNodes</strong>, que almacenarán los datos, replicarán su estado con Raft y mantendrán su información de manera persistente.</p>
+  </li>
+</ul>
+
+<p>La información de configuración —qué tablas existen, cómo se dividen en shards y en qué DataNodes reside cada uno— estará gestionada por <strong>ZooKeeper</strong>, que actuará como servicio de coordinación central. ZooKeeper garantizará la consistencia en la creación y eliminación de tablas, así como en la inicialización del sistema.</p>
+
+<p>El trabajo buscará integrar los conceptos vistos en la materia sobre <strong>replicación</strong>, <strong>consistencia</strong>, <strong>coordinación distribuida</strong> y <strong>manejo de concurrencia</strong>. A través de la implementación de Mini-DynamoDB, los estudiantes deberán enfrentarse a los mismos problemas que resuelven los sistemas distribuidos reales: asegurar disponibilidad en presencia de fallas, definir un modelo de consistencia apropiado, y coordinar múltiples nodos sin introducir estados intermedios inconsistentes.</p>
+
+<h2 id="2-arquitectura-general-del-sistema"><strong>2. Arquitectura general del sistema</strong></h2>
+
+<p>El sistema <strong>Mini-DynamoDB</strong> se compone de tres tipos principales de componentes: <strong>RequestRouters</strong>, <strong>DataNodes</strong> y <strong>ZooKeeper</strong>. Además, se provee un <strong>cliente de línea de comandos (CLI)</strong> para la interacción con el servicio. En conjunto, estos elementos conforman un sistema distribuido tolerante a fallos que permite realizar operaciones de lectura, escritura y borrado sobre un almacenamiento clave-valor replicado y particionado.</p>
+
+<h3 id="21-componentes-principales"><strong>2.1. Componentes principales</strong></h3>
+
+<h4 id="a-requestrouters"><strong>a) RequestRouters</strong></h4>
+
+<p>Los <strong>RequestRouters</strong> son los nodos de entrada del sistema. Reciben las peticiones de los clientes, determinan el shard correspondiente a cada clave y reenvían la operación a uno de los <strong>DataNodes</strong> responsables.</p>
+
+<p>Estos nodos son <strong>totalmente <em>stateless</em></strong>: no mantienen ningún estado persistente entre solicitudes. Toda la información sobre tablas, shards o asignaciones se obtiene desde <strong>ZooKeeper</strong> o se mantiene temporalmente en una caché de memoria volátil.</p>
+
+<p>Las funciones principales de los RequestRouters incluyen:</p>
+
+<ul>
+  <li>Consultar a <strong>ZooKeeper</strong> la configuración actual del sistema (tablas, shards y DataNodes).</li>
+  <li>Enrutar las operaciones <code class="language-plaintext highlighter-rouge">Get</code>, <code class="language-plaintext highlighter-rouge">Put</code> y <code class="language-plaintext highlighter-rouge">Delete</code> hacia un DataNode, el cual va a redirigirlas al líder correspondiente del shard.</li>
+  <li>Mantener un <em>caché efímero</em> de configuración para reducir la carga sobre ZooKeeper.</li>
+  <li>Recuperarse automáticamente ante fallos o reinicios sin necesidad de sincronización adicional, dado su carácter <em>stateless</em>.</li>
+  <li>Para las entregas que implementen transacciones, el RequestRouter cumple el rol de TransactionManager e implementa 2 phase commit</li>
+</ul>
+
+<p>Al ser stateless, los RequestRouters pueden escalar horizontalmente y reemplazarse sin afectar la disponibilidad del sistema.</p>
+
+<h4 id="b-datanodes"><strong>b) DataNodes</strong></h4>
+
+<p>Los <strong>DataNodes</strong> son los nodos que almacenan los datos de los shards. Cada DataNode puede alojar múltiples shards, incluso de tablas distintas. Cada shard mantiene su propia réplica independiente, implementada mediante el algoritmo de consenso <strong>Raft</strong>, que asegura la consistencia entre réplicas y la durabilidad del estado.</p>
+
+<p>Características clave:</p>
+
+<ul>
+  <li>Implementan <strong>Raft con compactación de logs (snapshotting)</strong> y <strong>persistencia de estado</strong>.</li>
+  <li>Exponen una API gRPC para recibir las operaciones desde los RequestRouters.</li>
+  <li>Rechazan operaciones destinadas a shards que no administran.</li>
+  <li>Pueden alojar shards de múltiples tablas simultáneamente.</li>
+</ul>
+
+<p><strong>Se debe usar alguna implementación de Raft de las realizadas en el TP2 de alguno de los miembros del grupo.</strong></p>
+
+<p>Cada shard se replica en un conjunto de <strong>3 o 5 DataNodes</strong>, según la configuración inicial. El shard debe permanecer <strong>operativo mientras exista una mayoría de réplicas activas</strong>. Por ejemplo, en una configuración de tres réplicas, el shard continúa funcionando si al menos <strong>dos nodos permanecen disponibles y comunicados</strong>. Esto garantiza <strong>tolerancia a fallos</strong> sin comprometer la consistencia del estado replicado.</p>
+
+<h4 id="c-zookeeper"><strong>c) ZooKeeper</strong></h4>
+
+<p><strong>ZooKeeper</strong> actúa como el <strong>servicio de coordinación y configuración</strong> del sistema. Es responsable de mantener la configuración global, que incluye:</p>
+
+<ul>
+  <li>La lista de <strong>tablas existentes</strong>.</li>
+  <li>Los <strong>rangos de hash</strong> asignados a cada shard.</li>
+  <li>La <strong>asignación de shards a DataNodes</strong> (sus direcciones o identificadores).</li>
+</ul>
+
+<p>ZooKeeper debe garantizar la <strong>consistencia y atomicidad</strong> de las operaciones de configuración, especialmente durante la creación y eliminación de tablas. Debe aplicarse el modelo de coordinación descrito en el paper de ZooKeeper, utilizando <em>znodes</em> persistentes y mecanismos de <em>watchers</em> para mantener sincronizados a los RequestRouters.</p>
+
+<p><strong>En este trabajo no se requiere reconfiguración dinámica: una vez creada una tabla y sus shards, no se agregan ni remueven miembros al shard. Si pueden fallar pero se asume que los mismos eventualmente se recuperan. Esta es una simplificación con fines didácticos que no se puede ignorar en sistemas productivos.</strong></p>
+
+<h4 id="d-cliente-cli"><strong>d) Cliente CLI</strong></h4>
+
+<p>El <strong>cliente de línea de comandos (CLI)</strong> es la interfaz principal de usuario. Permite ejecutar operaciones sobre el sistema, incluyendo tanto las de datos (<code class="language-plaintext highlighter-rouge">Get</code>, <code class="language-plaintext highlighter-rouge">Put</code>, <code class="language-plaintext highlighter-rouge">Delete</code>) como las administrativas (<code class="language-plaintext highlighter-rouge">CreateTable</code>, <code class="language-plaintext highlighter-rouge">DeleteTable</code>).</p>
+
+<h3 id="22-flujo-general-de-operaciones"><strong>2.2. Flujo general de operaciones</strong></h3>
+
+<ol>
+  <li>El cliente envía una solicitud (por ejemplo, <code class="language-plaintext highlighter-rouge">Put</code>) a un RequestRouter.</li>
+  <li>El RequestRouter consulta a ZooKeeper (o su caché local) para identificar el shard y los DataNodes correspondientes.</li>
+  <li>El RequestRouter envía la operación a <strong>un nodo</strong> del shard. Si este no es el líder, dirige la operación al líder del shard.</li>
+  <li>El líder replica la operación a sus seguidores según el protocolo Raft.</li>
+  <li>El líder responde al RequestRouter, que devuelve el resultado al cliente.</li>
+</ol>
+
+<p>Mientras exista una <strong>mayoría de réplicas disponibles</strong>, cada shard puede continuar operando normalmente, incluso si uno o más DataNodes fallan o pierden conectividad temporalmente.</p>
+
+<p>Todas las comunicaciones se deben implementar como gRPC sobre sockets TCP.</p>
+
+<h2 id="3-administración-de-tablas"><strong>3. Administración de tablas</strong></h2>
+
+<p>El sistema <strong>Mini-DynamoDB</strong> debe permitir la creación y eliminación de tablas, administradas de forma centralizada mediante <strong>ZooKeeper</strong>. Cada tabla se compone de un conjunto de <em>shards</em> distribuidos entre los <strong>DataNodes</strong>, y su existencia, configuración y estado deben estar reflejados en ZooKeeper, que actúa como registro único de la configuración global del sistema.</p>
+
+<h3 id="31-requerimientos-generales"><strong>3.1. Requerimientos generales</strong></h3>
+
+<ul>
+  <li>Toda tabla debe tener un <strong>nombre único</strong> dentro del sistema.</li>
+  <li>Cada tabla debe especificar al momento de su creación el <strong>número de shards</strong> que la compondrán.</li>
+  <li>Los shards deben asignarse a los DataNodes disponibles de manera <strong>aleatoria</strong>, y cada uno debe tener <strong>3 o 5 réplicas</strong> según la configuración establecida.</li>
+  <li>La relación entre tablas, shards y DataNodes debe mantenerse registrada de forma persistente y consistente en ZooKeeper.</li>
+  <li>Un <strong>DataNode puede alojar múltiples shards</strong>, incluso pertenecientes a distintas tablas.</li>
+  <li>No se requiere reconfiguración dinámica: una vez creada una tabla, su estructura y asignación de shards permanece fija.</li>
+</ul>
+
+<h3 id="32-operación-createtable"><strong>3.2. Operación <code class="language-plaintext highlighter-rouge">CreateTable</code></strong></h3>
+
+<p><code class="language-plaintext highlighter-rouge">CreateTable &lt;nombre&gt; &lt;número_de_shards&gt;</code> <code class="language-plaintext highlighter-rouge">&lt;número_de_replicas&gt;</code></p>
+
+<p>La operación debe:</p>
+
+<ul>
+  <li>Registrar la existencia de una nueva tabla en ZooKeeper.</li>
+  <li>Definir el número de shards y los rangos de hash asociados.</li>
+  <li>Asignar de forma aleatoria los shards a los DataNodes disponibles.</li>
+  <li>Inicializar los metadatos correspondientes, incluyendo el número de réplicas por shard.</li>
+</ul>
+
+<p>El sistema debe garantizar que la creación de tablas es <strong>atómica y consistente</strong>, evitando estados parciales o configuraciones incompletas.</p>
+
+<h3 id="33-operación-deletetable"><strong>3.3. Operación <code class="language-plaintext highlighter-rouge">DeleteTable</code></strong></h3>
+
+<p><code class="language-plaintext highlighter-rouge">DeleteTable &lt;nombre&gt;</code></p>
+
+<p>La operación debe:</p>
+
+<ul>
+  <li>Eliminar todos los metadatos asociados a la tabla en ZooKeeper.</li>
+  <li>Indicar la eliminación de los shards correspondientes en los DataNodes.</li>
+  <li>Asegurar que, una vez completada, la tabla no sea visible ni accesible desde los RequestRouters o el cliente.</li>
+</ul>
+
+<p>La eliminación debe realizarse de manera <strong>segura y definitiva</strong>, sin dejar shards huérfanos o configuraciones residuales.</p>
+
+<h3 id="34-metadatos-en-zookeeper"><strong>3.4. Metadatos en ZooKeeper</strong></h3>
+
+<p>Para cada tabla, ZooKeeper debe almacenar:</p>
+
+<ul>
+  <li>El <strong>nombre de la tabla</strong>.</li>
+  <li>El <strong>número total de shards</strong>.</li>
+  <li>Los <strong>rangos de hash</strong> correspondientes a cada shard.</li>
+  <li>Las <strong>direcciones o identificadores</strong> de los DataNodes asignados a cada shard.</li>
+  <li>El <strong>número de réplicas</strong> por shard.</li>
+  <li>El <strong>estado</strong> de la tabla (<code class="language-plaintext highlighter-rouge">creating</code>, <code class="language-plaintext highlighter-rouge">available</code>, <code class="language-plaintext highlighter-rouge">deleting</code>).</li>
+</ul>
+
+<p>Toda esta información debe ser consultable por los RequestRouters para el enrutamiento de operaciones.</p>
+
+<h2 id="4-consistencia-y-modelo-de-lecturas"><strong>4. Consistencia y modelo de lecturas</strong></h2>
+
+<p>El sistema debe ofrecer un modelo de consistencia configurable, con soporte tanto para <strong>lecturas eventualmente consistentes</strong> como para <strong>lecturas fuertemente consistentes (linealizables)</strong>, siguiendo la semántica de DynamoDB.</p>
+
+<h3 id="41-requerimientos-generales"><strong>4.1. Requerimientos generales</strong></h3>
+
+<ul>
+  <li>Todas las operaciones deben asegurar que los datos almacenados en las distintas réplicas de un shard converjan al mismo valor.</li>
+  <li>Las operaciones de escritura deben preservar un orden global dentro de cada shard.</li>
+  <li>El sistema debe permitir que los clientes elijan, para cada lectura, el nivel de consistencia deseado.</li>
+</ul>
+
+<h3 id="42-operación-get"><strong>4.2. Operación <code class="language-plaintext highlighter-rouge">Get</code></strong></h3>
+
+<ul>
+  <li>
+    <p>La operación <code class="language-plaintext highlighter-rouge">Get</code> debe aceptar un <strong>parámetro opcional</strong> que indique el nivel de consistencia:</p>
+
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">consistent=false</code></strong> (por defecto): lectura eventual.</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">consistent=true</code></strong>: lectura fuertemente consistente.</li>
+    </ul>
+  </li>
+  <li>Las lecturas eventuales pueden ser respondidas por cualquier réplica disponible.</li>
+  <li>Las lecturas fuertes deben reflejar el estado más reciente confirmado por la mayoría.</li>
+</ul>
+
+<h3 id="43-operaciones-put-y-delete"><strong>4.3. Operaciones <code class="language-plaintext highlighter-rouge">Put</code> y <code class="language-plaintext highlighter-rouge">Delete</code></strong></h3>
+
+<ul>
+  <li>Las operaciones <code class="language-plaintext highlighter-rouge">Put</code> y <code class="language-plaintext highlighter-rouge">Delete</code> deben aplicarse de forma ordenada y garantizar que no existan versiones conflictivas dentro del mismo shard.</li>
+  <li>Si un shard no puede asegurar un estado consistente (por pérdida de quorum o error de sincronización), las escrituras deben ser rechazadas.</li>
+  <li>Las escrituras deben ser visibles inmediatamente para lecturas fuertes y de forma eventual para lecturas débiles.</li>
+</ul>
+
+<h3 id="44-disponibilidad"><strong>4.4. Disponibilidad</strong></h3>
+
+<ul>
+  <li>Cada shard debe continuar procesando operaciones mientras conserve <strong>una mayoría de réplicas activas</strong>.</li>
+  <li>Si un shard pierde la mayoría, solo se permiten lecturas eventuales.</li>
+</ul>
+
+<h2 id="5-transacciones-distribuidas"><strong>5. Transacciones distribuidas</strong></h2>
+
+<p>El sistema debe incorporar soporte para transacciones usando 2 Phase Commit basadas en el <strong>mecanismo de locking optimista</strong> descripto en el <em>paper de Amazon DynamoDB</em>. Este modelo debe detectar conflictos de concurrencia y abortar la transacción en caso de inconsistencias, permitiendo al cliente reintentarlo.</p>
+
+<p>Se deberán soportar dos tipos de transacciones:</p>
+
+<ul>
+  <li><strong>Put transaccional:</strong> agrupa múltiples operaciones <code class="language-plaintext highlighter-rouge">Put</code> (y solo <code class="language-plaintext highlighter-rouge">Put</code>) que deben aplicarse de forma <strong>atómica</strong>, es decir, todas o ninguna.</li>
+  <li><strong>Get transaccional:</strong> permite realizar un conjunto de lecturas (<code class="language-plaintext highlighter-rouge">Get</code>) que reflejen un <strong>estado consistente del sistema</strong>, actuando como un <em>snapshot</em> transaccional.</li>
+</ul>
+
+<p>Las transacciones deben poder involucrar <strong>múltiples tablas y múltiples shards</strong>. El <strong>RequestRouter</strong> debe <strong>implementar el Transaction Manager</strong>, siendo responsable de coordinar el inicio, validación, commit y abort de cada transacción.</p>
+
+<p>El estado del Transaction Manager y sus transacciones (pendiente, confirmada o abortada) debe persistirse en <strong>ZooKeeper</strong>, garantizando la <strong>recuperación ante fallas</strong>, incluso en caso de caída del Transaction Manager o de los nodos participantes.</p>
+
+<h2 id="6-bibliografía"><strong>6. Bibliografía</strong></h2>
+
+<ul>
+  <li>M. Elhemali et al., “Amazon DynamoDB: A Scalable, Predictably Performant, and Fully Managed NoSQL Database Service,” in Proc. 2022 USENIX Annu. Tech. Conf. (USENIX ATC 22), Carlsbad, CA, USA, Jul. 2022, pp. 1037–1048. [Online]. Available: <a href="https://www.usenix.org/conference/atc22/presentation/elhemali">https://www.usenix.org/conference/atc22/presentation/elhemali</a></li>
+  <li>P. Hunt, M. Konar, F. P. Junqueira, and B. Reed, “ZooKeeper: Wait-free coordination for Internet-scale systems,” in Proc. 2010 USENIX Annu. Tech. Conf. (USENIX ATC 10), Boston, MA, USA, Jun. 2010. [Online]. Available: <a href="https://www.usenix.org/conference/usenix-atc-10/zookeeper-wait-free-coordination-internet-scale-systems">https://www.usenix.org/conference/usenix-atc-10/zookeeper-wait-free-coordination-internet-scale-systems</a></li>
+  <li>D. Ongaro and J. Ousterhout, “In Search of an Understandable Consensus Algorithm,” in Proc. 2014 USENIX Annu. Tech. Conf. (USENIX ATC 14), Philadelphia, PA, USA, Jun. 2014, pp. 305–319. [Online]. Available: <a href="https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro">https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro</a></li>
+  <li>J. Idziorek et al., “Distributed Transactions at Scale in Amazon DynamoDB,” in Proc. 2023 USENIX Annu. Tech. Conf. (USENIX ATC 23), Boston, MA, USA, Jul. 2023, pp. 705–717. [Online]. Available: <a href="https://www.usenix.org/conference/atc23/presentation/idziorek">https://www.usenix.org/conference/atc23/presentation/idziorek</a></li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/archive/2026a/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">TA050 Sistemas Distribuidos I</li><li><a class="u-email" href="mailto:eespina@fi.uba.ar">eespina@fi.uba.ar</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <label for="cuatrimestres-select">Cuatrimestres Anteriores</label>
+        <select id="cuatrimestres-select" onchange="if(this.value) window.location.href=this.value">
+          <option value="">— Elegir —</option><option value="/archive/2025b">2025b</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
