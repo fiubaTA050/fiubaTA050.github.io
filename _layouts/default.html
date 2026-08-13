@@ -7,7 +7,11 @@
 
     {%- include navbar.html -%}
 
-    <main class="flex-shrink-0 {{ page.main_class }}">
+    {%- comment -%}
+      `layout.main_class`, no `page.main_class`: el front matter de un layout
+      se expone bajo `layout`, así que con `page` esto nunca resolvía a nada.
+    {%- endcomment -%}
+    <main class="flex-shrink-0{% if layout.main_class %} {{ layout.main_class }}{% endif %}">
       {{ content }}
     </main>
 
