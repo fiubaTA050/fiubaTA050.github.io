@@ -94,7 +94,7 @@ permalink: /calendario/
       <td class="calendar-activity">
         <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — <span class="cal-entrega">entrega y presentación</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — <span class="cal-entrega">entrega</span></dd>
         </dl></td>
       <td>—</td>
       <td>—</td>
