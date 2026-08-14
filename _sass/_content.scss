@@ -95,6 +95,15 @@
   font-weight: 500;
 }
 
+// Anuncio en prosa, para lo que no es una lista de fechas.
+.anuncios-texto {
+  margin: 0 0 0.6rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .anuncios-fechas {
   margin: 0;
   padding-left: 0;

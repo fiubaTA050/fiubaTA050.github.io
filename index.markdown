@@ -5,17 +5,12 @@ title: Bienvenidos a Sistemas Distribuidos I
 
 <section class="anuncios" aria-labelledby="anuncios-heading">
   <h2 id="anuncios-heading" class="anuncios-title"><i class="fa-solid fa-bullhorn"></i> Anuncios</h2>
-  <p class="anuncios-subtitle"><i class="fa-solid fa-graduation-cap"></i> Fechas de finales</p>
+  <p class="anuncios-subtitle"><i class="fa-solid fa-calendar-day"></i> Primera clase</p>
   <ul class="anuncios-fechas">
-    <li><span class="anuncios-fecha">1 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 418</span></li>
-    <li class="anuncios-tachada"><span class="anuncios-fecha">15 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 418</span> <span class="anuncios-reprogramada">Reprogramada al viernes 17</span></li>
-    <li><span class="anuncios-fecha">17 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 313</span></li>
-    <li><span class="anuncios-fecha">22 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 414</span></li>
-    <li class="anuncios-tachada"><span class="anuncios-fecha">31 de julio</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 414</span> <span class="anuncios-reprogramada">Reprogramada al miércoles 5 de agosto</span></li>
-    <li><span class="anuncios-fecha">5 de agosto</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 403</span></li>
-    <li class="anuncios-tachada"><span class="anuncios-fecha">12 de agosto</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 414</span> <span class="anuncios-reprogramada">Reprogramada al viernes 14 de agosto por paro</span></li>
-    <li><span class="anuncios-fecha">14 de agosto</span> <span class="anuncios-hora">· 19:00 hs</span> <span class="anuncios-aula">· Aula 319</span></li>
+    <li><span class="anuncios-fecha">Miércoles 19 de agosto</span> <span class="anuncios-hora">· 19 a 22 h</span> <span class="anuncios-aula">· Presencial en la facultad</span></li>
   </ul>
+  <p class="anuncios-subtitle"><i class="fa-solid fa-envelope"></i> Alta al curso</p>
+  <p class="anuncios-texto">Antes del inicio de la cursada se enviará un correo con la información para darse de alta al curso, que incluye un formulario de Google y el enlace al servidor de Discord, principal canal de comunicación de la materia. El correo se envía a la dirección registrada en SIU Guaraní.</p>
 </section>
 
 <div class="row mb-4 pb-lg-2 border-bottom border-2">
