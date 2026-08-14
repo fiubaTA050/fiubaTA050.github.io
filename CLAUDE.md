@@ -52,9 +52,11 @@ Constraints worth knowing before editing styles:
 ## Common tasks
 
 1. **Update the calendar** (most frequent) — add notes/video links per class, shift dates, add readings/papers. A dedicated skill exists for this.
-2. **Update TP statements** — edit `tp*.markdown`.
-3. **Change the look** — edit `_sass/`, never inline styles in the content markdown.
-4. **Archive a finished semester** — freeze the site as a static snapshot under `/archive/<cuatri>/`. A dedicated skill exists for this; the procedure has several non-obvious pitfalls, so follow it rather than improvising.
+2. **Update the home announcements** — the `.anuncios` block swaps between
+   start-of-term notices and the fechas de finales. A dedicated skill exists.
+3. **Update TP statements** — edit `tp*.markdown`.
+4. **Change the look** — edit `_sass/`, never inline styles in the content markdown.
+5. **Archive a finished semester** — freeze the site as a static snapshot under `/archive/<cuatri>/`. A dedicated skill exists for this; the procedure has several non-obvious pitfalls, so follow it rather than improvising.
 
 ## Design samples and screenshot tooling
 
