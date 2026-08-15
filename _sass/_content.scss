@@ -1,0 +1,163 @@
+// La tarjeta clara que flota sobre el fondo oscuro.
+.main-content {
+  color: var(--text-color);
+
+  // Red de seguridad: un token largo sin espacios (una URL, un identificador
+  // de zona horaria como America/Argentina/Buenos_Aires) no puede empujar el
+  // ancho del documento y provocar scroll horizontal en el teléfono.
+  overflow-wrap: break-word;
+}
+
+.content {
+  h1 {
+    font-weight: 800;
+    border-bottom: 5px solid var(--header-color);
+  }
+
+  h2 {
+    font-weight: 600;
+    border-bottom: 3px dotted var(--header-color);
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1.35rem;
+  }
+
+  // Título de las páginas internas (Calendario, Programa, FAQ, TPs).
+  h1.page-header {
+    margin-bottom: 1.5rem;
+    font-family: var(--header-font), sans-serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    border-bottom: 0;
+    text-shadow: 0.1rem 0.1rem var(--shadow-color);
+  }
+}
+
+// Red de seguridad para las tablas que genera Markdown (Programa, FAQ), que no
+// pueden llevar la clase .table de Bootstrap.
+.content table:not(.table) {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 600;
+  }
+}
+
+.course-info {
+  > dd {
+    padding-left: 0;
+  }
+
+  font-size: 90%;
+}
+
+// ---------------------------------------------------------------------------
+// Anuncios (fechas de finales) en la home
+// ---------------------------------------------------------------------------
+.anuncios {
+  margin: 0 0 2.5rem;
+  padding: 1.1rem 1.4rem;
+  border: 1px solid #dee2e6;
+  border-left: 5px solid var(--main-color);
+  border-radius: 0.75rem;
+  background-color: #fff;
+}
+
+.anuncios-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  font-family: var(--header-font), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+  border-bottom: 0 !important;
+}
+
+.anuncios-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.7rem 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+// Anuncio en prosa, para lo que no es una lista de fechas.
+.anuncios-texto {
+  margin: 0 0 0.6rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.anuncios-fechas {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #dee2e6;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.anuncios-fecha {
+  min-width: 7em;
+  font-weight: 500;
+}
+
+.anuncios-hora,
+.anuncios-aula {
+  color: #6c757d;
+}
+
+.anuncios-tachada {
+  .anuncios-fecha,
+  .anuncios-hora,
+  .anuncios-aula {
+    color: #6c757d;
+    text-decoration: line-through;
+  }
+}
+
+.anuncios-reprogramada {
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+@media (max-width: 575px) {
+  // A ancho completo la tarjeta no debe tener esquinas redondeadas.
+  .main-content {
+    border-radius: 0 !important;
+  }
+
+  .content h1.page-header {
+    font-size: 2.4rem;
+  }
+
+  .anuncios-fechas li {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+}

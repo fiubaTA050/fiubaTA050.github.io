@@ -1,0 +1,17 @@
+---
+# Front matter vacío obligatorio: es lo que le dice a Jekyll que procese
+# este archivo y lo compile a /assets/css/main.css.
+---
+
+// Bootstrap 5 se carga compilado desde el CDN (ver _includes/head.html), así
+// que acá no hay acceso a sus variables ni mixins Sass. Los breakpoints van
+// a mano, alineados a los de Bootstrap: 576 / 768 / 992 / 1200 / 1400.
+
+@import "tokens";
+@import "base";
+@import "navbar";
+@import "banner";
+@import "content";
+@import "personnel";
+@import "calendario";
+@import "footer";

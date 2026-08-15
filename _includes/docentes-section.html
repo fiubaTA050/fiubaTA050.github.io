@@ -1,0 +1,23 @@
+{%- comment -%}
+  Una sección de docentes (Profesor / Ayudantes / Colaboradores).
+  Parámetros: title, icon, people (una lista de _data/docentes.yml).
+{%- endcomment -%}
+<div class="docentes-section">
+  <h3 class="docentes-section-title"><i class="{{ include.icon }}"></i> {{ include.title }}</h3>
+  <div class="row">
+    {%- for person in include.people -%}
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="docentes-person">
+        <img class="docentes-person-img" src="{{ person.image | relative_url }}" alt="{{ person.name }}" />
+        <div class="docentes-person-name">
+          {%- if person.url and person.url != "" -%}
+            <a href="{{ person.url }}">{{ person.name }}</a>
+          {%- else -%}
+            <span>{{ person.name }}</span>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    {%- endfor -%}
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.footer {
+  z-index: 20;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-brand {
+  font-family: var(--header-font), sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-email {
+  font-size: 0.9rem;
+  color: var(--glow-color);
+
+  &:hover {
+    background-color: var(--glow-color);
+    color: #04202a;
+  }
+}
+
+.dropdown-menu {
+  .dropdown-item:hover {
+    background-color: var(--main-color);
+    color: #fff;
+  }
+}

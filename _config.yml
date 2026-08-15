@@ -28,11 +28,33 @@ url: "https://fiubata050.github.io" # the base hostname & protocol for your site
 #github_username:  jekyll
 
 # Build settings
-theme: minima
+# El tema es local: _layouts/, _includes/, _sass/ y assets/css/main.scss.
+# `theme: null` es obligatorio, no decorativo: omitir la clave no alcanza,
+# porque el gem `github-pages` mete `jekyll-theme-primer` como default y su
+# _sass/ y _includes/ quedan en el path de resolución, pisando al tema local.
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# Datos del curso usados por el banner y el navbar
+course:
+  code: FIUBA TA050
+  name: Sistemas Distribuidos
+  term: 2do Cuat. 2026
+  youtube: https://www.youtube.com/channel/UC4otLhNFBFcbjsxjCF_uUaw
+  meet: https://meet.google.com/htg-dkva-htv
+  apuntes: https://clasesdistribuidos.github.io/
+  # Variante del título del hero:
+  #   perspectiva — 3D rotado, como CMU (default)
+  #   recto       — a la derecha, derecho, con glow cyan
+  #   centrado    — abajo y centrado a ancho completo
+  banner_title: perspectiva
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Imagen OG por defecto para TODAS las páginas.
 # jekyll-seo-tag (v2.8.0) solo lee `page.image` del front matter, NO `site.image`,
@@ -69,6 +91,8 @@ header_pages:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - CLAUDE.md
+  - README.md
   - _posts/
   - vendor/
   - .bundle/

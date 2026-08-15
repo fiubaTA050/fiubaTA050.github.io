@@ -1,0 +1,72 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--text-font), sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background: linear-gradient(0deg, var(--page-bg-bottom), var(--page-bg-top));
+  color: var(--text-color);
+}
+
+// Despeje del navbar fixed-top.
+main {
+  margin-top: 3.75rem;
+}
+
+main img {
+  max-width: 100%;
+}
+
+strong,
+b,
+dt {
+  font-weight: 500;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--mono-font), var(--bs-font-monospace);
+  background-color: #e9ecef !important;
+}
+
+.bg-light {
+  background-color: var(--card-bg) !important;
+}
+
+// Links: en hover invierten a fondo sólido de acento con texto blanco,
+// como en la referencia de CMU.
+a {
+  color: var(--link-color);
+  padding: 1px 1px;
+  border-radius: 3px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+
+  &:hover {
+    background-color: var(--link-color);
+    color: #fff;
+    text-decoration: underline dotted;
+  }
+
+  // Un link que envuelve una imagen no debe teñirse.
+  &:has(> img):hover {
+    text-decoration: none !important;
+    background-color: inherit !important;
+  }
+}
+
+// Resaltado del ancla al navegar con #fragmento: las citas del calendario
+// enlazan a la bibliografía del pie con href="#ref-…", y esos destinos son
+// los <li> de la lista. El scroll-margin despeja el navbar `fixed-top`, que
+// si no tapa el ítem cuando el destino no está al final del documento.
+li:target {
+  background-color: #ffffcc;
+  border: 3px solid var(--main-color);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  scroll-margin-top: 5rem;
+}

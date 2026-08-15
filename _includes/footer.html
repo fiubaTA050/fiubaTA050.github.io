@@ -1,44 +1,38 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+<footer class="footer mt-auto bg-black">
+  <div class="container">
+    <div class="row py-3 align-items-center">
 
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
+      <div class="col-7 col-md-8 my-auto">
+        <span class="footer-brand d-block">{{ site.title | escape }}</span>
+        {%- if site.email -%}
+          <a class="footer-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        {%- endif -%}
       </div>
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
+      <div class="col-5 col-md-4">
+        {%- if site.data.archivo and site.data.archivo.size > 0 -%}
+          <div class="dropdown float-end">
+            <button class="btn btn-sm btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-book"></i> Cuatrimestres
+            </button>
+            {%- comment -%}
+              Rutas absolutas a propósito, SIN `relative_url`: los archivos se
+              construyen con `--baseurl /archive/<cuatri>`, y ahí `relative_url`
+              generaría `/archive/2026a/archive/2025b`. Los archivos viven siempre
+              en la raíz del sitio, así que la ruta absoluta es correcta en ambos
+              casos (el sitio vivo tiene `baseurl: ""`).
+            {%- endcomment -%}
+            <ul class="dropdown-menu dropdown-menu-end">
+              {%- for c in site.data.archivo -%}
+                <li class="{% unless forloop.first %}border-top{% endunless %}">
+                  <a class="dropdown-item" href="{{ c.url }}" title="Ver sitio del cuatrimestre {{ c.label }}">{{ c.label }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
       </div>
 
-      <div class="footer-col footer-col-3">
-        <label for="cuatrimestres-select">Cuatrimestres Anteriores</label>
-        <select id="cuatrimestres-select" onchange="if(this.value) window.location.href=this.value">
-          <option value="">— Elegir —</option>
-          {%- comment -%}
-            Rutas absolutas a propósito, SIN `relative_url`: los archivos se
-            construyen con `--baseurl /archive/<cuatri>`, y ahí `relative_url`
-            generaría `/archive/2026a/archive/2025b`. Los archivos viven siempre
-            en la raíz del sitio, así que la ruta absoluta es correcta en ambos
-            casos (el sitio vivo tiene `baseurl: ""`).
-          {%- endcomment -%}
-          <option value="/archive/2025b">2025b</option>
-        </select>
-      </div>
     </div>
-
   </div>
-
 </footer>

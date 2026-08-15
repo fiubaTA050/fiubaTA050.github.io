@@ -1,0 +1,126 @@
+.calendario {
+  border-left: none;
+  border-right: none;
+
+  th,
+  td {
+    border-left: none;
+    border-right: none;
+  }
+
+  // Notas y Video
+  td:nth-child(3),
+  td:nth-child(4) {
+    text-align: center;
+  }
+
+  tr.cal-feriado td {
+    background-color: var(--feriado-row-bg);
+  }
+
+  // `tr.cal-entrega` ya venía en el markup pero sin ningún estilo asociado.
+  tr.cal-entrega td {
+    background-color: var(--deadline-row-bg);
+  }
+}
+
+// Mismo nombre en dos elementos distintos, a propósito: la fila entera marca
+// que hay una entrega, el span marca cuál.
+span.cal-entrega {
+  font-weight: 500;
+  color: var(--deadline-color);
+}
+
+.calendar-date {
+  font-size: 95%;
+}
+
+.calendario .calendar-activity {
+  vertical-align: top;
+
+  .lecture-title {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+  }
+
+  .cal-activity-dl {
+    display: grid;
+    grid-template-columns: minmax(5.5rem, auto) 1fr;
+    gap: 0.2rem 0.65rem;
+    align-items: baseline;
+    margin: 0;
+    padding-left: 0.25rem;
+    font-size: 0.95em;
+
+    dt {
+      margin: 0;
+      font-weight: 400;
+      color: #6c757d;
+    }
+
+    dd {
+      margin: 0;
+      padding-left: 0;
+    }
+
+    ul.cal-reading-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+
+      > li {
+        margin: 0;
+      }
+    }
+
+    a.schedule-badge {
+      white-space: nowrap;
+      border: none !important;
+    }
+  }
+
+}
+
+// Escritorio/tablet ancho: 4 columnas, sin duplicar Notas/Video dentro de Tema.
+@media (min-width: 768px) {
+  .calendario .cal-mobile-only {
+    display: none;
+  }
+}
+
+// Teléfono: Notas y Video sólo dentro de Tema; se ocultan las columnas propias.
+@media (max-width: 767.98px) {
+  .calendario {
+    th:nth-child(3),
+    th:nth-child(4),
+    td:nth-child(3),
+    td:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+.cal-bibliografia-heading {
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.cal-bibliografia {
+  margin: 0.5rem 0 0;
+  padding-left: 1.5rem;
+
+  cite {
+    font-style: italic;
+  }
+}
+
+@media (max-width: 575px) {
+  .calendario {
+    font-size: 85%;
+  }
+}

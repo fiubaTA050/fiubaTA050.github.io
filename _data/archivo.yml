@@ -1,0 +1,7 @@
+# Cuatrimestres anteriores archivados. Cada uno es una copia estática
+# bajo /archive/, así que agregar uno nuevo es sumar una línea acá.
+# Del más reciente al más viejo: así aparecen en el desplegable.
+- label: 2026a
+  url: /archive/2026a
+- label: 2025b
+  url: /archive/2025b
