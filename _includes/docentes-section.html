@@ -1,11 +1,16 @@
 {%- comment -%}
   Una sección de docentes (Profesor / Ayudantes / Colaboradores).
   Parámetros: title, icon, people (una lista de _data/docentes.yml).
+
+  Las entradas con `disabled: true` no se renderizan. Siguen en el YAML a
+  propósito: quien deja de participar un cuatrimestre suele volver, y así no se
+  pierden su foto ni su mail.
 {%- endcomment -%}
 <div class="docentes-section">
   <h3 class="docentes-section-title"><i class="{{ include.icon }}"></i> {{ include.title }}</h3>
   <div class="row">
     {%- for person in include.people -%}
+    {%- unless person.disabled -%}
     <div class="col-12 col-md-6 col-xl-4">
       <div class="docentes-person">
         <img class="docentes-person-img" src="{{ person.image | relative_url }}" alt="{{ person.name }}" />
@@ -18,6 +23,7 @@
         </div>
       </div>
     </div>
+    {%- endunless -%}
     {%- endfor -%}
   </div>
 </div>

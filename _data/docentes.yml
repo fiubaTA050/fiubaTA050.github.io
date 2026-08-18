@@ -5,6 +5,10 @@ instructor:
 # Ordenados alfabéticamente por nombre. Quien no tiene foto todavía usa
 # placeholder.png. El campo `email` es solo para uso interno: ninguna plantilla
 # lo renderiza.
+#
+# `disabled: true` saca a la persona de la home sin borrarla de acá. Es para
+# quien no participa este cuatrimestre pero puede volver: se reactiva sacando
+# la línea, sin tener que recuperar su foto ni su mail del historial de git.
 ayudantes:
   - name: Alen Davies
     image: "/assets/images/adavies.jpeg"
@@ -21,6 +25,10 @@ ayudantes:
   - name: Gonzalo Crudo
     image: "/assets/images/gcrudo.jpeg"
     email: gncrudo@fi.uba.ar
+  - name: Ignacio Viau
+    image: "/assets/images/placeholder.png"
+    email: iviau@fi.uba.ar
+    disabled: true
   - name: JuanMa Pascual
     image: "/assets/images/jpascual.jpeg"
     email: jpascual@fi.uba.ar
@@ -46,5 +54,7 @@ ayudantes:
 colaboradores_invitados:
   - name: Ing. Tomás Arjovsky
     image: "/assets/images/tarjovsky.jpeg"
-  - name: Luca Lazcano
+  - name: Ing. Luca Lazcano
     image: "/assets/images/llazcano.jpeg"
+    email: llazcano@fi.uba.ar
+    disabled: true
