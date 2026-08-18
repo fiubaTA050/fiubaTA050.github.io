@@ -3,35 +3,48 @@ instructor:
     image: "/assets/images/eespina.jpeg"
 
 # Ordenados alfabéticamente por nombre. Quien no tiene foto todavía usa
-# placeholder.png.
+# placeholder.png. El campo `email` es solo para uso interno: ninguna plantilla
+# lo renderiza.
 ayudantes:
   - name: Alen Davies
     image: "/assets/images/adavies.jpeg"
+    email: adavies@fi.uba.ar
   - name: Bautista Silvano Lima
     image: "/assets/images/bsilvano.jpeg"
+    email: bsilvano@fi.uba.ar
   - name: Brayan Ricaldi
-    image: "/assets/images/placeholder.png"
+    image: "/assets/images/bricaldi.jpeg"
+    email: bricaldi@fi.uba.ar
   - name: Fran Orquera
     image: "/assets/images/forquera.jpeg"
+    email: forqueral@fi.uba.ar
   - name: Gonzalo Crudo
     image: "/assets/images/gcrudo.jpeg"
-  - name: Ignacio Viau
-    image: "/assets/images/placeholder.png"
+    email: gncrudo@fi.uba.ar
   - name: JuanMa Pascual
     image: "/assets/images/jpascual.jpeg"
+    email: jpascual@fi.uba.ar
   - name: Leticia Isabel Aab
     image: "/assets/images/laab.jpeg"
-  - name: Luca Lazcano
-    image: "/assets/images/llazcano.jpeg"
+    email: laab@fi.uba.ar
   - name: Lucas Torres
     image: "/assets/images/ltorres.jpeg"
+    email: lgtorres@fi.uba.ar
   - name: Matias Besmedrisnik
     image: "/assets/images/mbesmedrisnik.jpeg"
+    email: mbesmedrisnik@fi.uba.ar
   - name: Nicolas Chaia
     image: "/assets/images/nchaia.jpeg"
+    email: nchaia@fi.uba.ar
+  - name: Pablo Romanelli
+    image: "/assets/images/promanelli.jpeg"
+    email: pabloromanelli@gmail.com
   - name: Ruben Bohorquez
     image: "/assets/images/rbohorquez.jpeg"
+    email: rbohorquez@fi.uba.ar
 
 colaboradores_invitados:
   - name: Ing. Tomás Arjovsky
     image: "/assets/images/tarjovsky.jpeg"
+  - name: Luca Lazcano
+    image: "/assets/images/llazcano.jpeg"
