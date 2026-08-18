@@ -15,7 +15,7 @@ permalink: /calendario/
   </thead>
   <tbody>
     <tr>
-      <td>19 ago</td>
+      <td>19 ago<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 1 — Introducción y RPC</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
@@ -31,12 +31,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>21 ago</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Introducción a Go</span>
-        <div><em>Clase asincrónica a cargo de Luca Lazcano</em></div>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-book"></i> Lecturas:</dt>
-          <dd><a href="https://go.dev/tour">A Tour of Go</a></dd>
-        </dl></td>
+      <td></td>
       <td>—</td>
       <td>—</td>
     </tr>
