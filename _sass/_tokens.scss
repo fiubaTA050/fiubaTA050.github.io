@@ -26,6 +26,19 @@
   --deadline-row-bg: #fdf0ee;
   --feriado-row-bg: #dff0d8;
 
+  // Modalidad de cada clase. Pares fondo/texto pensados para el pill: el texto
+  // queda en 6:1 o más sobre su propio fondo, así que ninguno depende del color
+  // para leerse. Suspendida reusa el rojo de las entregas a propósito: es la
+  // única modalidad que exige acción del lector.
+  --modalidad-presencial-bg: #e3eff1;
+  --modalidad-presencial-fg: #045766;
+  --modalidad-virtual-bg: #eceff3;
+  --modalidad-virtual-fg: #45525f;
+  --modalidad-asincronica-bg: #fdf3e0;
+  --modalidad-asincronica-fg: #8a5a00;
+  --modalidad-suspendida-bg: var(--deadline-row-bg);
+  --modalidad-suspendida-fg: var(--deadline-color);
+
   // Superficies
   --page-bg-top: #010101;
   --page-bg-bottom: #03181a;

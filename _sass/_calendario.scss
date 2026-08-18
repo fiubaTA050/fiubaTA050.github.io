@@ -35,6 +35,41 @@ span.cal-entrega {
   font-size: 95%;
 }
 
+// Modalidad: pill bajo la fecha. Va en la primera columna a propósito — es la
+// única que sobrevive al breakpoint de teléfono, donde Notas y Video se ocultan.
+.calendario .cal-modalidad {
+  display: block;
+  width: fit-content;
+  margin-top: 0.35rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.calendario .cal-modalidad-presencial {
+  background-color: var(--modalidad-presencial-bg);
+  color: var(--modalidad-presencial-fg);
+}
+
+.calendario .cal-modalidad-virtual {
+  background-color: var(--modalidad-virtual-bg);
+  color: var(--modalidad-virtual-fg);
+}
+
+.calendario .cal-modalidad-asincronica {
+  background-color: var(--modalidad-asincronica-bg);
+  color: var(--modalidad-asincronica-fg);
+}
+
+.calendario .cal-modalidad-suspendida {
+  background-color: var(--modalidad-suspendida-bg);
+  color: var(--modalidad-suspendida-fg);
+}
+
 .calendario .calendar-activity {
   vertical-align: top;
 
