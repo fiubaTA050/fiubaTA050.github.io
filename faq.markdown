@@ -16,11 +16,11 @@ En las clases presenciales en la facultad puede tomarse asistencia para registra
 
 ### ¿Las clases son presenciales o virtuales?
 
-La cursada sigue un modelo híbrido: en general los miércoles son presenciales en la facultad y los viernes, virtuales por Meet.
+La cursada sigue un modelo híbrido: algunas clases son presenciales en la facultad y otras, virtuales por Meet. La modalidad de cada clase se indica en la página del [Calendario]({{ "/calendario/" | relative_url }}) a medida que se confirma.
 
 Las clases presenciales se graban y se publican después en el canal de YouTube, pero no se transmiten en vivo. Las virtuales se dan por Meet y también quedan grabadas. En ambos casos, todas las clases se disponibilizan posteriormente en la página de la materia.
 
-El aula de las clases presenciales, y cualquier excepción a la modalidad habitual, se avisan con anticipación en el Discord de la materia.
+El aula de las clases presenciales, y cualquier cambio de modalidad, se avisan con anticipación en el Discord de la materia.
 
 ## ¿Cómo se compone la nota final?
 

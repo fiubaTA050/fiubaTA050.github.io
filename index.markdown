@@ -12,7 +12,7 @@ title: Bienvenidos a Sistemas Distribuidos I
   <p class="anuncios-subtitle"><i class="fa-solid fa-envelope"></i> Alta al curso</p>
   <p class="anuncios-texto">Antes del inicio de la cursada se enviará un correo con la información para darse de alta al curso, que incluye un formulario de Google y el enlace al servidor de Discord, principal canal de comunicación de la materia. El correo se envía a la dirección registrada en SIU Guaraní.</p>
   <p class="anuncios-subtitle"><i class="fa-solid fa-tower-broadcast"></i> Modalidad de cada clase</p>
-  <p class="anuncios-texto">Este panel se utilizará durante la cursada para informar la modalidad de cada clase: si se dicta de manera presencial o virtual, o si se suspende. Ante cualquier cambio respecto del cronograma habitual, el aviso se publicará acá y se replicará por Discord.</p>
+  <p class="anuncios-texto">La modalidad de cada clase &mdash;presencial o virtual&mdash; se indica en el <a href="{{ "/calendario/" | relative_url }}">calendario</a> a medida que se confirma. Este panel se utilizará durante la cursada para informar cambios o suspensiones, y todo aviso se replicará por Discord.</p>
 </section>
 
 <div class="row mb-4 pb-lg-2 border-bottom border-2">
@@ -38,7 +38,7 @@ La cursada combina teoría y práctica: los trabajos prácticos reproducen técn
   <dd class="col-sm-7">Miércoles 19 a 22 h · Viernes 18 a 21 h</dd>
 
   <dt class="col-sm-5"><i class="fa-solid fa-location-dot"></i> Modalidad:</dt>
-  <dd class="col-sm-7">Miércoles presencial, viernes virtual. El aula y las excepciones se avisan por Discord.</dd>
+  <dd class="col-sm-7">Híbrida: la modalidad de cada clase se indica en el <a href="{{ "/calendario/" | relative_url }}">calendario</a>. El aula de las presenciales se avisa por Discord.</dd>
 
   <dt class="col-sm-5"><i class="fa-solid fa-link"></i> Meet:</dt>
   <dd class="col-sm-7"><a href="{{ site.course.meet }}" target="_meet" rel="noopener">Unirse a la videollamada <i class="fa-solid fa-arrow-up-right-from-square"></i></a></dd>
