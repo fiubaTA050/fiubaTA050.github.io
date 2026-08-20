@@ -1,6 +1,6 @@
 ---
 name: update-calendar
-description: Use when the user asks to modify `calendario.markdown` — moving, deleting, inserting, or renumbering Clases (lectures), or adding/updating class metadata such as Notas (Drive), Video (YouTube), Lecturas, Paper, or Trabajo práctico links. Triggers on phrases like "mover Clase N", "eliminar clase", "agregar video a Clase N", "insertar una clase", "actualizar el calendario".
+description: Use when the user asks to modify `calendario.markdown` — moving, deleting, inserting, or renumbering Clases (lectures), or adding/updating class metadata such as Apuntes (sitio de apuntes), Slides (PDF), Video (YouTube), Lecturas, Paper, or Trabajo práctico links. Triggers on phrases like "mover Clase N", "eliminar clase", "agregar video a Clase N", "insertar una clase", "actualizar el calendario".
 ---
 
 # Update Calendar
@@ -30,7 +30,7 @@ Lecture numbers must be strictly consecutive starting at Clase 1 (no gaps). Afte
 ### Delete a class
 1. If the row is plain class → set the activity cell to `<td></td>` (becomes a buffer).
 2. If the row is `cal-entrega` + class → keep `cal-entrega` and the TP `<dt>/<dd>` block; remove the lecture-title span and any class-only metadata.
-3. Reset Notas/Video columns to `<td>—</td>` if they belonged to the removed class.
+3. Reset the Apuntes/Slides/Video columns to `<td>—</td>` if they belonged to the removed class.
 4. Renumber all subsequent classes (decrement by 1).
 
 ### Move a class forward
@@ -41,7 +41,7 @@ Lecture numbers must be strictly consecutive starting at Clase 1 (no gaps). Afte
 3. While walking past class-bearing rows, those classes also shift forward by the same rule (cascade).
 4. If the cascade would push a class off the end of the table (no buffer/entrega-only slot remains), **stop and ask the user** before proceeding.
 5. The source row becomes empty: if it was a plain class row → activity cell to `<td></td>`; if it was `cal-entrega` + class → keep `cal-entrega` and the TP entry, drop the class portion.
-6. Notas/Video column links travel with the class (move them too). Reset abandoned columns to `<td>—</td>`.
+6. Apuntes/Slides/Video column links travel with the class (move them too). Reset abandoned columns to `<td>—</td>`.
 7. **Never move TP entrega `<dd>` entries** — they stay anchored to their original date.
 8. No renumbering.
 
@@ -56,14 +56,19 @@ Mirror of forward: scan upward for the next eligible slot, same row-type rules. 
 ### Update class metadata
 Add or replace entries inside the class's `<dl class="cal-activity-dl">`. Keep this canonical order:
 
-1. **Notas** (mobile-only `<dt>/<dd>`)
-2. **Video** (mobile-only `<dt>/<dd>`)
-3. **Lecturas** (`fas fa-book`)
-4. **Paper** (`fas fa-scroll`)
-5. **Trabajo práctico** (`fa fa-bullhorn`) — enunciado or entrega
+1. **Apuntes** (mobile-only `<dt>/<dd>`)
+2. **Slides** (mobile-only `<dt>/<dd>`)
+3. **Video** (mobile-only `<dt>/<dd>`)
+4. **Lecturas** (`fas fa-book`)
+5. **Paper** (`fas fa-scroll`)
+6. **Trabajo práctico** (`fa fa-bullhorn`) — enunciado or entrega
 
-When adding **Notas**: also replace the row's third `<td>—</td>` with the PDF icon link.
-When adding **Video**: also replace the row's fourth `<td>—</td>` with the video icon link.
+The table has five columns: Fecha, Tema, Apuntes, Slides, Video. Every row carries
+those three trailing `<td>` cells, in that order.
+
+When adding **Apuntes**: also replace the row's third `<td>—</td>` with the book icon link.
+When adding **Slides**: also replace the row's fourth `<td>—</td>` with the PDF icon link.
+When adding **Video**: also replace the row's fifth `<td>—</td>` with the video icon link.
 
 For metadata categories not listed here, ask the user for the icon and label, then follow the same `<dt>/<dd>` pattern.
 
@@ -79,10 +84,18 @@ For metadata categories not listed here, ask the user for the icon and label, th
 <span class="lecture-title">Clase N — Tema</span>
 ```
 
-### Notas (mobile-only block, inside `<dl class="cal-activity-dl">`)
+### Apuntes (mobile-only block, inside `<dl class="cal-activity-dl">`)
+Los apuntes son páginas del sitio `clasesdistribuidos.github.io/clase-NN/`.
 ```html
-<dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Notas:</dt>
-<dd class="cal-mobile-only"><a href="{drive-url}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+<dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+<dd class="cal-mobile-only"><a href="{apuntes-url}" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+```
+
+### Slides (mobile-only block)
+El PDF vive en el repo, bajo `assets/slides/claseN.pdf`, y se linkea con `relative_url`.
+```html
+<dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
+<dd class="cal-mobile-only"><a href="{{ "/assets/slides/claseN.pdf" | relative_url }}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
 ```
 
 ### Video (mobile-only block)
@@ -126,9 +139,10 @@ For metadata categories not listed here, ask the user for the icon and label, th
 <dd><a href="{{ "/trabajos-practicos/{tp-slug}/" | relative_url }}">{TP title}</a> — <span style="color: #c00;">{entrega description}</span></dd>
 ```
 
-### Notas / Video columns (replacing `—`)
+### Apuntes / Slides / Video columns (replacing `—`)
 ```html
-<td><a href="{drive-url}"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+<td><a href="{apuntes-url}"><i class="fas fa-book-open fa-lg"></i></a></td>
+<td><a href="{{ "/assets/slides/claseN.pdf" | relative_url }}"><i class="fas fa-file-pdf fa-lg"></i></a></td>
 <td><a href="{youtube-url}"><i class="fas fa-file-video fa-lg"></i></a></td>
 ```
 

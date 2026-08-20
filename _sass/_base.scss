@@ -64,7 +64,7 @@ a {
 // los <li> de la lista. El scroll-margin despeja el navbar `fixed-top`, que
 // si no tapa el ítem cuando el destino no está al final del documento.
 li:target {
-  background-color: #ffffcc;
+  background-color: var(--highlight-bg);
   border: 3px solid var(--main-color);
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;

@@ -18,6 +18,10 @@
   --glow-rgb: 37, 246, 254;
   --shadow-color: #046b7d;
   --header-color: #dee2e6;
+  // Resaltado amarillo, heredado de 15-445: marca el ancla de `li:target` y el
+  // hover de los links de material del calendario. El acento encima queda en
+  // 5.3:1, de sobra para texto y para un glifo.
+  --highlight-bg: #ffffcc;
 
   // Semánticos del calendario. Rojo para entregas (5.4:1 sobre la tarjeta),
   // verde para feriados. Los tintes de fila son deliberadamente lavados: el

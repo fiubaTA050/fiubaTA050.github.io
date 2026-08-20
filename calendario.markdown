@@ -9,7 +9,8 @@ permalink: /calendario/
     <tr>
       <th>Fecha</th>
       <th>Tema</th>
-      <th>Notas</th>
+      <th>Apuntes</th>
+      <th>Slides</th>
       <th>Video</th>
     </tr>
   </thead>
@@ -18,6 +19,12 @@ permalink: /calendario/
       <td>19 ago<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 1 — Introducción y RPC</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-01/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
+          <dd class="cal-mobile-only"><a href="{{ "/assets/slides/clase1.pdf" | relative_url }}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/M5nVa0z5FGQ" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
           <dd>
             <ul class="cal-reading-list">
@@ -26,14 +33,16 @@ permalink: /calendario/
             </ul>
           </dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-01/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 1)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
+      <td class="calendar-slides"><a href="{{ "/assets/slides/clase1.pdf" | relative_url }}" title="Slides (Clase 1)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td class="calendar-video"><a href="https://youtu.be/M5nVa0z5FGQ" target="_blank" rel="noopener noreferrer" title="Video (Clase 1)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>21 ago</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>26 ago</td>
@@ -44,14 +53,16 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — enunciado</dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>28 ago</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>2 sep</td>
@@ -66,14 +77,16 @@ permalink: /calendario/
             </ul>
           </dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>4 sep</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>9 sep</td>
@@ -82,8 +95,9 @@ permalink: /calendario/
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://static.googleusercontent.com/media/research.google.com/es//archive/gfs-sosp2003.pdf">GFS - Ghemawat</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr class="cal-entrega">
       <td>11 sep</td>
@@ -92,8 +106,9 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — <span class="cal-entrega">entrega</span></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>16 sep</td>
@@ -104,14 +119,16 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — enunciado</dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>18 sep</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>23 sep</td>
@@ -120,8 +137,9 @@ permalink: /calendario/
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf">Raft - Ongaro</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr class="cal-entrega">
       <td>25 sep</td>
@@ -130,8 +148,9 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2A</span></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>30 sep</td>
@@ -140,8 +159,9 @@ permalink: /calendario/
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf">Zookeeper - Hunt</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr class="cal-entrega">
       <td>2 oct</td>
@@ -150,8 +170,9 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2B</span></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>7 oct</td>
@@ -160,8 +181,9 @@ permalink: /calendario/
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/memcache-fb.pdf">Memcache - Nishtala</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr class="cal-entrega">
       <td>9 oct</td>
@@ -170,8 +192,9 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2C</span></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>14 oct</td>
@@ -187,14 +210,16 @@ permalink: /calendario/
             </ul>
           </dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>16 oct</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>21 oct</td>
@@ -205,8 +230,9 @@ permalink: /calendario/
           <dt><i class="fas fa-video"></i> Videos:</dt>
           <dd><a href="https://www.youtube.com/watch?v=yvBR71D0nAQ">DynamoDB deep dive</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr class="cal-entrega">
       <td>23 oct</td>
@@ -215,8 +241,9 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2D</span></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>28 oct</td>
@@ -227,14 +254,16 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — enunciado</dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>30 oct</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>4 nov</td>
@@ -244,14 +273,16 @@ permalink: /calendario/
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>6 nov</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>11 nov</td>
@@ -260,14 +291,16 @@ permalink: /calendario/
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.5840/2025/papers/spanner.pdf">Spanner - Corbett</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>13 nov</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>18 nov</td>
@@ -285,14 +318,16 @@ permalink: /calendario/
           <dt><i class="fas fa-video"></i> Videos:</dt>
           <dd><a href="https://www.youtube.com/watch?v=XcvHmqmh16g">Intra-cluster Replication in Apache Kafka</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>20 nov</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>25 nov</td>
@@ -303,8 +338,9 @@ permalink: /calendario/
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
           <dd>Capítulo 11, pp. 464–479 de <a href="#ref-kleppmann-ddia">Kleppmann (2017)</a></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr class="cal-entrega">
       <td>27 nov</td>
@@ -313,20 +349,23 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — <span class="cal-entrega">entrega y presentación</span></dd>
         </dl></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>2 dic</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>4 dic</td>
       <td></td>
-      <td>—</td>
-      <td>—</td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
     </tr>
   </tbody>
 </table>

@@ -8,10 +8,40 @@
     border-right: none;
   }
 
-  // Notas y Video
-  td:nth-child(3),
-  td:nth-child(4) {
+  // Apuntes, Slides y Video. Por clase y no por `nth-child` — como en 15-445 —
+  // así el estilo sigue a la columna si algún día cambia el orden.
+  td.calendar-apuntes,
+  td.calendar-slides,
+  td.calendar-video {
     text-align: center;
+
+    // El link es sólo el ícono, así que le damos algo de caja para que el
+    // resaltado del hover no quede pegado al glifo.
+    a.schedule-badge {
+      display: inline-block;
+      padding: 0.25rem 0.4rem;
+      border-radius: 0.35rem;
+    }
+  }
+
+  // Los links de material de clase (íconos de columna y badges de la vista
+  // móvil) no siguen el hover global de `a`, que invierte a fondo de acento
+  // sólido: en un link que es sólo un ícono eso queda como un recuadro oscuro.
+  // 15-445 lo resuelve con un resaltado amarillo pálido — el mismo `#ffffcc`
+  // que este sitio ya usa para `li:target` — y lo copiamos.
+  //
+  // Con una corrección: allá el `color: #fff` del hover global le sigue ganando
+  // a la regla del badge, así que el glifo se vuelve blanco sobre amarillo y
+  // desaparece. Acá el ícono se queda con el acento.
+  a.schedule-badge {
+    white-space: nowrap;
+    border: none !important;
+
+    &:hover {
+      background-color: var(--highlight-bg);
+      color: var(--link-color);
+      text-decoration: none;
+    }
   }
 
   tr.cal-feriado td {
@@ -36,7 +66,8 @@ span.cal-entrega {
 }
 
 // Modalidad: pill bajo la fecha. Va en la primera columna a propósito — es la
-// única que sobrevive al breakpoint de teléfono, donde Notas y Video se ocultan.
+// única que sobrevive al breakpoint de teléfono, donde Apuntes, Slides y Video
+// se ocultan.
 .calendario .cal-modalidad {
   display: block;
   width: fit-content;
@@ -111,29 +142,28 @@ span.cal-entrega {
         margin: 0;
       }
     }
-
-    a.schedule-badge {
-      white-space: nowrap;
-      border: none !important;
-    }
   }
 
 }
 
-// Escritorio/tablet ancho: 4 columnas, sin duplicar Notas/Video dentro de Tema.
+// Escritorio/tablet ancho: 5 columnas, sin duplicar Apuntes/Slides/Video dentro
+// de Tema.
 @media (min-width: 768px) {
   .calendario .cal-mobile-only {
     display: none;
   }
 }
 
-// Teléfono: Notas y Video sólo dentro de Tema; se ocultan las columnas propias.
+// Teléfono: Apuntes, Slides y Video sólo dentro de Tema; se ocultan las columnas
+// propias.
 @media (max-width: 767.98px) {
   .calendario {
     th:nth-child(3),
     th:nth-child(4),
-    td:nth-child(3),
-    td:nth-child(4) {
+    th:nth-child(5),
+    td.calendar-apuntes,
+    td.calendar-slides,
+    td.calendar-video {
       display: none;
     }
   }
