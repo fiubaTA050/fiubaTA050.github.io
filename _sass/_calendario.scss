@@ -44,18 +44,21 @@
     }
   }
 
-  tr.cal-feriado td {
-    background-color: var(--feriado-row-bg);
+  // Filas alternadas. Va después de las reglas de columna y antes de las
+  // semánticas a propósito: mismo peso que `tr.cal-feriado td`, así que el
+  // orden es lo que deja ganar al feriado sobre la banda.
+  tbody tr:nth-of-type(odd) td {
+    background-color: var(--stripe-row-bg);
   }
 
-  // `tr.cal-entrega` ya venía en el markup pero sin ningún estilo asociado.
-  tr.cal-entrega td {
-    background-color: var(--deadline-row-bg);
+  tbody tr.cal-feriado td {
+    background-color: var(--feriado-row-bg);
   }
 }
 
-// Mismo nombre en dos elementos distintos, a propósito: la fila entera marca
-// que hay una entrega, el span marca cuál.
+// `tr.cal-entrega` marca la fila en el markup pero no se pinta: desde que las
+// teóricas comparten fila con las entregas, el fondo cargaba demasiado. La
+// señal la lleva sola el span.
 span.cal-entrega {
   font-weight: 500;
   color: var(--deadline-color);
