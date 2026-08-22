@@ -104,6 +104,25 @@
   }
 }
 
+// Lista con viñetas, para anuncios de una o dos líneas por ítem. La de fechas
+// de abajo es otra cosa: alinea fecha, hora y aula en columnas.
+.anuncios-lista {
+  margin: 0 0 0.6rem;
+  padding-left: 1.2rem;
+
+  li {
+    margin-bottom: 0.2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .anuncios-fechas {
   margin: 0;
   padding-left: 0;
