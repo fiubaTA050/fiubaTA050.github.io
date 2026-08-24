@@ -50,6 +50,9 @@ ayudantes:
   - name: Ruben Bohorquez
     image: "/assets/images/rbohorquez.jpeg"
     email: rbohorquez@fi.uba.ar
+  - name: Tomás Vainstein
+    image: "/assets/images/tvainstein.jpeg"
+    email: tvainstein@fi.uba.ar
 
 colaboradores_invitados:
   - name: Ing. Tomás Arjovsky
