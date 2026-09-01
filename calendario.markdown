@@ -49,25 +49,42 @@ permalink: /calendario/
       <td class="calendar-activity"><span class="lecture-title">Clase práctica: Introducción a Go</span>
         <div><em>Clase virtual a cargo del Ing. Ruben Bohorquez</em></div>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
+          <dd class="cal-mobile-only"><a href="https://drive.google.com/file/d/1wtLvsWcKy6D0Q8uuE-3xbeuaj54xYh9u/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/4h0ZVayhBVk" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
           <dd><a href="https://go.dev/tour">A Tour of Go</a></dd>
+          <dt><i class="fab fa-github"></i> Repositorios:</dt>
+          <dd>
+            <ul class="cal-reading-list">
+              <li><a href="https://github.com/fiubaTA050/clase_go">clase_go</a></li>
+              <li><a href="https://github.com/fiubaTA050/grpc">grpc</a></li>
+            </ul>
+          </dd>
         </dl></td>
       <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-slides"><a href="https://drive.google.com/file/d/1wtLvsWcKy6D0Q8uuE-3xbeuaj54xYh9u/view?usp=drive_link" target="_blank" rel="noopener noreferrer" title="Slides (Clase práctica: Introducción a Go)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td class="calendar-video"><a href="https://youtu.be/4h0ZVayhBVk" target="_blank" rel="noopener noreferrer" title="Video (Clase práctica: Introducción a Go)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>28 ago<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 2 — MapReduce</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-02/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
+          <dd class="cal-mobile-only"><a href="{{ "/assets/slides/clase2.pdf" | relative_url }}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/rZEyNErIXbE" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://static.googleusercontent.com/media/research.google.com/es//archive/mapreduce-osdi04.pdf">MapReduce - Dean</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — enunciado</dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-02/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 2)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
+      <td class="calendar-slides"><a href="{{ "/assets/slides/clase2.pdf" | relative_url }}" title="Slides (Clase 2)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td class="calendar-video"><a href="https://youtu.be/rZEyNErIXbE" target="_blank" rel="noopener noreferrer" title="Video (Clase 2)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>2 sep</td>
@@ -77,19 +94,21 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
-      <td>4 sep</td>
+      <td>4 sep<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 3 — Replicación y Sharding</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-03/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
           <dd>
             <ul class="cal-reading-list">
-              <li><a href="https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying">The Log - Kreps</a></li>
+              <li><a href="https://www.linkedin.com/blog/engineering/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying">The Log - Kreps</a></li>
               <li>Capítulo 5, pp. 152–161 de <a href="#ref-kleppmann-ddia">Kleppmann (2017)</a></li>
               <li><a href="https://pdos.csail.mit.edu/6.824/papers/cr-osdi04.pdf">Chain Replication - van Renesse y Schneider</a></li>
             </ul>
           </dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-03/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 3)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
     </tr>
