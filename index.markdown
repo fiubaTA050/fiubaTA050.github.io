@@ -5,11 +5,6 @@ title: Bienvenidos a Sistemas Distribuidos I
 
 <section class="anuncios" aria-labelledby="anuncios-heading">
   <h2 id="anuncios-heading" class="anuncios-title"><i class="fa-solid fa-bullhorn"></i> Anuncios</h2>
-  <p class="anuncios-subtitle"><i class="fa-solid fa-calendar-day"></i> Planificación segunda semana</p>
-  <ul class="anuncios-lista">
-    <li><strong>Miércoles 26 de agosto</strong>, 19 a 22 h: virtual.</li>
-    <li><strong>Viernes 28 de agosto</strong>, 18 a 21 h: presencial, aula 411.</li>
-  </ul>
   <p class="anuncios-subtitle"><i class="fa-solid fa-envelope"></i> Alta al curso</p>
   <p class="anuncios-texto">Antes del inicio de la cursada se enviará un correo con la información para darse de alta al curso, que incluye un formulario de Google y el enlace al servidor de Discord, principal canal de comunicación de la materia. El correo se envía a la dirección registrada en SIU Guaraní.</p>
   <p class="anuncios-subtitle"><i class="fa-solid fa-tower-broadcast"></i> Modalidad de cada clase</p>
