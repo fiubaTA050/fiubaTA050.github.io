@@ -42,11 +42,37 @@ La nota de cursada es el promedio ponderado de las notas de los TPs (el peso de 
 
 ## ¿Cómo es la entrega de los TPs?
 
-La cátedra provee un repositorio privado para cada TP (grupal o individual), y el trabajo debe desarrollarse y entregarse ahí.
+La cátedra provee un repositorio privado para cada TP (grupal o individual), y el trabajo debe desarrollarse y entregarse ahí. Los repositorios y las entregas se administran con [FIUBA Classroom](https://fiuba-tps.vercel.app), la herramienta de la cátedra, dentro de la organización de GitHub `fiubaTA050-labs`.
 
 > No está permitido utilizar repositorios propios. Todos los trabajos deben realizarse en el repositorio provisto por la cátedra.
 
+El flujo para cada trabajo práctico es el siguiente:
+
+1. **Aceptar el TP.** La cátedra publica un link de invitación para cada TP en el Discord de la materia. Al abrirlo hay que iniciar sesión con la cuenta de GitHub que se va a usar durante toda la cursada, elegir el propio padrón en la lista de alumnos (se hace una sola vez por cuatrimestre y vincula la cuenta de GitHub con el padrón) y aceptar el trabajo práctico. En ese momento se crea el repositorio privado, ya con el código base, y se otorga acceso.
+2. **Desarrollar en el repositorio.** Se trabaja y se hace push con normalidad. La cátedra ve los commits en su panel, pero eso **no constituye una entrega**.
+3. **Confirmar la entrega.** Volviendo al mismo link de invitación, en la sección **Entrega** se indica la rama, el tag o el commit que se quiere entregar (por defecto, `main`), se completa la [declaración de uso de IA](#qué-es-la-declaración-de-uso-de-ia) y se confirma. El sistema resuelve esa referencia y congela el commit exacto: eso es lo que se corrige, aunque después se siga trabajando en el repositorio.
+
+<figure>
+  <img src="{{ "/assets/images/entrega-classroom.png" | relative_url }}" alt="Sección Entrega de FIUBA Classroom, debajo del aviso con el link al repositorio creado: muestra la fecha de entrega, el campo para indicar la rama, tag o commit a entregar, el botón Cambiar entrega y el campo de la declaración de uso de IA." loading="lazy">
+  <figcaption>La sección de entrega en FIUBA Classroom, debajo del link al repositorio ya creado.</figcaption>
+</figure>
+
+Algunas aclaraciones importantes:
+
+- **Hacer push no es entregar.** Un TP sin entrega confirmada figura para la cátedra como *Sin confirmar*, aunque el repositorio tenga commits. Hasta no confirmar la entrega, no hay entrega.
+- **Se puede volver a entregar** las veces que haga falta mientras el TP esté activo. Cada confirmación queda registrada y la vigente es la última. Para volver a una versión anterior alcanza con confirmar ese commit.
+- **La fecha de entrega no bloquea nada.** La fecha y hora límite (hora de Argentina) se muestran en la misma pantalla. Si se confirma después, la entrega se acepta igual, pero queda marcada como *Tarde* y aplican las reglas de [entregas tardías](#qué-pasa-si-entrego-tarde-un-tp). Lo que cuenta es el momento de la confirmación, no la fecha del commit.
+- **Lo que cierra las entregas es que la cátedra desactive el TP.** A partir de ese momento no se pueden confirmar más entregas para ese trabajo práctico.
+
 Para el TP grupal, además del código, todos los grupos realizan una exposición de aproximadamente 20 minutos el día de la entrega.
+
+### ¿Qué es la declaración de uso de IA?
+
+Al confirmar cada entrega hay que completar una **declaración jurada de uso de IA**. Es obligatoria: sin ella no se puede confirmar la entrega. Hay que indicar qué herramientas de IA se usaron (asistentes de código, chatbots, etc.) y para qué partes del trabajo práctico, o escribir explícitamente que no se usó ninguna.
+
+La declaración queda guardada junto con la entrega. Si hace falta corregirla, basta con volver a confirmar la entrega, aunque sea con el mismo commit.
+
+Declarar el uso de IA no es motivo de penalización: lo que la cátedra evalúa es que el estudiante comprenda y pueda defender el código que entrega (ver [Uso de IA](#uso-de-ia)). Omitir o falsear la declaración, en cambio, es una falta ética y tiene las consecuencias descritas en la [Política de colaboración](#política-de-colaboración).
 
 ## ¿Qué pasa si entrego tarde un TP?
 
@@ -91,4 +117,4 @@ En el trabajo grupal se espera colaboración entre los miembros del grupo asigna
 > Cualquier forma de plagio o conducta académica deshonesta será considerada una falta grave y podrá implicar que el estudiante quede libre en la materia, además de ser escalada a las autoridades de la facultad.
 
 ### Uso de IA
-Recomendamos no utilizar herramientas de IA para generar código, ya que esto puede reducir el aprendizaje obtenido de los trabajos prácticos. Sin embargo, si decide utilizarlas, se espera que cada estudiante comprenda completamente el código que entrega, pueda explicarlo en detalle y razonar sobre su funcionamiento durante el coloquio o en instancias de evaluación. En caso de haber utilizado IA, deberá mencionarse explícitamente en una nota aclaratoria indicando la herramienta empleada y el tipo de interacción realizada.
+Recomendamos no utilizar herramientas de IA para generar código, ya que esto puede reducir el aprendizaje obtenido de los trabajos prácticos. Sin embargo, si decide utilizarlas, se espera que cada estudiante comprenda completamente el código que entrega, pueda explicarlo en detalle y razonar sobre su funcionamiento durante el coloquio o en instancias de evaluación. El uso de IA debe informarse en la [declaración de uso de IA](#qué-es-la-declaración-de-uso-de-ia) que se completa al confirmar cada entrega, indicando la herramienta empleada y para qué partes del trabajo se utilizó.

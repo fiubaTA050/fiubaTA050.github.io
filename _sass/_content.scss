@@ -35,6 +35,32 @@
   }
 }
 
+// Capturas de pantalla en el contenido (FAQ). La imagen es clara sobre una
+// tarjeta también clara: el borde y la sombra suave son lo que la separa.
+// Tope de ancho y centrado: una captura no tiene por qué ocupar toda la
+// tarjeta, y a tamaño natural o menor se lee mejor que estirada.
+.content figure {
+  max-width: 880px;
+  margin: 1.5rem auto 2rem;
+
+  img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+  }
+
+  figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+  }
+}
+
 // Red de seguridad para las tablas que genera Markdown (Programa, FAQ), que no
 // pueden llevar la clase .table de Bootstrap.
 .content table:not(.table) {
