@@ -120,12 +120,8 @@ En el trabajo grupal se espera colaboración entre los miembros del grupo asigna
 
 Recomendamos no utilizar herramientas de IA para generar código, ya que esto puede reducir el aprendizaje obtenido de los trabajos prácticos. Quien decida utilizarlas de todos modos debe hacerlo dentro de las reglas que siguen.
 
-Cada estudiante debe entregar soluciones propias. Se pueden usar herramientas de IA generativa (ChatGPT, Claude, Copilot, etc.) del mismo modo en que se recurriría a un compañero: para discutir ideas, aclarar conceptos o consultar sintaxis poco familiar. No se les puede pedir directamente la solución de una consigna ni copiar el código que producen, y hay que reconocerlas como colaboradoras en la [declaración de uso de IA](#qué-es-la-declaración-de-uso-de-ia) de cada entrega.
-
-Tampoco está permitido pedirles que revisen la solución completa o que busquen errores en ella (por ejemplo, "encontrá el bug en mi implementación"): esa depuración es justamente lo que el trabajo práctico busca ejercitar, y equivale a que otro estudiante revise la solución antes de entregarla. Sí se puede consultar un error puntual ya localizado, como un mensaje del compilador o un panic específico.
+Cada estudiante debe entregar soluciones propias. Se pueden usar herramientas de IA generativa (ChatGPT, Claude, Copilot, etc.) del mismo modo en que se recurriría a un compañero: para discutir ideas, aclarar conceptos, consultar sintaxis poco familiar o depurar un error puntual. No se les puede pedir directamente la solución de una consigna ni copiar el código que producen, y hay que reconocerlas como colaboradoras en la [declaración de uso de IA](#qué-es-la-declaración-de-uso-de-ia) de cada entrega.
 
 Usar IA generativa para resolver sustancialmente un trabajo práctico, por ejemplo con una herramienta agéntica como Claude Code o Codex que construya la solución a partir del enunciado, está prohibido y se considera una falta ética, con las consecuencias descritas más arriba. La cátedra revisa las entregas y el historial de commits del repositorio para detectarlo.
-
-Si se usan herramientas de IA, hay que conservar la transcripción de la interacción (un link compartido a la conversación o capturas de pantalla) y estar en condiciones de presentarla si la cátedra la solicita. Por eso solo se admiten herramientas que permitan compartir o exportar esa transcripción.
 
 En cualquier caso, cada estudiante debe comprender completamente el código que entrega y poder explicarlo en detalle y razonar sobre su funcionamiento durante el coloquio o en instancias de evaluación.
