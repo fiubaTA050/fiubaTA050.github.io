@@ -13,6 +13,7 @@ ayudantes:
   - name: Alen Davies
     image: "/assets/images/adavies.jpeg"
     email: adavies@fi.uba.ar
+    disabled: true
   - name: Bautista Silvano Lima
     image: "/assets/images/bsilvano.jpeg"
     email: bsilvano@fi.uba.ar
