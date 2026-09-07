@@ -120,10 +120,12 @@ permalink: /calendario/
       <td>9 sep<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 4 — Google File System</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-04/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://static.googleusercontent.com/media/research.google.com/es//archive/gfs-sosp2003.pdf">GFS - Ghemawat</a></dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-04/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 4)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
     </tr>
