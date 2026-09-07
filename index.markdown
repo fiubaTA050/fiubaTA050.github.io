@@ -3,14 +3,6 @@ layout: home
 title: Bienvenidos a Sistemas Distribuidos I
 ---
 
-<section class="anuncios" aria-labelledby="anuncios-heading">
-  <h2 id="anuncios-heading" class="anuncios-title"><i class="fa-solid fa-bullhorn"></i> Anuncios</h2>
-  <p class="anuncios-subtitle"><i class="fa-solid fa-envelope"></i> Alta al curso</p>
-  <p class="anuncios-texto">Antes del inicio de la cursada se enviará un correo con la información para darse de alta al curso, que incluye un formulario de Google y el enlace al servidor de Discord, principal canal de comunicación de la materia. El correo se envía a la dirección registrada en SIU Guaraní.</p>
-  <p class="anuncios-subtitle"><i class="fa-solid fa-tower-broadcast"></i> Modalidad de cada clase</p>
-  <p class="anuncios-texto">La modalidad de cada clase &mdash;presencial o virtual&mdash; se indica en el <a href="{{ "/calendario/" | relative_url }}">calendario</a> a medida que se confirma. Este panel se utilizará durante la cursada para informar cambios o suspensiones, y todo aviso se replicará por Discord.</p>
-</section>
-
 <div class="row mb-4 pb-lg-2 border-bottom border-2">
 
 <div class="col-lg-7" markdown="1">
