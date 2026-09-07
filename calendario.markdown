@@ -99,6 +99,10 @@ permalink: /calendario/
         <dl class="cal-activity-dl">
           <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
           <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-03/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
+          <dd class="cal-mobile-only"><a href="{{ "/assets/slides/clase3.pdf" | relative_url }}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/KtEH4GHeIKs" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
           <dd>
             <ul class="cal-reading-list">
@@ -109,22 +113,24 @@ permalink: /calendario/
           </dd>
         </dl></td>
       <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-03/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 3)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
-      <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-slides"><a href="{{ "/assets/slides/clase3.pdf" | relative_url }}" title="Slides (Clase 3)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
+      <td class="calendar-video"><a href="https://youtu.be/KtEH4GHeIKs" target="_blank" rel="noopener noreferrer" title="Video (Clase 3)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
-      <td>9 sep</td>
-      <td></td>
+      <td>9 sep<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 4 — Google File System</span>
+        <dl class="cal-activity-dl">
+          <dt><i class="fas fa-scroll"></i> Paper:</dt>
+          <dd><a href="https://static.googleusercontent.com/media/research.google.com/es//archive/gfs-sosp2003.pdf">GFS - Ghemawat</a></dd>
+        </dl></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
     </tr>
     <tr class="cal-entrega">
-      <td>11 sep</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 4 — Google File System</span>
+      <td>11 sep<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Replicación y Sharding</span>
         <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://static.googleusercontent.com/media/research.google.com/es//archive/gfs-sosp2003.pdf">GFS - Ghemawat</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — <span class="cal-entrega">entrega</span></dd>
         </dl></td>
