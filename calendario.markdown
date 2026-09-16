@@ -209,10 +209,17 @@ permalink: /calendario/
     </tr>
     <tr class="cal-entrega">
       <td>9 oct</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 8 — Consistencia en caches</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 8 — Dynamo I, hashing y relojes</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/memcache-fb.pdf">Memcache - Nishtala</a></dd>
+          <dd><a href="https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store">Dynamo - DeCandia</a></dd>
+          <dt><i class="fas fa-book"></i> Lecturas:</dt>
+          <dd>
+            <ul class="cal-reading-list">
+              <li><a href="https://lamport.azurewebsites.net/pubs/time-clocks.pdf">Logical Clocks - Lamport</a></li>
+              <li>Capítulo 14.1 a 14.4 de <a href="#ref-coulouris-ds">Coulouris et al. (2012)</a></li>
+            </ul>
+          </dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2C</span></dd>
         </dl></td>
@@ -229,17 +236,12 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>16 oct</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 9 — Dynamo I, hashing y relojes</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 9 — Dynamo II y DynamoDB</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store">Dynamo - DeCandia</a></dd>
-          <dt><i class="fas fa-book"></i> Lecturas:</dt>
-          <dd>
-            <ul class="cal-reading-list">
-              <li><a href="https://lamport.azurewebsites.net/pubs/time-clocks.pdf">Logical Clocks - Lamport</a></li>
-              <li>Capítulo 14.1 a 14.4 de <a href="#ref-coulouris-ds">Coulouris et al. (2012)</a></li>
-            </ul>
-          </dd>
+          <dd><a href="https://www.usenix.org/system/files/atc22-elhemali.pdf">DynamoDb - Elhemali</a></dd>
+          <dt><i class="fas fa-video"></i> Videos:</dt>
+          <dd><a href="https://www.youtube.com/watch?v=yvBR71D0nAQ">DynamoDB deep dive</a></dd>
         </dl></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
@@ -254,12 +256,10 @@ permalink: /calendario/
     </tr>
     <tr class="cal-entrega">
       <td>23 oct</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 10 — Dynamo II y DynamoDB</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 10 — Transacciones distribuidas</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://www.usenix.org/system/files/atc22-elhemali.pdf">DynamoDb - Elhemali</a></dd>
-          <dt><i class="fas fa-video"></i> Videos:</dt>
-          <dd><a href="https://www.youtube.com/watch?v=yvBR71D0nAQ">DynamoDB deep dive</a></dd>
+          <dd><a href="https://www.usenix.org/system/files/atc23-idziorek.pdf">DynamoDb - Idziorek</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2D</span></dd>
         </dl></td>
@@ -276,10 +276,10 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>30 oct</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 11 — Transacciones distribuidas</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 11 — Spanner</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://www.usenix.org/system/files/atc23-idziorek.pdf">DynamoDb - Idziorek</a></dd>
+          <dd><a href="http://nil.csail.mit.edu/6.5840/2025/papers/spanner.pdf">Spanner - Corbett</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — enunciado</dd>
         </dl></td>
@@ -296,11 +296,10 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>6 nov</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 12 — Bitcoin</span>
-        <div><em>Clase asincrónica a cargo del Ing. Tomás Arjovsky</em></div>
+      <td class="calendar-activity"><span class="lecture-title">Clase 12 — Consistencia en caches</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
+          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/memcache-fb.pdf">Memcache - Nishtala</a></dd>
         </dl></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
@@ -315,25 +314,7 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>13 nov</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 13 — Spanner</span>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="http://nil.csail.mit.edu/6.5840/2025/papers/spanner.pdf">Spanner - Corbett</a></dd>
-        </dl></td>
-      <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
-    </tr>
-    <tr>
-      <td>18 nov</td>
-      <td></td>
-      <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
-    </tr>
-    <tr>
-      <td>20 nov</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Sistemas de Mensajería</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 13 — Sistemas de Mensajería</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
@@ -352,6 +333,26 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
+      <td>18 nov</td>
+      <td></td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
+    </tr>
+    <tr>
+      <td>20 nov</td>
+      <td class="calendar-activity"><span class="lecture-title">Clase 14 — Procesamiento de data streams</span>
+        <dl class="cal-activity-dl">
+          <dt><i class="fas fa-scroll"></i> Paper:</dt>
+          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a></dd>
+          <dt><i class="fas fa-book"></i> Lecturas:</dt>
+          <dd>Capítulo 11, pp. 464–479 de <a href="#ref-kleppmann-ddia">Kleppmann (2017)</a></dd>
+        </dl></td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
+    </tr>
+    <tr>
       <td>25 nov</td>
       <td></td>
       <td class="calendar-apuntes">—</td>
@@ -360,12 +361,11 @@ permalink: /calendario/
     </tr>
     <tr class="cal-entrega">
       <td>27 nov</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Procesamiento de data streams</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Bitcoin</span>
+        <div><em>Clase asincrónica a cargo del Ing. Tomás Arjovsky</em></div>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a></dd>
-          <dt><i class="fas fa-book"></i> Lecturas:</dt>
-          <dd>Capítulo 11, pp. 464–479 de <a href="#ref-kleppmann-ddia">Kleppmann (2017)</a></dd>
+          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — <span class="cal-entrega">entrega y presentación</span></dd>
         </dl></td>
