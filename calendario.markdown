@@ -148,7 +148,7 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
-      <td>18 sep</td>
+      <td>18 sep<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 5 — Raft I: elección de líder</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
