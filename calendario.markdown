@@ -153,14 +153,18 @@ permalink: /calendario/
       <td>18 sep<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 5 — Raft I: elección de líder</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-05/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/O9aVLIrOLLs" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf">Raft - Ongaro</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — enunciado</dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-05/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 5)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/O9aVLIrOLLs" target="_blank" rel="noopener noreferrer" title="Video (Clase 5)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>23 sep</td>
@@ -173,14 +177,18 @@ permalink: /calendario/
       <td>25 sep</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 6 — Raft II: log y snapshots</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-06/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/2fNRXQfAyg8" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf">Raft - Ongaro</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2A</span></dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-06/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 6)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/2fNRXQfAyg8" target="_blank" rel="noopener noreferrer" title="Video (Clase 6)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>30 sep</td>
