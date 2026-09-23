@@ -133,13 +133,22 @@ permalink: /calendario/
     </tr>
     <tr class="cal-entrega">
       <td>11 sep<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
-      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Replicación y Sharding</span>
+      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Replicación y consistencia</span>
+        <div><em>Clase a cargo del Ing. Pablo Romanelli</em></div>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/practica-01/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
+          <dd class="cal-mobile-only"><a href="{{ "/assets/slides/practica1.pdf" | relative_url }}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt><i class="fas fa-book"></i> Lecturas:</dt>
+          <dd><a href="https://clasesdistribuidos.github.io/practica-01/15-referencias/">Bibliografía en el apunte</a></dd>
+          <dt><i class="fab fa-github"></i> Repositorios:</dt>
+          <dd><a href="https://github.com/fiubaTA050/replication-consistency">replication-consistency</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — <span class="cal-entrega">entrega</span></dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/practica-01/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase práctica: Replicación y consistencia)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
+      <td class="calendar-slides"><a href="{{ "/assets/slides/practica1.pdf" | relative_url }}" title="Slides (Clase práctica: Replicación y consistencia)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
       <td class="calendar-video">—</td>
     </tr>
     <tr>
