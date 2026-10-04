@@ -212,14 +212,20 @@ permalink: /calendario/
       <td>2 oct</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 7 — Linealizabilidad y Zookeeper</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-07/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/Taiz1RYsX3Y" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf">Zookeeper - Hunt</a></dd>
+          <dt><i class="fas fa-book"></i> Lecturas:</dt>
+          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/p463-herlihy.pdf">Linearizability - Herlihy y Wing</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2B</span></dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-07/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 7)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/Taiz1RYsX3Y" target="_blank" rel="noopener noreferrer" title="Video (Clase 7)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>7 oct</td>
@@ -232,6 +238,10 @@ permalink: /calendario/
       <td>9 oct</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 8 — Dynamo I, hashing y relojes</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-08/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/pyxXqi3wC7s" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store">Dynamo - DeCandia</a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
@@ -244,9 +254,9 @@ permalink: /calendario/
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2C</span></dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-08/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 8)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/pyxXqi3wC7s" target="_blank" rel="noopener noreferrer" title="Video (Clase 8)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>14 oct</td>
