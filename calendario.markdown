@@ -228,7 +228,7 @@ permalink: /calendario/
       <td class="calendar-video"><a href="https://youtu.be/Taiz1RYsX3Y" target="_blank" rel="noopener noreferrer" title="Video (Clase 7)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
-      <td>7 oct<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
+      <td>7 oct<span class="cal-modalidad cal-modalidad-virtual">Virtual</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 8 — Dynamo I, hashing y relojes</span>
         <dl class="cal-activity-dl">
           <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>

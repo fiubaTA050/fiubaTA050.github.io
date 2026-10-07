@@ -3,6 +3,12 @@ layout: home
 title: Bienvenidos a Sistemas Distribuidos I
 ---
 
+<section class="anuncios" aria-labelledby="anuncios-heading">
+  <h2 id="anuncios-heading" class="anuncios-title"><i class="fa-solid fa-bullhorn"></i> Anuncios</h2>
+  <p class="anuncios-subtitle"><i class="fa-solid fa-video"></i> Clase del miércoles 7 de octubre: virtual</p>
+  <p class="anuncios-texto">La clase de hoy, miércoles 7 de octubre (Clase 8 — Dynamo I, hashing y relojes), pasa a dictarse de forma <strong>virtual</strong> por Google Meet, en el horario habitual de 19 a 22 h. <a href="{{ site.course.meet }}" target="_meet" rel="noopener">Unirse a la videollamada <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+</section>
+
 <div class="row mb-4 pb-lg-2 border-bottom border-2">
 
 <div class="col-lg-7" markdown="1">
