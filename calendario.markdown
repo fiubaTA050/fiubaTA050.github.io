@@ -261,14 +261,7 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
-      <td>14 oct</td>
-      <td></td>
-      <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
-    </tr>
-    <tr>
-      <td>16 oct</td>
+      <td>14 oct<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 9 — Dynamo II y DynamoDB</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -276,6 +269,13 @@ permalink: /calendario/
           <dt><i class="fas fa-video"></i> Videos:</dt>
           <dd><a href="https://www.youtube.com/watch?v=yvBR71D0nAQ">DynamoDB deep dive</a></dd>
         </dl></td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
+    </tr>
+    <tr>
+      <td>16 oct<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Replicación sin líder y CRDTs</span></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
