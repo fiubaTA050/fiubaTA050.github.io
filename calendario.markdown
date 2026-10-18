@@ -266,6 +266,8 @@ permalink: /calendario/
         <dl class="cal-activity-dl">
           <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
           <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-09/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/9ZKUwF7gBWY" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.usenix.org/system/files/atc22-elhemali.pdf">DynamoDb - Elhemali</a></dd>
           <dt><i class="fas fa-video"></i> Videos:</dt>
@@ -273,7 +275,7 @@ permalink: /calendario/
         </dl></td>
       <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-09/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 9)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/9ZKUwF7gBWY" target="_blank" rel="noopener noreferrer" title="Video (Clase 9)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>16 oct<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
@@ -288,12 +290,14 @@ permalink: /calendario/
         <dl class="cal-activity-dl">
           <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
           <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-10/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/motwgkEcQ3k" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.usenix.org/system/files/atc23-idziorek.pdf">DynamoDb - Idziorek</a></dd>
         </dl></td>
       <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-10/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 10)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/motwgkEcQ3k" target="_blank" rel="noopener noreferrer" title="Video (Clase 10)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr class="cal-entrega">
       <td>23 oct</td>
@@ -319,6 +323,8 @@ permalink: /calendario/
         <dl class="cal-activity-dl">
           <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
           <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-11/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/6CePms3_7eg" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.5840/2025/papers/spanner.pdf">Spanner - Corbett</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
@@ -326,7 +332,7 @@ permalink: /calendario/
         </dl></td>
       <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-11/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 11)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/6CePms3_7eg" target="_blank" rel="noopener noreferrer" title="Video (Clase 11)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>4 nov</td>
