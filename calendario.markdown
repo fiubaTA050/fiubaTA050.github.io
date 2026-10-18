@@ -283,24 +283,26 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
-      <td>21 oct</td>
-      <td></td>
-      <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
-    </tr>
-    <tr class="cal-entrega">
-      <td>23 oct</td>
+      <td>21 oct<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 10 — Transacciones distribuidas</span>
         <dl class="cal-activity-dl">
           <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
           <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-10/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.usenix.org/system/files/atc23-idziorek.pdf">DynamoDb - Idziorek</a></dd>
+        </dl></td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-10/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 10)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
+    </tr>
+    <tr class="cal-entrega">
+      <td>23 oct</td>
+      <td class="calendar-activity">
+        <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2D</span></dd>
         </dl></td>
-      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-10/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 10)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
+      <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
     </tr>
