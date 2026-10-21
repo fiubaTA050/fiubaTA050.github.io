@@ -145,7 +145,7 @@ permalink: /calendario/
           <dt><i class="fab fa-github"></i> Repositorios:</dt>
           <dd><a href="https://github.com/fiubaTA050/replication-consistency">replication-consistency</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — <span class="cal-entrega">entrega</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }}">TP1 MapReduce</a> — <span class="cal-entrega">entrega (domingo 13/9)</span></dd>
         </dl></td>
       <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/practica-01/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase práctica: Replicación y consistencia)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides"><a href="{{ "/assets/slides/practica1.pdf" | relative_url }}" title="Slides (Clase práctica: Replicación y consistencia)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
@@ -195,7 +195,7 @@ permalink: /calendario/
       <td class="calendar-activity"><span class="lecture-title">PARO DOCENTE</span>
         <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2A</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2A (domingo 27/9)</span></dd>
         </dl></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
@@ -221,7 +221,7 @@ permalink: /calendario/
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/p463-herlihy.pdf">Linearizability - Herlihy y Wing</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2B</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2B (domingo 4/10)</span></dd>
         </dl></td>
       <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-07/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 7)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
@@ -254,7 +254,7 @@ permalink: /calendario/
       <td class="calendar-activity">
         <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2C</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2C (domingo 11/10)</span></dd>
         </dl></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
@@ -304,7 +304,7 @@ permalink: /calendario/
       <td class="calendar-activity">
         <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2D</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp2-raft/" | relative_url }}">TP2 Raft</a> — <span class="cal-entrega">entrega 2D (domingo 25/10)</span></dd>
         </dl></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
