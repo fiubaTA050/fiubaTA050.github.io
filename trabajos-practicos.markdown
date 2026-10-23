@@ -13,5 +13,5 @@ Información sobre los trabajos prácticos del curso, incluyendo consignas y mat
 
 - [TP1 - MapReduce]({{ "/trabajos-practicos/tp1-mapreduce/" | relative_url }})
 - [TP2 - Raft]({{ "/trabajos-practicos/tp2-raft/" | relative_url }})
-- [TP3 - Mini-DynamoDb]({{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }})
+- [TP3 - Mini-DynamoDB]({{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }})
 
