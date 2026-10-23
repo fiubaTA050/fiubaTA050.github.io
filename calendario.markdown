@@ -328,7 +328,7 @@ permalink: /calendario/
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="http://nil.csail.mit.edu/6.5840/2025/papers/spanner.pdf">Spanner - Corbett</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — enunciado</dd>
+          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDB</a> — enunciado</dd>
         </dl></td>
       <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-11/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 11)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
@@ -414,7 +414,7 @@ permalink: /calendario/
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDb</a> — <span class="cal-entrega">entrega y presentación</span></dd>
+          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDB</a> — <span class="cal-entrega">entrega y presentación</span></dd>
         </dl></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
