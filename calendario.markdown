@@ -279,7 +279,8 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>16 oct<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
-      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Replicación sin líder y CRDTs</span></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Replicación sin líder y CRDTs</span>
+        <div><em>Clase a cargo del Ing. Pablo Romanelli</em></div></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
@@ -318,7 +319,7 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
-      <td>30 oct</td>
+      <td>30 oct<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 11 — Spanner</span>
         <dl class="cal-activity-dl">
           <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
@@ -342,7 +343,7 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
-      <td>6 nov</td>
+      <td>6 nov<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 12 — Consistencia en caches</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -360,7 +361,15 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
-      <td>13 nov</td>
+      <td>13 nov<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Sagas</span>
+        <div><em>Clase a cargo de Matias Besmedrisnik, Nicolas Chaia y Gonzalo Crudo</em></div></td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
+    </tr>
+    <tr>
+      <td>18 nov</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 13 — Sistemas de Mensajería</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -375,13 +384,6 @@ permalink: /calendario/
           <dt><i class="fas fa-video"></i> Videos:</dt>
           <dd><a href="https://www.youtube.com/watch?v=XcvHmqmh16g">Intra-cluster Replication in Apache Kafka</a></dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
-    </tr>
-    <tr>
-      <td>18 nov</td>
-      <td></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
