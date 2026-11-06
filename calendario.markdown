@@ -409,23 +409,20 @@ permalink: /calendario/
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
     </tr>
-    <tr class="cal-entrega">
+    <tr>
       <td>27 nov</td>
-      <td class="calendar-activity"><span class="lecture-title">Clase 15 — Bitcoin</span>
-        <div><em>Clase asincrónica a cargo del Ing. Tomás Arjovsky</em></div>
-        <dl class="cal-activity-dl">
-          <dt><i class="fas fa-scroll"></i> Paper:</dt>
-          <dd><a href="https://pdos.csail.mit.edu/6.824/papers/bitcoin.pdf">Bitcoin - Nakamoto</a></dd>
-          <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
-          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDB</a> — <span class="cal-entrega">entrega y presentación</span></dd>
-        </dl></td>
+      <td></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
     </tr>
-    <tr>
+    <tr class="cal-entrega">
       <td>2 dic</td>
-      <td></td>
+      <td class="calendar-activity">
+        <dl class="cal-activity-dl">
+          <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
+          <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDB</a> — <span class="cal-entrega">entrega y presentación</span> <em>(cualquier día de la semana del 30 nov al 4 dic, a coordinar con el ayudante)</em></dd>
+        </dl></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>

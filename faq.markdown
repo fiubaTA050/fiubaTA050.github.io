@@ -64,7 +64,7 @@ Algunas aclaraciones importantes:
 - **La fecha de entrega no bloquea nada.** La fecha y hora límite (hora de Argentina) se muestran en la misma pantalla. Si se confirma después, la entrega se acepta igual, pero queda marcada como *Tarde* y aplican las reglas de [entregas tardías](#qué-pasa-si-entrego-tarde-un-tp). Lo que cuenta es el momento de la confirmación, no la fecha del commit.
 - **Lo que cierra las entregas es que la cátedra desactive el TP.** Desde ese momento ya no se pueden confirmar entregas.
 
-Para el TP grupal, además del código, todos los grupos realizan una exposición de aproximadamente 20 minutos el día de la entrega.
+Para el TP grupal, además del código, todos los grupos realizan una exposición de aproximadamente 20 minutos durante la última semana de cursada, en el día y horario que cada grupo coordine con su ayudante.
 
 ### ¿Qué es la declaración de uso de IA?
 
