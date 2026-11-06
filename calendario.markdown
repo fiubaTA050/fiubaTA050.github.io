@@ -354,22 +354,15 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
-      <td>11 nov</td>
-      <td></td>
+      <td>11 nov<span class="cal-modalidad cal-modalidad-virtual">Virtual</span></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Caches</span>
+        <div><em>Clase virtual a cargo del Ing. Juan Manuel Pascual</em></div></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
     </tr>
     <tr>
       <td>13 nov<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
-      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Sagas</span>
-        <div><em>Clase a cargo de Matias Besmedrisnik, Nicolas Chaia y Gonzalo Crudo</em></div></td>
-      <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
-    </tr>
-    <tr>
-      <td>18 nov</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 13 — Sistemas de Mensajería</span>
         <dl class="cal-activity-dl">
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
@@ -384,6 +377,14 @@ permalink: /calendario/
           <dt><i class="fas fa-video"></i> Videos:</dt>
           <dd><a href="https://www.youtube.com/watch?v=XcvHmqmh16g">Intra-cluster Replication in Apache Kafka</a></dd>
         </dl></td>
+      <td class="calendar-apuntes">—</td>
+      <td class="calendar-slides">—</td>
+      <td class="calendar-video">—</td>
+    </tr>
+    <tr>
+      <td>18 nov</td>
+      <td class="calendar-activity"><span class="lecture-title">Clase práctica: Sagas</span>
+        <div><em>Clase a cargo de Matias Besmedrisnik, Nicolas Chaia y Gonzalo Crudo</em></div></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
