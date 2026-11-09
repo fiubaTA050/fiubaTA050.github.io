@@ -3,6 +3,24 @@ layout: home
 title: Bienvenidos a Sistemas Distribuidos I
 ---
 
+<section class="anuncios" aria-labelledby="anuncios-heading">
+  <h2 id="anuncios-heading" class="anuncios-title"><i class="fa-solid fa-bullhorn"></i> Anuncios</h2>
+  <p class="anuncios-subtitle"><i class="fa-solid fa-graduation-cap"></i> Fechas de examen final</p>
+  <p class="anuncios-texto">No se agregarán fechas especiales de examen ni se harán excepciones. Las fechas disponibles son:</p>
+  <ul class="anuncios-fechas">
+    <li><span class="anuncios-fecha">Miércoles 9 de diciembre</span> <span class="anuncios-hora">· 19:00 hs</span></li>
+    <li><span class="anuncios-fecha">Viernes 18 de diciembre</span> <span class="anuncios-hora">· 19:00 hs</span></li>
+    <li><span class="anuncios-fecha">Viernes 5 de febrero</span> <span class="anuncios-hora">· 19:00 hs</span></li>
+    <li><span class="anuncios-fecha">Viernes 26 de febrero</span> <span class="anuncios-hora">· 19:00 hs</span></li>
+    <li><span class="anuncios-fecha">Viernes 5 de marzo</span> <span class="anuncios-hora">· 19:00 hs</span></li>
+  </ul>
+  <p class="anuncios-texto">En todas las fechas el final será escrito y no se corregirá en el momento, sin excepción.</p>
+  <p class="anuncios-subtitle"><i class="fa-solid fa-user-graduate"></i> Opción para quienes se reciben con esta materia</p>
+  <p class="anuncios-texto">Quienes se reciban con esta materia pueden, si lo desean, postergar la presentación grupal del TP3. En ese caso, en lugar de presentarlo en la última semana con su ayudante, lo harán de forma presencial en la facultad, en una fecha de diciembre o en una de marzo, que definiremos más adelante.</p>
+  <p class="anuncios-texto"><strong>Importante:</strong> el TP3 debe entregarse igual en la fecha límite habitual y será corregido esa misma semana. Lo único que se posterga es la presentación.</p>
+  <p class="anuncios-texto">Esta opción es para quienes quieran cerrar la materia en una instancia presencial y celebrarlo con familiares y amigos. Aclaramos que, aun en este caso, el examen escrito no se corregirá en el momento.</p>
+</section>
+
 <div class="row mb-4 pb-lg-2 border-bottom border-2">
 
 <div class="col-lg-7" markdown="1">
