@@ -56,6 +56,8 @@ ayudantes:
     email: tvainstein@fi.uba.ar
 
 colaboradores_invitados:
+  - name: Ing. Alfonso Campodónico
+    image: "/assets/images/acampodonico.jpeg"
   - name: Ing. Tomás Arjovsky
     image: "/assets/images/tarjovsky.jpeg"
   - name: Ing. Luca Lazcano

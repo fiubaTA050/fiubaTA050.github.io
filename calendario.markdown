@@ -410,8 +410,9 @@ permalink: /calendario/
       <td class="calendar-video">—</td>
     </tr>
     <tr>
-      <td>27 nov</td>
-      <td></td>
+      <td>27 nov<span class="cal-modalidad cal-modalidad-virtual">Virtual</span></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase especial: Cómo servir un modelo</span>
+        <div><em>Clase virtual a cargo del Ing. Alfonso Campodónico</em></div></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
