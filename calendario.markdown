@@ -346,11 +346,13 @@ permalink: /calendario/
       <td>6 nov<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 12 — Consistencia en caches</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
+          <dd class="cal-mobile-only"><a href="{{ "/assets/slides/clase12.pdf" | relative_url }}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/memcache-fb.pdf">Memcache - Nishtala</a></dd>
         </dl></td>
       <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
+      <td class="calendar-slides"><a href="{{ "/assets/slides/clase12.pdf" | relative_url }}" title="Slides (Clase 12)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
       <td class="calendar-video">—</td>
     </tr>
     <tr>
@@ -365,6 +367,8 @@ permalink: /calendario/
       <td>13 nov<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 13 — Sistemas de Mensajería</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
+          <dd class="cal-mobile-only"><a href="{{ "/assets/slides/clase13.pdf" | relative_url }}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
@@ -378,7 +382,7 @@ permalink: /calendario/
           <dd><a href="https://www.youtube.com/watch?v=XcvHmqmh16g">Intra-cluster Replication in Apache Kafka</a></dd>
         </dl></td>
       <td class="calendar-apuntes">—</td>
-      <td class="calendar-slides">—</td>
+      <td class="calendar-slides"><a href="{{ "/assets/slides/clase13.pdf" | relative_url }}" title="Slides (Clase 13)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
       <td class="calendar-video">—</td>
     </tr>
     <tr>
