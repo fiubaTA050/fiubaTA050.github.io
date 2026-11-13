@@ -280,7 +280,11 @@ permalink: /calendario/
     <tr>
       <td>16 oct<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase práctica: Replicación sin líder y CRDTs</span>
-        <div><em>Clase a cargo del Ing. Pablo Romanelli</em></div></td>
+        <div><em>Clase a cargo del Ing. Pablo Romanelli</em></div>
+        <dl class="cal-activity-dl">
+          <dt><i class="fab fa-github"></i> Repositorios:</dt>
+          <dd><a href="https://github.com/fiubaTA050/leaderless-replication">leaderless-replication</a></dd>
+        </dl></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
