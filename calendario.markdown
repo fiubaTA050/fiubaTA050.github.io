@@ -350,14 +350,18 @@ permalink: /calendario/
       <td>6 nov<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 12 — Consistencia en caches</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-12/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
           <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
           <dd class="cal-mobile-only"><a href="{{ "/assets/slides/clase12.pdf" | relative_url }}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/J35V1Sqf2tY" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://pdos.csail.mit.edu/6.824/papers/memcache-fb.pdf">Memcache - Nishtala</a></dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-12/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 12)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides"><a href="{{ "/assets/slides/clase12.pdf" | relative_url }}" title="Slides (Clase 12)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/J35V1Sqf2tY" target="_blank" rel="noopener noreferrer" title="Video (Clase 12)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>11 nov<span class="cal-modalidad cal-modalidad-virtual">Virtual</span></td>
@@ -371,8 +375,12 @@ permalink: /calendario/
       <td>13 nov<span class="cal-modalidad cal-modalidad-presencial">Presencial</span></td>
       <td class="calendar-activity"><span class="lecture-title">Clase 13 — Sistemas de Mensajería</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-13/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
           <dt class="cal-mobile-only"><i class="fas fa-file-pdf"></i> Slides:</dt>
           <dd class="cal-mobile-only"><a href="{{ "/assets/slides/clase13.pdf" | relative_url }}" class="schedule-badge">Descargar <i class="fas fa-arrow-circle-down"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/bTOSYUN0nMY" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka - Kreps</a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
@@ -385,9 +393,9 @@ permalink: /calendario/
           <dt><i class="fas fa-video"></i> Videos:</dt>
           <dd><a href="https://www.youtube.com/watch?v=XcvHmqmh16g">Intra-cluster Replication in Apache Kafka</a></dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-13/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 13)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides"><a href="{{ "/assets/slides/clase13.pdf" | relative_url }}" title="Slides (Clase 13)" class="schedule-badge"><i class="fas fa-file-pdf fa-lg"></i></a></td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/bTOSYUN0nMY" target="_blank" rel="noopener noreferrer" title="Video (Clase 13)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>18 nov</td>
@@ -401,14 +409,18 @@ permalink: /calendario/
       <td>20 nov</td>
       <td class="calendar-activity"><span class="lecture-title">Clase 14 — Procesamiento de data streams</span>
         <dl class="cal-activity-dl">
+          <dt class="cal-mobile-only"><i class="fas fa-book-open"></i> Apuntes:</dt>
+          <dd class="cal-mobile-only"><a href="https://clasesdistribuidos.github.io/clase-14/" target="_blank" rel="noopener noreferrer" class="schedule-badge">Leer <i class="fas fa-external-link-alt"></i></a></dd>
+          <dt class="cal-mobile-only"><i class="fas fa-file-video"></i> Video:</dt>
+          <dd class="cal-mobile-only"><a href="https://youtu.be/2G9kXTXVXOo" target="_blank" rel="noopener noreferrer" class="schedule-badge">Ver <i class="fas fa-external-link-alt"></i></a></dd>
           <dt><i class="fas fa-scroll"></i> Paper:</dt>
           <dd><a href="https://research.google/pubs/millwheel-fault-tolerant-stream-processing-at-internet-scale/">Millwheel - Akidau</a></dd>
           <dt><i class="fas fa-book"></i> Lecturas:</dt>
           <dd>Capítulo 11, pp. 464–479 de <a href="#ref-kleppmann-ddia">Kleppmann (2017)</a></dd>
         </dl></td>
-      <td class="calendar-apuntes">—</td>
+      <td class="calendar-apuntes"><a href="https://clasesdistribuidos.github.io/clase-14/" target="_blank" rel="noopener noreferrer" title="Apuntes (Clase 14)" class="schedule-badge"><i class="fas fa-book-open fa-lg"></i></a></td>
       <td class="calendar-slides">—</td>
-      <td class="calendar-video">—</td>
+      <td class="calendar-video"><a href="https://youtu.be/2G9kXTXVXOo" target="_blank" rel="noopener noreferrer" title="Video (Clase 14)" class="schedule-badge"><i class="fas fa-file-video fa-lg"></i></a></td>
     </tr>
     <tr>
       <td>25 nov</td>
