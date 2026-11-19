@@ -424,7 +424,8 @@ permalink: /calendario/
     </tr>
     <tr>
       <td>25 nov</td>
-      <td></td>
+      <td class="calendar-activity"><span class="lecture-title">Clase especial: Blockchain I — Consenso (PoW y PoS)</span>
+        <div><em>Clase a cargo del Ing. Ruben Bohorquez</em></div></td>
       <td class="calendar-apuntes">—</td>
       <td class="calendar-slides">—</td>
       <td class="calendar-video">—</td>
@@ -439,7 +440,8 @@ permalink: /calendario/
     </tr>
     <tr class="cal-entrega">
       <td>2 dic</td>
-      <td class="calendar-activity">
+      <td class="calendar-activity"><span class="lecture-title">Clase especial: Blockchain II — EVM y smart contracts</span>
+        <div><em>Clase a cargo del Ing. Ruben Bohorquez</em></div>
         <dl class="cal-activity-dl">
           <dt><i class="fa fa-bullhorn"></i> Trabajo práctico:</dt>
           <dd><a href="{{ "/trabajos-practicos/tp3-mini-dynamodb/" | relative_url }}">TP3 Mini-DynamoDB</a> — <span class="cal-entrega">entrega y presentación</span> <em>(cualquier día de la semana del 30 nov al 4 dic, a coordinar con el ayudante)</em></dd>
